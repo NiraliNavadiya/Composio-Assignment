@@ -1,0 +1,25 @@
+{
+  "name": "composio-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^2.23.0",
+    "@google/generative-ai": "^0.24.1",
+    "browser-use-sdk": "^3.11.3",
+    "dotenv": "^18.0.0",
+    "groq-sdk": "^1.6.0",
+    "tsx": "^4.23.13"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  }
+}

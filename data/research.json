@@ -1,0 +1,1877 @@
+[
+  {
+    "id": 1,
+    "app": "Salesforce",
+    "category": "CRM and Sales",
+    "one_liner": "Enterprise cloud-based customer relationship management platform.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.salesforce.com/docs/"
+  },
+  {
+    "id": 2,
+    "app": "HubSpot",
+    "category": "CRM and Sales",
+    "one_liner": "Inbound marketing, sales, and service software platform.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.hubspot.com/docs/api/overview"
+  },
+  {
+    "id": 3,
+    "app": "Pipedrive",
+    "category": "CRM and Sales",
+    "one_liner": "Sales-focused CRM and pipeline management tool.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://pipedrive.readme.io/docs/getting-started"
+  },
+  {
+    "id": 4,
+    "app": "Attio",
+    "category": "CRM and Sales",
+    "one_liner": "Flexible and data-driven workspace and CRM platform.",
+    "auth_methods": [
+      "Bearer Token",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://attio.com/docs"
+  },
+  {
+    "id": 5,
+    "app": "Twenty",
+    "category": "CRM and Sales",
+    "one_liner": "Modern open-source CRM alternative.",
+    "auth_methods": [
+      "Bearer Token",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.twenty.com/"
+  },
+  {
+    "id": 6,
+    "app": "Podio",
+    "category": "CRM and Sales",
+    "one_liner": "Flexible work management platform to organize team communication, business processes, and data.",
+    "auth_methods": [
+      "OAuth2",
+      "Basic"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.podio.com/"
+  },
+  {
+    "id": 7,
+    "app": "Zoho CRM",
+    "category": "CRM and Sales",
+    "one_liner": "Comprehensive CRM software for managing sales, marketing, and customer support in one place.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v2/"
+  },
+  {
+    "id": 8,
+    "app": "Close",
+    "category": "CRM and Sales",
+    "one_liner": "Inside sales CRM designed for startups and SMBs with built-in calling, email, and SMS.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.close.com/"
+  },
+  {
+    "id": 9,
+    "app": "Copper",
+    "category": "CRM and Sales",
+    "one_liner": "CRM built specifically for Google Workspace users with automated data entry and tracking.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.copper.com/"
+  },
+  {
+    "id": 10,
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "one_liner": "Deal management and CRM platform built for the capital markets and investment banking.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Requires enterprise or partner-gated API credentials to access documentation and endpoints.",
+    "docs_url": "https://api.docs.dealcloud.com/"
+  },
+  {
+    "id": 11,
+    "app": "Zendesk",
+    "category": "Support and Helpdesk",
+    "one_liner": "Cloud-based customer service software and support ticketing system.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "Basic"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.zendesk.com/api-reference/"
+  },
+  {
+    "id": 12,
+    "app": "Intercom",
+    "category": "Support and Helpdesk",
+    "one_liner": "Customer service platform providing conversational relationship management.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.intercom.com/"
+  },
+  {
+    "id": 13,
+    "app": "Freshdesk",
+    "category": "Support and Helpdesk",
+    "one_liner": "Cloud-based customer service software offering ticketing and automation.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.freshdesk.com/api/"
+  },
+  {
+    "id": 14,
+    "app": "Front",
+    "category": "Support and Helpdesk",
+    "one_liner": "Customer operations platform that unifies shared inboxes, collaboration, and CRM.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://dev.frontapp.com/"
+  },
+  {
+    "id": 15,
+    "app": "Pylon",
+    "category": "Support and Helpdesk",
+    "one_liner": "Customer support and success platform built for B2B companies via Slack, Teams, and email.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Requires contacting sales or partnership approval for API access.",
+    "docs_url": "https://docs.usepylon.com/"
+  },
+  {
+    "id": 16,
+    "app": "LiveAgent",
+    "category": "Support and Helpdesk",
+    "one_liner": "Help desk and live chat software with a comprehensive REST API for tickets, contacts, and agents.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://www.liveagent.com/api/"
+  },
+  {
+    "id": 17,
+    "app": "Plain",
+    "category": "Support and Helpdesk",
+    "one_liner": "Customer support platform built for modern engineering teams with a robust GraphQL API.",
+    "auth_methods": [
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.plain.com/api/overview"
+  },
+  {
+    "id": 18,
+    "app": "Help Scout",
+    "category": "Support and Helpdesk",
+    "one_liner": "Help desk software providing Mailbox APIs for managing conversations, customers, and tags.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.helpscout.com/"
+  },
+  {
+    "id": 19,
+    "app": "Gorgias",
+    "category": "Support and Helpdesk",
+    "one_liner": "E-commerce helpdesk integrating customer service data with online stores via REST API.",
+    "auth_methods": [
+      "Basic",
+      "OAuth2"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.gorgias.com/"
+  },
+  {
+    "id": 20,
+    "app": "Gladly",
+    "category": "Support and Helpdesk",
+    "one_liner": "Customer service platform centered on people rather than tickets, offering REST APIs.",
+    "auth_methods": [
+      "Basic",
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Restricted sandbox and developer access requiring partner/sales approval.",
+    "docs_url": "https://developer.gladly.com/"
+  },
+  {
+    "id": 21,
+    "app": "Slack",
+    "category": "Communications and Messaging",
+    "one_liner": "A channel-based messaging platform for team collaboration and workflow automation.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Native MCP Available",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://api.slack.com/"
+  },
+  {
+    "id": 22,
+    "app": "Twilio",
+    "category": "Communications and Messaging",
+    "one_liner": "Cloud communications platform for building SMS, voice, and video messaging applications.",
+    "auth_methods": [
+      "Basic",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://www.twilio.com/docs"
+  },
+  {
+    "id": 23,
+    "app": "Zoho Cliq",
+    "category": "Communications and Messaging",
+    "one_liner": "Business messaging and team collaboration tool with powerful bot and extension integrations.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "OAuth token lifecycle management requires Zoho account console setup",
+    "docs_url": "https://www.zoho.com/cliq/help/rest-api/"
+  },
+  {
+    "id": 24,
+    "app": "Lark (Larksuite)",
+    "category": "Communications and Messaging",
+    "one_liner": "All-in-one collaboration suite featuring chat, calendar, docs, and custom enterprise bots.",
+    "auth_methods": [
+      "Bearer Token",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://open.larksuite.com/document/home/index"
+  },
+  {
+    "id": 25,
+    "app": "Pumble",
+    "category": "Communications and Messaging",
+    "one_liner": "Team collaboration and chat application offering messaging channels and user management.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Limited public webhook and REST endpoints for advanced conversational automations",
+    "docs_url": "https://pumble.com/help/integrations-and-api/pumble-api"
+  },
+  {
+    "id": 26,
+    "app": "Discord",
+    "category": "Communications and Messaging",
+    "one_liner": "Voice, video, and text communication service for building communities and managing chat bots.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://discord.com/developers/docs"
+  },
+  {
+    "id": 27,
+    "app": "Telegram",
+    "category": "Communications and Messaging",
+    "one_liner": "Cloud-based instant messaging service offering a robust Bot API for automated interactions.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://core.telegram.org/bots/api"
+  },
+  {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "one_liner": "Business messaging platform enabling companies to communicate with customers at scale via the Cloud API.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Meta Business Verification and phone number approval required",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp"
+  },
+  {
+    "id": 29,
+    "app": "Aircall",
+    "category": "Communications and Messaging",
+    "one_liner": "Cloud-based call center software and phone system with comprehensive APIs for telephony integration.",
+    "auth_methods": [
+      "Basic",
+      "OAuth2"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Requires a paid Aircall subscription to access API credentials",
+    "docs_url": "https://developer.aircall.io/"
+  },
+  {
+    "id": 30,
+    "app": "Vonage",
+    "category": "Communications and Messaging",
+    "one_liner": "Cloud communications platform providing APIs for voice, SMS, messaging, and video capabilities.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.vonage.com/"
+  },
+  {
+    "id": 31,
+    "app": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Manage large and complex Google Ads campaigns and reporting programmatically.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Developer token approval process required for production access",
+    "docs_url": "https://developers.google.com/google-ads/api/docs/start"
+  },
+  {
+    "id": 32,
+    "app": "Meta Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Create, manage, and optimize Facebook and Instagram ad campaigns.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Strict app review and permission scoping for ad management",
+    "docs_url": "https://developers.facebook.com/docs/marketing-apis"
+  },
+  {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Automate advertising, campaign management, and lead generation on LinkedIn.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Requires Marketing Developer Platform partner program approval",
+    "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/"
+  },
+  {
+    "id": 34,
+    "app": "GoHighLevel",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "All-in-one sales and marketing platform for agencies and small businesses.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://highlevel.stoplight.io/"
+  },
+  {
+    "id": 35,
+    "app": "Mailchimp",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Manage mailing lists, newsletters, and automated marketing campaigns.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://mailchimp.com/developer/"
+  },
+  {
+    "id": 36,
+    "app": "Klaviyo",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Marketing automation platform specializing in email and SMS marketing for e-commerce.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.klaviyo.com/"
+  },
+  {
+    "id": 37,
+    "app": "systeme.io",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "All-in-one marketing platform for sales funnels, email marketing, and online courses.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Limited public API endpoints for full platform control",
+    "docs_url": "https://systeme.io/blog/systeme-io-api"
+  },
+  {
+    "id": 38,
+    "app": "Pinterest",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Visual discovery engine and social media platform for finding ideas.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.pinterest.com/"
+  },
+  {
+    "id": 39,
+    "app": "Threads (Meta)",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Text-based conversation app built by Meta, allowing public microblogging.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Requires Meta App review and specific permissions for full access",
+    "docs_url": "https://developers.facebook.com/docs/threads"
+  },
+  {
+    "id": 40,
+    "app": "SendGrid",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Cloud-based customer communication platform for transactional and marketing email.",
+    "auth_methods": [
+      "Bearer Token",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.sendgrid.com/api-reference"
+  },
+  {
+    "id": 41,
+    "app": "Shopify",
+    "category": "Ecommerce",
+    "one_liner": "Multi-channel commerce platform with comprehensive GraphQL and REST Admin APIs.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "Hybrid",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://shopify.dev/docs/api"
+  },
+  {
+    "id": 42,
+    "app": "WooCommerce",
+    "category": "Ecommerce",
+    "one_liner": "Open-source, customizable e-commerce platform built on WordPress with a REST API.",
+    "auth_methods": [
+      "OAuth2",
+      "Basic"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/"
+  },
+  {
+    "id": 43,
+    "app": "BigCommerce",
+    "category": "Ecommerce",
+    "one_liner": "SaaS ecommerce platform providing extensive REST APIs for store management.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.bigcommerce.com/docs/rest"
+  },
+  {
+    "id": 44,
+    "app": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "one_liner": "Enterprise cloud ecommerce solution offering comprehensive REST and OCAPI endpoints.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Strict partner gating and complex enterprise authentication setup.",
+    "docs_url": "https://developer.salesforce.com/docs/commerce"
+  },
+  {
+    "id": 45,
+    "app": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "one_liner": "Flexible ecommerce platform with robust REST and GraphQL APIs.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "Hybrid",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.adobe.com/commerce/webservices/rest/"
+  },
+  {
+    "id": 46,
+    "app": "Squarespace",
+    "category": "Ecommerce",
+    "one_liner": "All-in-one website building and ecommerce platform with developer APIs for commerce and inventory.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Developer platform access requires application approval and specific plan tiers.",
+    "docs_url": "https://developers.squarespace.com/"
+  },
+  {
+    "id": 47,
+    "app": "Ecwid",
+    "category": "Ecommerce",
+    "one_liner": "E-commerce platform providing REST APIs to manage stores, products, orders, and customers.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://api-docs.ecwid.com/"
+  },
+  {
+    "id": 48,
+    "app": "Gumroad",
+    "category": "Ecommerce",
+    "one_liner": "Online platform that lets creators sell products directly to consumers via a REST API.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://app.gumroad.com/api"
+  },
+  {
+    "id": 49,
+    "app": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "one_liner": "API suite for Amazon vendors and sellers to programmatically manage listings, orders, and fulfillment.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Strict IAM role configurations, LWA (Login with Amazon) tokens, and rigorous developer vetting.",
+    "docs_url": "https://developer-docs.amazon.com/sp-api"
+  },
+  {
+    "id": 50,
+    "app": "fanbasis",
+    "category": "Ecommerce",
+    "one_liner": "Creator monetization platform connecting fans with creators for experiences and digital goods.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Public developer documentation is extremely limited or private, requiring direct partnership.",
+    "docs_url": "https://fanbasis.com"
+  },
+  {
+    "id": 51,
+    "app": "DataForSEO",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Comprehensive SEO and digital marketing data APIs for developers and agencies.",
+    "auth_methods": [
+      "Basic"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.dataforseo.com/"
+  },
+  {
+    "id": 52,
+    "app": "SE Ranking",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "All-in-one SEO platform providing rank tracking, backlink checking, and site audit APIs.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://seranking.com/api.html"
+  },
+  {
+    "id": 53,
+    "app": "Ahrefs",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Industry-standard SEO toolset providing backlink, keyword, and site audit data via API.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Strict access limits and enterprise-only API availability",
+    "docs_url": "https://ahrefs.com/api"
+  },
+  {
+    "id": 54,
+    "app": "MrScraper",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Web scraping API that turns any website into a structured JSON API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.mrscraper.com/"
+  },
+  {
+    "id": 55,
+    "app": "Apify",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Cloud platform for web scraping and data extraction with a robust API and actor ecosystem.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.apify.com/api/v2"
+  },
+  {
+    "id": 56,
+    "app": "Firecrawl",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Turn websites into LLM-ready markdown and structured data with an API.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.firecrawl.dev/"
+  },
+  {
+    "id": 57,
+    "app": "Bright Data",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Web data platform providing proxies, web scrapers, and datasets via robust APIs.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Complex multi-step proxy and dataset trigger flows require custom endpoints",
+    "docs_url": "https://docs.brightdata.com/"
+  },
+  {
+    "id": 58,
+    "app": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Hunt down social media accounts by username across social networks.",
+    "auth_methods": [
+      "Custom/None"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "None/Scrape-Only",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Open source CLI tool without a native hosted public REST API",
+    "docs_url": "https://github.com/sherlock-project/sherlock"
+  },
+  {
+    "id": 59,
+    "app": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Waterfalling waterfall enrichment and contact intel platform.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Private or restricted API documentation requiring sales contact",
+    "docs_url": "https://waterfall.io/"
+  },
+  {
+    "id": 60,
+    "app": "Clay",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Combine 50+ data providers and AI to build automated enrichment and outbound workflows.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.clay.com/"
+  },
+  {
+    "id": 61,
+    "app": "GitHub",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Complete platform for version control and collaboration, providing extensive REST and GraphQL APIs.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "Hybrid",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Native MCP Available",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.github.com/rest"
+  },
+  {
+    "id": 62,
+    "app": "Vercel",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Frontend cloud platform providing comprehensive REST APIs for project deployments and domain management.",
+    "auth_methods": [
+      "Bearer Token",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://vercel.com/docs/rest-api"
+  },
+  {
+    "id": 63,
+    "app": "Netlify",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Web development platform offering REST APIs to automate site builds, deploys, and site settings.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.netlify.com/api/get-started/"
+  },
+  {
+    "id": 64,
+    "app": "Cloudflare",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Cloud infrastructure and security platform providing an extensive REST API for zone and resource management.",
+    "auth_methods": [
+      "Bearer Token",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.cloudflare.com/api/"
+  },
+  {
+    "id": 65,
+    "app": "Supabase",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Open source Firebase alternative offering a rich Management REST API alongside auto-generated database APIs.",
+    "auth_methods": [
+      "Bearer Token",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://supabase.com/docs"
+  },
+  {
+    "id": 66,
+    "app": "Neo4j",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Graph database management system with native Cypher query API access.",
+    "auth_methods": [
+      "Basic",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://neo4j.com/docs/api/"
+  },
+  {
+    "id": 67,
+    "app": "Snowflake",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Cloud-native data warehouse with comprehensive SQL execution APIs.",
+    "auth_methods": [
+      "OAuth2",
+      "KeyPair"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.snowflake.com/"
+  },
+  {
+    "id": 68,
+    "app": "MongoDB Atlas",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Fully managed cloud database service providing a comprehensive administration API.",
+    "auth_methods": [
+      "Digest",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://www.mongodb.com/docs/atlas/api/"
+  },
+  {
+    "id": 69,
+    "app": "Datadog",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Cloud-scale monitoring and security platform with extensive telemetry APIs.",
+    "auth_methods": [
+      "API Key",
+      "Application Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.datadoghq.com/api/"
+  },
+  {
+    "id": 70,
+    "app": "Sentry",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "Application monitoring and error tracking software with rich developer APIs.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.sentry.io/api/"
+  },
+  {
+    "id": 71,
+    "app": "Notion",
+    "category": "Productivity and Project Management",
+    "one_liner": "All-in-one workspace for notes, tasks, wikis, and databases.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.notion.com/"
+  },
+  {
+    "id": 72,
+    "app": "Airtable",
+    "category": "Productivity and Project Management",
+    "one_liner": "Cloud collaboration platform combining database power with spreadsheet simplicity.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://airtable.com/developers"
+  },
+  {
+    "id": 73,
+    "app": "Linear",
+    "category": "Productivity and Project Management",
+    "one_liner": "Issue tracking tool designed for high-performance software teams.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.linear.app/"
+  },
+  {
+    "id": 74,
+    "app": "Jira",
+    "category": "Productivity and Project Management",
+    "one_liner": "Issue and project tracking software for agile software development teams.",
+    "auth_methods": [
+      "OAuth2",
+      "Basic"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/"
+  },
+  {
+    "id": 75,
+    "app": "Asana",
+    "category": "Productivity and Project Management",
+    "one_liner": "Web and mobile application designed to help teams organize, track, and manage work.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developers.asana.com/"
+  },
+  {
+    "id": 76,
+    "app": "Monday.com",
+    "category": "Productivity and Project Management",
+    "one_liner": "A flexible work operating system that allows teams to build custom workflow apps.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.monday.com/api-reference/docs"
+  },
+  {
+    "id": 77,
+    "app": "ClickUp",
+    "category": "Productivity and Project Management",
+    "one_liner": "An all-in-one productivity platform that offers task management, docs, goals, and chat.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://clickup.com/api/"
+  },
+  {
+    "id": 78,
+    "app": "Coda",
+    "category": "Productivity and Project Management",
+    "one_liner": "A doc that brings your docs, tables, and team together in one flexible workspace.",
+    "auth_methods": [
+      "Bearer Token",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://coda.io/developers/apis/v1"
+  },
+  {
+    "id": 79,
+    "app": "Smartsheet",
+    "category": "Productivity and Project Management",
+    "one_liner": "A cloud-based platform for work management and collaboration using spreadsheet-like interfaces.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://smartsheet.redoc.ly/"
+  },
+  {
+    "id": 80,
+    "app": "Harvest",
+    "category": "Productivity and Project Management",
+    "one_liner": "Time tracking and expense management software with powerful reporting features.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://help.getharvest.com/api-v2/"
+  },
+  {
+    "id": 81,
+    "app": "Stripe",
+    "category": "Finance and Fintech",
+    "one_liner": "Online payment processing and financial infrastructure for internet businesses.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://stripe.com/docs/api"
+  },
+  {
+    "id": 82,
+    "app": "Plaid",
+    "category": "Finance and Fintech",
+    "one_liner": "API platform that builds financial technology solutions connecting user bank accounts.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://plaid.com/docs/"
+  },
+  {
+    "id": 83,
+    "app": "Binance",
+    "category": "Finance and Fintech",
+    "one_liner": "Cryptocurrency exchange providing APIs for spot and derivatives trading.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Strict IP whitelisting and cryptographic signature generation required for requests",
+    "docs_url": "https://binance-docs.github.io/apidocs/"
+  },
+  {
+    "id": 84,
+    "app": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "one_liner": "Payment gateway service offering credit card processing and convenience store payments.",
+    "auth_methods": [
+      "Basic",
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Merchant account application and regional compliance (Japan) necessary for API credentials",
+    "docs_url": "https://www.paygent.co.jp/"
+  },
+  {
+    "id": 85,
+    "app": "iPayX",
+    "category": "Finance and Fintech",
+    "one_liner": "Payment processing and billing solutions platform.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Limited public sandbox documentation requiring enterprise engagement",
+    "docs_url": "https://www.ipayx.com/"
+  },
+  {
+    "id": 86,
+    "app": "QuickBooks",
+    "category": "Finance and Fintech",
+    "one_liner": "Cloud accounting software for small businesses to manage sales, expenses, and invoicing.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.intuit.com/app/developer/homepage"
+  },
+  {
+    "id": 87,
+    "app": "Xero",
+    "category": "Finance and Fintech",
+    "one_liner": "Online accounting software for small businesses and their advisors.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Extensive (>50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://developer.xero.com/"
+  },
+  {
+    "id": 88,
+    "app": "Brex",
+    "category": "Finance and Fintech",
+    "one_liner": "Corporate cards and expense management platform for modern businesses.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Requires corporate account status and developer application approval",
+    "docs_url": "https://developer.brex.com/"
+  },
+  {
+    "id": 89,
+    "app": "Ramp",
+    "category": "Finance and Fintech",
+    "one_liner": "Corporate card, expense management, and bill payment platform.",
+    "auth_methods": [
+      "OAuth2",
+      "Bearer Token"
+    ],
+    "access_model": "Admin Approval",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "API access requires admin approval within the Ramp dashboard",
+    "docs_url": "https://docs.ramp.com/"
+  },
+  {
+    "id": 90,
+    "app": "PitchBook",
+    "category": "Finance and Fintech",
+    "one_liner": "Private market data provider covering venture capital, private equity, and M&A.",
+    "auth_methods": [
+      "API Key",
+      "Custom/None"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Enterprise-only subscription required for API access with restrictive terms",
+    "docs_url": "https://pitchbook.com/"
+  },
+  {
+    "id": 91,
+    "app": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "one_liner": "Google AI-powered note-taking and source-grounded research assistant.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "No dedicated public NotebookLM API; must interface via underlying Gemini/Google Cloud APIs.",
+    "docs_url": "https://cloud.google.com/gemini/docs"
+  },
+  {
+    "id": 92,
+    "app": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI-powered meeting transcription, recording, and summarization assistant.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "Public developer API is heavily restricted and requires partner approval.",
+    "docs_url": "https://help.otter.ai"
+  },
+  {
+    "id": 93,
+    "app": "Fathom",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI meeting assistant that records, transcribes, and highlights Zoom/Teams calls.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Limited public webhook and API integrations available primarily via Zapier or custom webhooks.",
+    "docs_url": "https://fathom.video"
+  },
+  {
+    "id": 94,
+    "app": "Consensus",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI-powered search engine that extracts and synthesizes findings from scientific research.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Blocked / High Friction",
+    "primary_blocker": "API access is strictly gated for enterprise partners and researchers.",
+    "docs_url": "https://consensus.app"
+  },
+  {
+    "id": 95,
+    "app": "Reducto",
+    "category": "AI, Research and Media-native",
+    "one_liner": "Document parsing and chunking API optimized for RAG and LLM ingestion.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://docs.reducto.ai"
+  },
+  {
+    "id": 96,
+    "app": "Devin",
+    "category": "AI, Research and Media-native",
+    "one_liner": "An autonomous AI software engineer capable of building applications and solving complex engineering tasks.",
+    "auth_methods": [
+      "API Key",
+      "Bearer Token"
+    ],
+    "access_model": "Contact Sales / Partner-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "Native MCP Available",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Access is tightly gated and requires enterprise partner approval.",
+    "docs_url": "https://docs.devin.ai"
+  },
+  {
+    "id": 97,
+    "app": "higgsfield",
+    "category": "AI, Research and Media-native",
+    "one_liner": "An AI-powered video generation and content creation platform.",
+    "auth_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Possible with Workaround",
+    "primary_blocker": "Limited public API documentation for direct developer integration.",
+    "docs_url": "https://higgsfield.ai"
+  },
+  {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "one_liner": "A command-line tool to render Mermaid diagrams into PNG, SVG, or PDF formats.",
+    "auth_methods": [
+      "Custom/None"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "None/Scrape-Only",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli"
+  },
+  {
+    "id": 99,
+    "app": "YouTube Transcript",
+    "category": "AI, Research and Media-native",
+    "one_liner": "An API service to extract subtitles and transcripts from YouTube videos easily.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "access_model": "Self-serve (Free/Trial)",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Narrow (<10 endpoints)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://transcriptapi.com"
+  },
+  {
+    "id": 100,
+    "app": "Grain",
+    "category": "AI, Research and Media-native",
+    "one_liner": "An AI meeting recorder that transcribes, summarizes, and highlights key moments from video calls.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_model": "Paid-Gated",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "Moderate (10-50)"
+    },
+    "mcp_status": "Composio/Third-Party MCP",
+    "buildability_verdict": "Instant Win (Ready)",
+    "primary_blocker": "None",
+    "docs_url": "https://help.grain.com"
+  }
+]
