@@ -80,7 +80,7 @@ TAVILY_API_KEY=your_tavily_api_key_here
 Run the primary research script to extract and classify initial records:
 
 ```bash
-npx ts-node generate-research.ts
+npx tsx src\generate-research.ts
 
 ```
 
@@ -89,7 +89,7 @@ npx ts-node generate-research.ts
 Run the targeted verification pass to validate status fields and official repository references:
 
 ```bash
-npx ts-node verify_with_tavily_gemini.ts
+npx tsx src\verify_with_tavily_gemini.ts
 
 ```
 
