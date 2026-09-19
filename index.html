@@ -361,8 +361,8 @@
             }
 
             .flow-body p {
-                font-size: 14px;
-                color: var(--ink-soft);
+                font-size: 15px;
+                color: var(--ink);
                 line-height: 1.65;
                 margin: 0 0 4px 0;
             }
@@ -374,13 +374,14 @@
             }
 
             .flow-body li {
-                font-size: 13.5px;
-                color: var(--ink-soft);
+                font-size: 14.5px;
+                color: var(--ink);
                 line-height: 1.6;
                 margin-bottom: 7px;
                 padding-left: 20px;
                 position: relative;
             }
+
             .flow-body li::before {
                 content: "→";
                 position: absolute;
@@ -457,6 +458,143 @@
             .footnote .kbd {
                 background: #fff;
                 border: 1px solid var(--line);
+            }
+
+            .pipeline {
+                margin-top: 20px;
+                border-top: 1px solid var(--line);
+                padding-top: 24px;
+            }
+
+            .pipeline-label {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--ink-faint);
+                margin-bottom: 18px;
+            }
+
+            .stage {
+                background: #fff;
+                border: 1px solid var(--line);
+                border-radius: 12px;
+                padding: 20px 22px;
+            }
+
+            .stage-head {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+            }
+
+            .stage-num {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: var(--accent);
+                color: #fff;
+                font-size: 12px;
+                font-weight: 800;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+            .stage-desc {
+                font-size: 14px;
+                color: var(--ink);
+                line-height: 1.6;
+                margin: 0 0 14px 0;
+            }
+
+            .stage-connector {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 6px 0;
+            }
+
+            .connector-line {
+                width: 2px;
+                height: 18px;
+                background: var(--line);
+            }
+
+            .connector-arrow {
+                color: var(--ink-faint);
+                font-size: 15px;
+                font-weight: 700;
+                margin-top: -2px;
+            }
+
+            .kbd.cmd {
+                background: var(--ink);
+                color: #fff;
+                border: none;
+            }
+
+            .kbd.file {
+                background: var(--accent-soft);
+                color: var(--accent);
+                border: 1px solid transparent;
+            }
+
+            .code-block {
+                background: #10141f;
+                color: #d8ddf0;
+                border-radius: 10px;
+                padding: 16px 18px;
+                font-size: 12px;
+                line-height: 1.55;
+                overflow-x: auto;
+                font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+                margin: 0;
+            }
+
+            .output-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                gap: 12px;
+                margin-top: 4px;
+            }
+
+            .output-card {
+                background: #f7f8fb;
+                border: 1px solid var(--line-soft);
+                border-radius: 10px;
+                padding: 16px 18px;
+            }
+
+            .output-title {
+                margin-bottom: 8px;
+            }
+
+            .output-card p {
+                font-size: 13.5px;
+                color: var(--ink-soft);
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            .output-card em {
+                font-style: normal;
+                font-weight: 700;
+                color: var(--ink);
+            }
+
+            a.kbd {
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: opacity 0.15s ease;
+            }
+
+            a.kbd:hover {
+                opacity: 0.8;
             }
         </style>
     </head>
@@ -704,23 +842,25 @@
                                 <span class="tag">Tavily</span>
                             </h4>
                             <p>
-                                Built a verification loop to fetch the correct
-                                MCP server URL for every app. Tavily was used
-                                for the web search step, since Gemini's native
-                                web search isn't free.
+                                Built a loop to fetch and verify the correct MCP
+                                server URL for every app.
                             </p>
                             <ul>
                                 <li>
-                                    Fetch MCP server details via Tavily and
-                                    check the app's official domain first
+                                    Used Tavily for the web search step — it
+                                    makes real, live web search calls, so
+                                    results reflect the latest available info
+                                    (Gemini's built-in web search isn't free so
+                                    I used Tavily)
                                 </li>
                                 <li>
-                                    If an official/native MCP server URL exists
-                                    on that domain, use it
+                                    For each app, I verified native MCP server
+                                    URL by confirming the app's own domain
+                                    appears in that URL
                                 </li>
                                 <li>
-                                    If not, fall back to the best available
-                                    third-party MCP server URL
+                                    If no native URL was found, fell back to the
+                                    best available third-party MCP server URL
                                 </li>
                             </ul>
                         </div>
@@ -752,6 +892,102 @@
                 </div>
 
                 <div class="schema-wrapper">
+                    <div class="">
+                        <div class="pipeline-label">
+                            Data Generation Pipeline
+                        </div>
+
+                        <!-- Stage 1 -->
+                        <div class="stage">
+                            <div class="stage-head">
+                                <span class="stage-num">1</span>
+                                <span class="kbd cmd"
+                                    >generate-research.ts</span
+                                >
+                            </div>
+                            <p class="stage-desc">
+                                Runs research for every app and outputs the
+                                baseline record to
+                                <span class="kbd file">research.json</span>.
+                            </p>
+                        </div>
+
+                        <div class="stage-connector">
+                            <h1 class="connector-arrow">↓</h1>
+                        </div>
+
+                        <!-- Stage 2 -->
+                        <div class="stage">
+                            <div class="stage-head">
+                                <span class="stage-num">2</span>
+                                <span class="kbd cmd"
+                                    >src/verify_with_tavily_gemini.ts</span
+                                >
+                            </div>
+                            <p class="stage-desc">
+                                Reads
+                                <span class="kbd file">research.json</span>,
+                                verifies every MCP server URL, and produces two
+                                output files:
+                            </p>
+
+                            <div class="output-grid">
+                                <div class="output-card">
+                                    <div class="output-title">
+                                        <span class="kbd file"
+                                            >dataset_audit_log.json</span
+                                        >
+                                    </div>
+                                    <p>
+                                        Logs every record that was falsy,
+                                        showing the old and corrected value —
+                                        for example, the corrected MCP server
+                                        type: <em>native</em>,
+                                        <em>third-party</em>, or
+                                        <em>no MCP</em>.
+                                    </p>
+                                </div>
+                                <div class="output-card">
+                                    <div class="output-title">
+                                        <span class="kbd file"
+                                            >dataset_verified.json</span
+                                        >
+                                    </div>
+                                    <p>
+                                        The final, verified dataset. Records
+                                        flagged with a
+                                        <span class="kbd"
+                                            >human_verification</span
+                                        >
+                                        column were checked manually against the
+                                        app's info before being marked complete.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="height: 60px"></div>
+
+                    <div class="label">
+                        Final Verified Data Schema Attributes
+                    </div>
+                    <div class="schema-list">
+                        <span class="schema-badge">app_name</span>
+                        <span class="schema-badge">category</span>
+                        <span class="schema-badge">one_line_description</span>
+                        <span class="schema-badge">access_model</span>
+                        <span class="schema-badge">api_surface</span>
+                        <span class="schema-badge">mcp_status</span>
+                        <span class="schema-badge">buildability_verdict</span>
+                        <span class="schema-badge">primary_blocker</span>
+                        <span class="schema-badge">docs_url</span>
+                        <span class="schema-badge">url</span>
+                        <span class="schema-badge">mcp_server_url</span>
+                        <span class="schema-badge">human_verification</span>
+                    </div>
+                </div>
+                <!--<div class="schema-wrapper">
                     <div class="label">
                         Final Verified Data Schema Attributes
                     </div>
@@ -776,7 +1012,7 @@
                         <span class="kbd">dataset_verified.json</span> for the
                         final production output.
                     </div>
-                </div>
+                </div>-->
             </section>
         </div>
     </body>
