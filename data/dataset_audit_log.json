@@ -1,0 +1,1603 @@
+{
+  "total_checked": 100,
+  "skipped_already_native": 0,
+  "false_count": 84,
+  "mismatches": [
+    {
+      "id": 1,
+      "app": "Salesforce",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://cirra.ai/articles/salesforce-mcp-servers-connectors-guide",
+        "https://ayaninsights.com/guestblogs/salesforce-mcp-server-explained",
+        "https://mcpservers.org/servers/AiondaDotCom/mcp-salesforce",
+        "https://www.salesforceben.com/salesforce-model-context-protocol-explained-how-mcp-bridges-ai-and-your-crm",
+        "https://gptfy.ai/features/mcp-server",
+        "https://developer.salesforce.com/blogs/2025/06/introducing-mcp-support-across-salesforce",
+        "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html"
+      ],
+      "reason": "Salesforce provides hosted MCP servers officially on developer.salesforce.com.",
+      "timestamp": "2026-09-18T23:06:59.579Z"
+    },
+    {
+      "id": 3,
+      "app": "Pipedrive",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://support.pipedrive.com/en/article/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+        "https://finance.yahoo.com/technology/ai/articles/pipedrive-launches-native-mcp-server-122300050.html",
+        "https://www.linkedin.com/posts/martech-series_pipedrive-launches-native-mcp-server-bringing-activity-7477734441818374144-kEEv",
+        "https://www.salesgear.io/sales-tools/sales-mcp-servers/pipedrive-mcp",
+        "https://support.pipedrive.com/en/article/mcp",
+        "https://www.facebook.com/pipedrivepartneraltois/videos/ai-is-even-more-powerful-when-its-connected-to-your-crmwith-pipedrives-new-nativ/2220164178777871",
+        "https://tldv.io/blog/pipedrive-mcp"
+      ],
+      "reason": "Pipedrive officially launched a native MCP server with documentation on support.pipedrive.com.",
+      "timestamp": "2026-09-18T23:06:59.580Z"
+    },
+    {
+      "id": 4,
+      "app": "Attio",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.attio.com/mcp/overview",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.gosearch.ai/blog/introducing-the-attio-mcp-server-in-gosearch",
+        "https://mcpservers.org/servers/kesslerio/attio-mcp-server",
+        "https://github.com/hmk/attio-mcp-server",
+        "https://www.folk.app/articles/attio-mcp",
+        "https://mcpmux.com/servers/com.attio-mcp",
+        "https://apigene.ai/mcp/official/attio",
+        "https://docs.attio.com/mcp/overview"
+      ],
+      "reason": "Attio provides official MCP documentation and overview on docs.attio.com.",
+      "timestamp": "2026-09-18T23:06:59.580Z"
+    },
+    {
+      "id": 5,
+      "app": "Twenty",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/jezweb/twenty-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/mcp/igorwarzocha-twenty-mcp-server",
+        "https://www.folk.app/articles/twenty-crm-mcp",
+        "https://github.com/jezweb/twenty-mcp",
+        "https://silentinfotech.com/blog/odoo-1/odoo-20-native-mcp-server-625",
+        "https://www.linkedin.com/posts/twenty_introducing-ai-in-twenty-ai-chat-agents-activity-7453473180712882176-z1Kq",
+        "https://glama.ai/mcp/servers/High-Impact-Athletes/hia-twenty-mcp",
+        "https://mcpservers.org/servers/OleApp-de/TwentyMCP"
+      ],
+      "reason": "MCP integrations for Twenty come from third-party repositories and community members.",
+      "timestamp": "2026-09-18T23:06:59.580Z"
+    },
+    {
+      "id": 6,
+      "app": "Podio",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://viasocket.com/mcp/podio",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://viasocket.com/mcp/podio",
+        "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server",
+        "https://www.activepieces.com/mcp/podio",
+        "https://support.sharefile.com/s/question/0D5QP000029oEud0AE/introducing-syncello-the-only-ai-youll-ever-need-for-podio",
+        "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+        "https://www.facebook.com/groups/1283855437217819/posts/1342455111357851",
+        "https://zapier.com/mcp/podio"
+      ],
+      "reason": "Podio MCP support is provided via integration tools like viasocket and activepieces.",
+      "timestamp": "2026-09-18T23:06:59.581Z"
+    },
+    {
+      "id": 7,
+      "app": "Zoho CRM",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.folk.app/articles/zoho-crm-mcp",
+        "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "https://github.com/junnaisystems/zoho-crm-mcp",
+        "https://www.synchub.io/connectors/zohocrm/knowledge-base/mcp",
+        "https://help.zoho.com/portal/en/community/topic/zoho-crm-with-built-in-mcp-support",
+        "https://www.zoho.com/crm/developer/mcp.html",
+        "https://www.flowhunt.io/hosted-mcp-servers/zoho-crm"
+      ],
+      "reason": "Zoho CRM officially provides developer documentation for MCP on zoho.com.",
+      "timestamp": "2026-09-18T23:06:59.581Z"
+    },
+    {
+      "id": 8,
+      "app": "Close",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://close.com/integrations/close-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://streamnative.io/blog/introducing-the-streamnative-mcp-server-connecting-streaming-data-to-ai-agents",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://close.com/integrations/close-mcp",
+        "https://lobehub.com/mcp/patrickkabwe-react-native-mcp",
+        "https://www.youtube.com/watch?v=45WPU7P-1QQ",
+        "https://learn.microsoft.com/en-ca/answers/questions/5975198/how-to-delete-mcp-server",
+        "https://www.youtube.com/watch?v=VTEg8uJ4yxo&vl=en"
+      ],
+      "reason": "Close has an official integration page for its MCP implementation on close.com.",
+      "timestamp": "2026-09-18T23:06:59.581Z"
+    },
+    {
+      "id": 9,
+      "app": "Copper",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://glama.ai/mcp/servers/hasankhadra/copper-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.contextgate.ai/connectors/copper",
+        "https://glama.ai/mcp/servers/hasankhadra/copper-mcp",
+        "https://n8n.io/workflows/5315-let-ai-agents-run-your-crm-with-copper-tool-mcp-server-all-32-operations",
+        "https://viasocket.com/mcp/copper",
+        "https://www.synchub.io/connectors/copper/mcp",
+        "https://lobehub.com/mcp/patrickkabwe-rn-mcp",
+        "https://agmetalminer.com/2026/09/15/mcp-servers-copper-prices"
+      ],
+      "reason": "Copper MCP servers are provided by community maintainers on Glama and via n8n workflows.",
+      "timestamp": "2026-09-18T23:06:59.581Z"
+    },
+    {
+      "id": 10,
+      "app": "DealCloud",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://api.docs.dealcloud.com/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://api.docs.dealcloud.com/releases",
+        "https://api.docs.dealcloud.com/mcp",
+        "https://api.docs.dealcloud.com/mcp/tools",
+        "https://autorfp.ai/integrations/dealcloud",
+        "https://api.docs.dealcloud.com/mcp/getting-started",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://www.usecarly.com/blog/chatgpt-dealcloud-integration"
+      ],
+      "reason": "DealCloud provides official MCP documentation hosted on their API docs subdomain.",
+      "timestamp": "2026-09-18T23:06:59.582Z"
+    },
+    {
+      "id": 11,
+      "app": "Zendesk",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://support.zendesk.com/hc/en-us/articles/10497779528730-Connecting-to-MCP-servers-and-using-MCP-tools-in-action-flows",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://glama.ai/mcp/servers/koundinya/zd-mcp-server",
+        "https://swifteq.com/post/zendesk-mcp-server-use-cases",
+        "https://www.zendesk.com/marketplace/apps/support/1191848/mcp-server",
+        "https://www.zendesk.com/se/marketplace/apps/support/1191848/mcp-server",
+        "https://tldv.io/blog/zendesk-mcp",
+        "https://lobehub.com/mcp/digital4better-zendesk-mcp-server",
+        "https://support.zendesk.com/hc/en-us/articles/10497779528730-Connecting-to-MCP-servers-and-using-MCP-tools-in-action-flows"
+      ],
+      "reason": "Zendesk features an official MCP server listed on their marketplace and support documentation.",
+      "timestamp": "2026-09-18T23:06:59.582Z"
+    },
+    {
+      "id": 12,
+      "app": "Intercom",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/intercom/intercom-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.enterpret.com/guides/the-6-best-mcp-servers-for-intercom-customer-conversations",
+        "https://www.gumloop.com/mcp/intercom",
+        "https://www.youtube.com/watch?v=My9d-oz1Sw4",
+        "https://www.intercom.com/blog/introducing-model-context-protocol-fin",
+        "https://www.dragapp.com/blog/mcp-native-support-platforms",
+        "https://growthmethod.com/intercom-mcp-server",
+        "https://github.com/intercom/intercom-mcp-server"
+      ],
+      "reason": "Intercom provides an official MCP server in their vendor GitHub organization and blog announcement.",
+      "timestamp": "2026-09-18T23:06:59.582Z"
+    },
+    {
+      "id": 13,
+      "app": "Freshdesk",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpservers.org/servers/Enreign/freshdeck-mcp",
+        "https://mcpservers.org/servers/effytech/freshdesk_mcp",
+        "https://github.com/effytech/freshdesk_mcp",
+        "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+        "https://n8n.io/workflows/5269-freshdesk-tool-mcp-server-all-10-operations",
+        "https://mcpmarket.com/server/freshdesk",
+        "https://www.usecarly.com/blog/freshdesk-mcp"
+      ],
+      "reason": "Freshdesk provides official EAP documentation for Model Context Protocol integration.",
+      "timestamp": "2026-09-18T23:06:59.582Z"
+    },
+    {
+      "id": 14,
+      "app": "Front",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://dev.frontapp.com/docs/mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://dev.frontapp.com/docs/mcp-server",
+        "https://community.front.com/api-news-updates-40/the-front-mcp-server-is-here-beta-3712",
+        "https://community.front.com/developer-discussion-39/is-anyone-working-on-creating-an-mcp-server-for-frontapp-2309",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://www.dragapp.com/blog/mcp-native-support-platforms",
+        "https://github.com/stainless-api/mcp-front",
+        "https://www.plain.com/blog/mcp-customer-support-2026"
+      ],
+      "reason": "Front offers official developer documentation for their MCP server.",
+      "timestamp": "2026-09-18T23:06:59.583Z"
+    },
+    {
+      "id": 15,
+      "app": "Pylon",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.usepylon.com/integrations/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://truto.one/blog/connect-pylon-to-claude-manage-support-teams-user-workflows",
+        "https://www.usepylon.com/integrations/mcp",
+        "https://github.com/JustinBeckwith/pylon-mcp",
+        "https://support.usepylon.com/articles/2407390554-connecting-to-the-pylon-mcp-server",
+        "https://www.plain.com/blog/mcp-customer-support-2026",
+        "https://www.dragapp.com/blog/mcp-native-support-platforms",
+        "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp"
+      ],
+      "reason": "Pylon supports MCP natively with documentation hosted on their domain.",
+      "timestamp": "2026-09-18T23:06:59.583Z"
+    },
+    {
+      "id": 16,
+      "app": "LiveAgent",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/QualityUnit/liveagent-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+        "https://www.liveagent.com/blog/liveagent-may-2026-product-update",
+        "https://github.com/QualityUnit/liveagent-mcp-server",
+        "https://www.flowhunt.io/hosted-mcp-servers/liveagent",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://www.agent-native.com/docs/mcp-protocol",
+        "https://finance.yahoo.com/sectors/technology/articles/topsort-launches-mcp-server-power-120000605.html"
+      ],
+      "reason": "LiveAgent maintains an official MCP server repository under their vendor GitHub organization.",
+      "timestamp": "2026-09-18T23:06:59.583Z"
+    },
+    {
+      "id": 17,
+      "app": "Plain",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.plain.com/blog/mcp-customer-support-2026",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://www.plain.com/blog/mcp-customer-support-2026",
+        "https://buildtolaunch.substack.com/p/what-is-mcp-server-plain-english",
+        "https://finance.yahoo.com/news/world-first-ai-native-travel-102100385.html",
+        "https://github.com/streamnative/streamnative-mcp-server",
+        "https://developers.plane.so/dev-tools/mcp-server",
+        "https://www.reddit.com/r/ClaudeAI/comments/1qne91q/nativedevtoolsmcp_an_mcp_server_for_testing"
+      ],
+      "reason": "Plain provides official customer support MCP documentation on their domain.",
+      "timestamp": "2026-09-18T23:06:59.583Z"
+    },
+    {
+      "id": 18,
+      "app": "Help Scout",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://withwillow.ai/marketplace/connectors/help-scout",
+        "https://truto.one/blog/connect-help-scout-to-chatgpt-manage-conversations-and-threads",
+        "https://mcpservers.org/servers/drewburchfield/help-scout-mcp-server",
+        "https://mcp.so/servers/help-scout-mcp-server",
+        "https://loomal.ai/marketplace/help-scout-mcp-server",
+        "https://articles.helpscout.com/blog/introducing-help-scout-mcp",
+        "https://www.usecarly.com/blog/chatgpt-help-scout-integration"
+      ],
+      "reason": "Help Scout officially announced their MCP integration on their domain articles.",
+      "timestamp": "2026-09-18T23:06:59.583Z"
+    },
+    {
+      "id": 19,
+      "app": "Gorgias",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/gorgias-mcp-server.md",
+        "https://github.com/mattcoatsworth/Gorgias-MCP-Server",
+        "https://www.gamut.so/mcp/communication/gorgias",
+        "https://truto.one/blog/connect-gorgias-to-chatgpt-manage-support-tickets-and-workflows",
+        "https://composio.dev/toolkits/gorgias/framework/claude-code",
+        "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+        "https://gentic.co/support"
+      ],
+      "reason": "Gorgias provides official documentation for connecting AI assistants to their MCP server.",
+      "timestamp": "2026-09-18T23:06:59.584Z"
+    },
+    {
+      "id": 20,
+      "app": "Gladly",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://truto.one/blog/connect-gladly-to-chatgpt-manage-customers-tasks-and-support-data",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://truto.one/blog/connect-gladly-to-chatgpt-manage-customers-tasks-and-support-data",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://truto.one/integrations/detail/gladly",
+        "https://glama.ai/mcp/servers?attributes=category%3Acalendar-management",
+        "https://resend.com/docs/mcp-server",
+        "https://finance.yahoo.com/sectors/technology/articles/digits-launches-mcp-server-connecting-130000822.html",
+        "https://unified.to/integrations/gladly"
+      ],
+      "reason": "Gladly MCP integrations are currently handled through third-party platforms like Truto.",
+      "timestamp": "2026-09-18T23:06:59.584Z"
+    },
+    {
+      "id": 21,
+      "app": "Slack",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.slack.dev/ai/slack-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.strac.io/blog/slack-mcp-server",
+        "https://apidog.com/blog/slack-mcp-server",
+        "https://www.truefoundry.com/blog/slack-mcp-server",
+        "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack",
+        "https://reclaim.ai/blog/slack-mcp-server",
+        "https://docs.slack.dev/ai/slack-mcp-server",
+        "https://www.augmentcode.com/mcp/slack-mcp-server"
+      ],
+      "reason": "Official documentation and server are hosted on docs.slack.dev.",
+      "timestamp": "2026-09-18T23:07:12.638Z"
+    },
+    {
+      "id": 22,
+      "app": "Twilio",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.twilio.com/docs/ai/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://activatecx.com/p/twilio-mcp-server-release-technical",
+        "https://www.twilio.com/en-us/blog/developers/best-practices/why-connect-twilio-mcp-server",
+        "https://www.twilio.com/en-us/blog/developers/introducing-twilio-mcp-skills",
+        "https://github.com/deshartman/twilio-messaging-mcp-server",
+        "https://www.twilio.com/docs/ai/mcp",
+        "https://n8n.io/workflows/5078-call-and-sms-twilio-tool-mcp-server",
+        "https://mcpservers.org/servers/mustafa-boorenie/twilio_sms_mcp"
+      ],
+      "reason": "Official documentation and server are hosted on twilio.com.",
+      "timestamp": "2026-09-18T23:07:12.638Z"
+    },
+    {
+      "id": 23,
+      "app": "Zoho Cliq",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+        "https://www.zoho.com/cliq/mcp-server.html",
+        "https://help.zoho.com/portal/en/kb/zoho-cliq/cliq-7-0/user-guides/articles/setting-up-the-zoho-cliq-mcp-server",
+        "https://www.ksolves.com/blog/zoho/all-about-mcp",
+        "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
+        "https://www.usecarly.com/blog/zoho-mcp",
+        "https://www.zoho.com/mcp"
+      ],
+      "reason": "Official integration documentation and MCP links are hosted directly on zoho.com.",
+      "timestamp": "2026-09-18T23:07:12.639Z"
+    },
+    {
+      "id": 24,
+      "app": "Lark (Larksuite)",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/advanced-configuration",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcp.so/servers/lark-openapi-mcp",
+        "https://www.verdent.ai/guides/lark-mcp-vs-lark-cli-ai-dev-workflow",
+        "https://lobehub.com/mcp/kennteohstorehub-lark-mcp-n8n-automation",
+        "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/advanced-configuration",
+        "https://mcpservers.org/servers/TestKAi005/MCP-Lark",
+        "https://lobehub.com/mcp/larksuite-lark-openapi-mcp",
+        "https://github.com/larksuite/lark-openapi-mcp/blob/main/docs/usage/configuration/configuration.md"
+      ],
+      "reason": "Official configuration documentation is hosted on open.larksuite.com.",
+      "timestamp": "2026-09-18T23:07:12.639Z"
+    },
+    {
+      "id": 25,
+      "app": "Pumble",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://pumble.com/learn/pumble/connecting-pumble-with-ai-agents-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://pumble.com/learn/pumble/connecting-pumble-with-ai-agents-mcp",
+        "https://lobehub.com/bg/mcp/nitindermohan-pumble-mcp",
+        "https://github.com/shoutkol/pumble-mcp-server",
+        "https://composio.dev/toolkits/pumble",
+        "https://zapier.com/mcp/pumble",
+        "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server",
+        "https://github.com/shoutkol/pumble-mcp-server/blob/main/RELEASE_NOTES_v1.0.0.md"
+      ],
+      "reason": "Official guide and setup for MCP are hosted on pumble.com.",
+      "timestamp": "2026-09-18T23:07:12.639Z"
+    },
+    {
+      "id": 28,
+      "app": "WhatsApp Business",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.waaru.app/whatsapp-mcp-server",
+        "https://glama.ai/mcp/servers/mattcoatsworth/Whatsapp-MCP-Server",
+        "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup",
+        "https://www.wati.io/products/astra/blog/whatsapp-mcp-server",
+        "https://www.wati.io/en/blog/whatsapp-mcp-server",
+        "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+        "https://www.activepieces.com/mcp/whatsapp"
+      ],
+      "reason": "Official documentation found under Meta's developer documentation domain (developers.facebook.com).",
+      "timestamp": "2026-09-18T23:07:12.640Z"
+    },
+    {
+      "id": 29,
+      "app": "Aircall",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/themobilefirstco/aircall-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/ar/mcp/themobilefirstco-aircall-mcp-server",
+        "https://lobehub.com/mcp/themobilefirstco-aircall-mcp-server",
+        "https://rulebase.co/mcp/aircall",
+        "https://github.com/themobilefirstco/aircall-mcp-server",
+        "https://www.ringee.io/compare/aircall",
+        "https://www.activepieces.com/mcp/aircall",
+        "https://zapier.com/mcp/aircall"
+      ],
+      "reason": "No official first-party implementation; only third-party or community repositories available.",
+      "timestamp": "2026-09-18T23:07:12.640Z"
+    },
+    {
+      "id": 30,
+      "app": "Vonage",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.vonage.com/en/mcp-server/overview",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://developer.vonage.com/en/mcp-server/technical-details",
+        "https://developer.vonage.com/en/mcp-server/overview",
+        "https://github.com/Vonage/vonage-mcp-server-documentation",
+        "https://www.youtube.com/watch?v=UOA1lLa9uLs",
+        "https://mcp.so/servers/vonage-mcp-server-api-bindings",
+        "https://developer.vonage.com/en/blog/introducing-mcp-ai-meets-programmable-communications-with-vonage",
+        "https://www.vonage.com/about-us/newsroom/press-releases/press-release-landing-page/Vonage-Expands-Developer-Ecosystem-to-Accelerate-the-Next-Era-of-Enterprise-Digital-Transformation/19b6d04d-2cb0-41b7-a921-30a1cb95192a"
+      ],
+      "reason": "Official documentation and server details are hosted on developer.vonage.com.",
+      "timestamp": "2026-09-18T23:07:12.640Z"
+    },
+    {
+      "id": 31,
+      "app": "Google Ads",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.marktechpost.com/2025/10/10/google-open-sources-an-mcp-server-for-the-google-ads-api-bringing-llm-native-access-to-ads-data",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://nexla.com/blog/nexla-mcp-server-vs-google-ads-mcp-benchmark",
+        "https://www.marktechpost.com/2025/10/10/google-open-sources-an-mcp-server-for-the-google-ads-api-bringing-llm-native-access-to-ads-data",
+        "https://n8n.io/workflows/5262-let-ai-agents-get-campaigns-with-google-ads-tool-mcp-server",
+        "https://mcpservers.org/servers/gomarble-ai/google-ads-mcp-server",
+        "https://mcpservers.org/servers/twominutereports/google-ads-mcp",
+        "https://www.get-ryze.ai/blog/best-mcp-for-google-ads",
+        "https://www.youtube.com/watch?v=W8yuCZOQ8EA"
+      ],
+      "reason": "Google open-sourced an official MCP server for the Google Ads API, referenced in official announcements.",
+      "timestamp": "2026-09-18T23:07:12.640Z"
+    },
+    {
+      "id": 33,
+      "app": "LinkedIn Ads",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcp.so/servers/mcp-linkedinads",
+        "https://github.com/danielpopamd/linkedin-ads-mcp",
+        "https://mcpservers.org/servers/danielpopamd/linkedin-ads-mcp",
+        "https://improvado.io/mcp/linkedin-ads",
+        "https://syntermedia.ai/blog/mcp-server-linkedin-ads",
+        "https://www.markifact.com/linkedin-ads-mcp",
+        "https://www.get-ryze.ai/linkedin-ads-mcp"
+      ],
+      "reason": "Available strictly through community developer GitHub repositories rather than official Microsoft/LinkedIn domains.",
+      "timestamp": "2026-09-18T23:07:12.641Z"
+    },
+    {
+      "id": 34,
+      "app": "GoHighLevel",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://glama.ai/mcp/servers/alibhatti59/gohighlevel-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://glama.ai/mcp/servers/alibhatti59/gohighlevel-mcp",
+        "https://www.reddit.com/r/gohighlevel/comments/1mckezg/ghl_mcp_official_n8n_works_out_of_the_box_now",
+        "https://www.facebook.com/groups/gohighlevel1/posts/1548741926996894",
+        "https://mcpservers.org/servers/hridayshah7/gohighlevel-mcp",
+        "https://ai.exoticaitsolutions.com/blog/gohighlevel-mcp",
+        "https://lobehub.com/mcp/kersagency-ghl-mcp-server",
+        "https://optimizesmart.com/blog/how-to-connect-gohighlevel-mcp-server-to-claude"
+      ],
+      "reason": "Community and third-party listings exist, but no official native GHL domain-hosted MCP repository is available.",
+      "timestamp": "2026-09-18T23:07:12.641Z"
+    },
+    {
+      "id": 36,
+      "app": "Klaviyo",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.klaviyo.com/blog/introducing-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://magnetmonster.com/blog/klaviyo-mcp-server-a-comprehensive-guide-for-marketers",
+        "https://github.com/mattcoatsworth/Klaviyo-MCP-Server",
+        "https://www.klaviyo.com/newsroom/mcp-server",
+        "https://www.speakeasy.com/product/mcp-gateway/catalog/klaviyo",
+        "https://www.mavlers.com/blog/klaviyo-mcp-server-customer-data-automation",
+        "https://granitedatapro.com/marketing-automation/klaviyo-mcp-server",
+        "https://www.klaviyo.com/blog/introducing-mcp-server"
+      ],
+      "reason": "Official newsroom and blog posts confirm native Klaviyo MCP server release on klaviyo.com.",
+      "timestamp": "2026-09-18T23:07:12.641Z"
+    },
+    {
+      "id": 37,
+      "app": "systeme.io",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://help.systeme.io/article/11331-how-to-manage-your-contacts-with-the-systeme-io-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://thatmarketingbuddy.com/mcp/systeme-io",
+        "https://help.systeme.io/article/11331-how-to-manage-your-contacts-with-the-systeme-io-mcp-server",
+        "https://www.activepieces.com/mcp/systeme-io",
+        "https://help.systeme.io/article/11407-how-to-manage-your-newsletters-with-the-systeme-io-mcp-server",
+        "https://mcpservers.org/servers/snzeeee/mcp-server-systemeio",
+        "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+        "https://www.youtube.com/watch?v=29NDFK5eZas"
+      ],
+      "reason": "Official help documentation and management guides are hosted directly on systeme.io.",
+      "timestamp": "2026-09-18T23:07:12.641Z"
+    },
+    {
+      "id": 38,
+      "app": "Pinterest",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://medium.com/pinterest-engineering/building-an-mcp-ecosystem-at-pinterest-d881eb4c16f1",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/collactivelabs/pinterest-mcp-server",
+        "https://mcp.so/servers/mcp-pinterest",
+        "https://github.com/CDataSoftware/pinterest-mcp-server-by-cdata",
+        "https://www.digitalapplied.com/blog/advertising-mcp-servers-pinterest-microsoft-2026-guide",
+        "https://glama.ai/mcp/servers/Kargatharaakash/mcp-pinterest",
+        "https://mcp.aibase.com/server/1916341328822378498",
+        "https://medium.com/pinterest-engineering/building-an-mcp-ecosystem-at-pinterest-d881eb4c16f1"
+      ],
+      "reason": "Pinterest engineering documentation confirms an official MCP ecosystem built on Pinterest domains.",
+      "timestamp": "2026-09-18T23:07:12.641Z"
+    },
+    {
+      "id": 39,
+      "app": "Threads (Meta)",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.threads.com/@mattnavarra/post/DaQIWUEiiYk/meta-launches-an-mcp-server-to-help-developers-debug-their-apps-developer-tools",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.outstand.so/mcp/threads",
+        "https://github.com/bintangtimurlangit/threads-mcp/blob/main/README.md",
+        "https://github.com/tttn13/threads-mcp",
+        "https://www.npmjs.com/package/@mlllm/threads-mcp?activeTab=readme",
+        "https://lobehub.com/mcp/baguskto-threads-mcp",
+        "https://www.threads.com/@mattnavarra/post/DaQIWUEiiYk/meta-launches-an-mcp-server-to-help-developers-debug-their-apps-developer-tools",
+        "https://glama.ai/mcp/servers?query=Threads"
+      ],
+      "reason": "Meta developer tools include an official Meta/Threads-focused developer tool release.",
+      "timestamp": "2026-09-18T23:07:12.642Z"
+    },
+    {
+      "id": 42,
+      "app": "WooCommerce",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.woocommerce.com/docs/features/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.usecarly.com/blog/woocommerce-mcp",
+        "https://www.usecarly.com/blog/claude-woocommerce-integration",
+        "https://wooninjas.com/managing-woocommerce-products-with-mcp-add-update-sync-via-ai",
+        "https://www.digitalapplied.com/blog/woocommerce-10-9-mcp-agent-ready-wordpress-store-guide",
+        "https://github.com/techspawn/woocommerce-mcp-server",
+        "https://developer.woocommerce.com/docs/features/mcp",
+        "https://webkul.com/blog/woocommerce-mcp-server"
+      ],
+      "reason": "An official documentation path is provided directly on the WooCommerce developer domain.",
+      "timestamp": "2026-09-18T23:07:26.269Z"
+    },
+    {
+      "id": 43,
+      "app": "BigCommerce",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpmarket.com/server/bigcommerce",
+        "https://improvado.io/mcp/bigcommerce",
+        "https://github.com/isaacgounton/bigcommerce-api-mcp",
+        "https://truto.one/blog/connect-bigcommerce-to-claude-automate-support-order-fulfillment",
+        "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+        "https://www.stackone.com/connectors/bigcommerce/mcp",
+        "https://ecommerce.folio3.com/blog/how-bigcommerce-mcp-enables-real-time-ai-automation-for-ecommerce"
+      ],
+      "reason": "Official documentation page hosted on BigCommerce developer docs.",
+      "timestamp": "2026-09-18T23:07:26.269Z"
+    },
+    {
+      "id": 44,
+      "app": "Salesforce Commerce Cloud",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/taurgis/sfcc-dev-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpservers.org/servers/BrinsilElias/commercecloud-mcp-server",
+        "https://github.com/taurgis/sfcc-dev-mcp",
+        "https://github.com/ZaUtre/sfcc-mcp-server",
+        "https://lobehub.com/mcp/your-username-commercecloud-mcp-server",
+        "https://www.thecommerceteam.com/our-products/salesforce-b2c-mcp",
+        "https://www.facebook.com/salesforce/posts/salesforce-now-hosts-mcp-servers-on-the-platform-betaaccess-apis-through-mcp-wit/1264459412391513",
+        "https://ayaninsights.com/guestblogs/salesforce-mcp-server-explained"
+      ],
+      "reason": "Evidence shows third-party repositories and integrations (e.g., taurus/sfcc-dev-mcp), but no direct official native server hosted on salesforce.com domains.",
+      "timestamp": "2026-09-18T23:07:26.269Z"
+    },
+    {
+      "id": 45,
+      "app": "Magento (Adobe Commerce)",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/mcp/thomastx05-magento-mcp",
+        "https://lobehub.com/mcp/codexpect-adobe-commerce-mcp",
+        "https://www.vortexiq.ai/resources/blog/adobe-commerce-magento-mcp",
+        "https://mirasvit.com/magento-2-mcp-ai-integration.html",
+        "https://kishansavaliya.com/build-magento-2-mcp-server-with-python",
+        "https://www.linkedin.com/posts/markshust_hold-off-on-using-mcp-servers-with-your-activity-7351219975828770816-LtNl",
+        "https://github.com/rafaelstz/adobe-commerce-dev-mcp"
+      ],
+      "reason": "Community and third-party developer repositories exist (e.g., rafaelstz), without an official first-party Adobe hosted MCP release documented.",
+      "timestamp": "2026-09-18T23:07:26.269Z"
+    },
+    {
+      "id": 46,
+      "app": "Squarespace",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers-preview.squarespace.com/mcp/overview",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/mcp/busybee3333-mcpengine",
+        "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+        "https://developers-preview.squarespace.com/mcp/overview",
+        "https://lobehub.com/mcp/busybee3333-squarespace-mcp-2026-complete",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://www.mcpbundles.com/skills/squarespace",
+        "https://developer.squareup.com/docs/mcp"
+      ],
+      "reason": "Official MCP overview documentation hosted onSquarespace preview developer domain.",
+      "timestamp": "2026-09-18T23:07:26.270Z"
+    },
+    {
+      "id": 47,
+      "app": "Ecwid",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://truto.one/blog/connect-ecwid-to-claude-handle-customers-reviews-and-marketing",
+        "https://viasocket.com/mcp/ecwid-by-lightspeed",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://zapier.com/mcp/ecwid",
+        "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+        "https://anythingmcp.com/marketplace/ecwid",
+        "https://finance.yahoo.com/sectors/technology/articles/topsort-launches-mcp-server-power-120000605.html"
+      ],
+      "reason": "Listed in third-party hubs and community utility repos (e.g., m190/usefulapi-mcp), with no first-party official Ecwid domain MCP implementation.",
+      "timestamp": "2026-09-18T23:07:26.270Z"
+    },
+    {
+      "id": 48,
+      "app": "Gumroad",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/rmarescu/gumroad-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://composio.dev/toolkits/gumroad/framework/claude-code",
+        "https://mcp.aibase.com/server/1916343466965311490",
+        "https://github.com/rmarescu/gumroad-mcp",
+        "https://mcpmarket.com/server/gumroad",
+        "https://mcpservers.org/servers/rmarescu/gumroad-mcp",
+        "https://zapier.com/mcp/gumroad",
+        "https://www.reddit.com/r/mcp/comments/1k367vh/gumroad_a_model_context_protocol_mcp_server"
+      ],
+      "reason": "Third-party developer repositories and toolkits available (e.g., rmarescu/gumroad-mcp), but no native official release.",
+      "timestamp": "2026-09-18T23:07:26.270Z"
+    },
+    {
+      "id": 49,
+      "app": "Amazon Selling Partner",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/amazon-selling-partner-mcp-server.md",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/amazon-selling-partner-mcp-server.md",
+        "https://gentic.co/amazon",
+        "https://glama.ai/mcp/servers/D2D99/amazon-mcp",
+        "https://mcp.aibase.com/server/1916354521688154113",
+        "https://lobehub.com/mcp/sakshsiw-sellerbridge",
+        "https://novadata.io/amazon-seller-central-mcp-server",
+        "https://github.com/amzn/selling-partner-api-samples/discussions/131"
+      ],
+      "reason": "Community integrations exist via third-party wrappers, but no official Amazon SP-API native MCP server exists on official domain.",
+      "timestamp": "2026-09-18T23:07:26.271Z"
+    },
+    {
+      "id": 51,
+      "app": "DataForSEO",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://dataforseo.com/model-context-protocol",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://dataforseo.com/help-center/setting-up-the-official-dataforseo-mcp-server-simple-guide",
+        "https://dataforseo.com/update/dataforseo-mcp-server-launch",
+        "https://github.com/Skobyn/dataforseo-mcp-server",
+        "https://blog.coupler.io/seo-mcp",
+        "https://contextbolt.com/blog/dataforseo-mcp-setup",
+        "https://dataforseo.com/model-context-protocol",
+        "https://dataforseo.com/help-center/how-to-connect-the-official-dataforseo-mcp-server-to-chatgpt-simple-guide"
+      ],
+      "reason": "Official MCP server launched and documented on the official DataForSEO domain.",
+      "timestamp": "2026-09-18T23:07:26.271Z"
+    },
+    {
+      "id": 52,
+      "app": "SE Ranking",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://seranking.com/api/integrations/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://seranking.com/api/integrations/mcp",
+        "https://thatmarketingbuddy.com/mcp/se-ranking",
+        "https://www.gamut.so/mcp/analytics-marketing/se-ranking",
+        "https://seranking.com/blog/best-seo-mcps",
+        "https://seranking.com/integrations.html",
+        "https://chrisraulf.com/se-ranking-mcp-keyword-research-automation",
+        "https://dailyemerald.com/188418/promotedposts/best-mcp-server-for-geo-aeo-and-serm-experts-in-2026"
+      ],
+      "reason": "Official integration path hosted directly on the SE Ranking domain.",
+      "timestamp": "2026-09-18T23:07:26.271Z"
+    },
+    {
+      "id": 53,
+      "app": "Ahrefs",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.gumloop.com/mcp/ahrefs",
+        "https://mcpservers.org/remote-mcp-servers/ahrefs",
+        "https://docs.ahrefs.com/en/mcp/docs/introduction",
+        "https://www.merge.dev/connectors/ahrefs",
+        "https://suganthan.com/blog/ahrefs-mcp-server-manus-skill",
+        "https://ahrefs.com/blog/mcp-use-cases",
+        "https://contextbolt.com/seo/compare/contextbolt-seo-vs-ahrefs-mcp"
+      ],
+      "reason": "Official documentation for MCP is hosted on Ahrefs' official documentation subdomain.",
+      "timestamp": "2026-09-18T23:07:26.271Z"
+    },
+    {
+      "id": 54,
+      "app": "MrScraper",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.mrscraper.com",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/mcp/mrscraper-com-mrscraper-mcp",
+        "https://composio.dev/toolkits/mrscraper",
+        "https://docs.mrscraper.com",
+        "https://mcp.ai/mrscraper",
+        "https://mrscraper.com/integrations",
+        "https://www.skyvern.com/blog/top-mcp-servers-web-scraping",
+        "https://fastcrw.com/blog/best-mcp-servers-web-scraping"
+      ],
+      "reason": "Official platform integration and docs hosted on MrScraper's official documentation domain.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 55,
+      "app": "Apify",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.apify.com/integrations/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://use-apify.com/blog/tags/mcp",
+        "https://docs.apify.com/integrations/mcp",
+        "https://oaphub.ai/mcp/267305287893909504",
+        "https://www.scalekit.com/blog/apify-mcp-vs-api",
+        "https://www.usecarly.com/blog/apify-mcp",
+        "https://apify.com/halilc4/research-tools-mcp",
+        "https://github.com/apify/apify-mcp-server"
+      ],
+      "reason": "Official Apify MCP server and documentation hosted on Apify's official domains and official GitHub organization.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 56,
+      "app": "Firecrawl",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://modelscope.cn/mcp/servers/@mendableai/firecrawl-mcp-server",
+        "https://www.firecrawl.dev/use-cases/ai-mcps",
+        "https://www.youtube.com/watch?v=32dVRCTnnkQ&vl=en",
+        "https://pub.towardsai.net/i-wired-firecrawl-into-claude-via-mcp-heres-the-honest-breakdown-673a5e288849",
+        "https://github.com/firecrawl/firecrawl-mcp-server",
+        "https://www.reddit.com/r/codex/comments/1qw648e/firecrawl_for_ai_agents_skills_vs_mcp_servers_for",
+        "https://www.crawlforge.dev/blog/best-mcp-servers-web-scraping-2026"
+      ],
+      "reason": "Official Firecrawl MCP server hosted directly on the official Firecrawl GitHub organization.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 57,
+      "app": "Bright Data",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.brightdata.com/products/mcp-server/remote/quickstart",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://stacklok.com/registry/brightdata-mcp",
+        "https://docs.brightdata.com/products/mcp-server/faqs",
+        "https://github.com/brightdata",
+        "https://dev.co/ai/mcp/brightdata-mcp",
+        "https://brightdata.com/pricing/mcp-server",
+        "https://docs.brightdata.com/products/mcp-server/remote/quickstart",
+        "https://www.youtube.com/watch?v=0xmE0OJrNmg"
+      ],
+      "reason": "Official MCP products and setup guide hosted directly on Bright Data's documentation domain.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 58,
+      "app": "Sherlock",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/H4RR1SON/sherlock-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://glama.ai/mcp/servers/H4RR1SON/sherlock-mcp",
+        "https://github.com/H4RR1SON/sherlock-mcp",
+        "https://www.nuget.org/packages/Sherlock.MCP.Server",
+        "https://mcpmarket.com/server/sherlock",
+        "https://mcpservers.org/servers/jcucci/dotnet-sherlock-mcp",
+        "https://m8ven.ai/mcp/h4rr1son-sherlock-mcp-18imja",
+        "https://loomal.ai/marketplace/dotnet-sherlock-mcp"
+      ],
+      "reason": "Maintained as a third-party community repository and package, not as a first-party official server from the core Sherlock maintainers.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 60,
+      "app": "Clay",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.clay.com/guides/clay-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.salesforge.ai/blog/clay-mcp",
+        "https://www.town.com/integrations/clay",
+        "https://www.linkedin.com/posts/estebanlopez_tfw-clay-is-cooking-something-mcp-servers-activity-7362899766977912833-s66F",
+        "https://www.gumloop.com/mcp/clay",
+        "https://lagrowthmachine.com/clay-mcp",
+        "https://withwillow.ai/marketplace/connectors/clay",
+        "https://www.clay.com/guides/clay-mcp"
+      ],
+      "reason": "Official guides and resources hosted directly on Clay's official domain.",
+      "timestamp": "2026-09-18T23:07:26.272Z"
+    },
+    {
+      "id": 61,
+      "app": "GitHub",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/mcp/github/github-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.mintmcp.com/blog/github-mcp-server",
+        "https://github.com/mcp/github/github-mcp-server",
+        "https://mcpservers.org/servers/ildunari/Github-MCP",
+        "https://github.blog/changelog/2025-04-04-github-mcp-server-public-preview",
+        "https://www.reddit.com/r/mcp/comments/1jri4c6/github_released_its_official_mcp_server",
+        "https://docs.github.com/en/copilot/concepts/context/mcp",
+        "https://github.com/cyanheads/git-mcp-server"
+      ],
+      "reason": "Official GitHub MCP server is available under the official documentation and GitHub organization.",
+      "timestamp": "2026-09-18T23:07:37.103Z"
+    },
+    {
+      "id": 62,
+      "app": "Vercel",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://foundrysoft.co/services/vercel-ai-sdk-mcp-servers",
+        "https://vercel.com/blog/introducing-vercel-mcp-connect-vercel-to-your-ai-tools",
+        "https://mcpservers.org/servers/msabramo/vercel-mcp",
+        "https://www.mintmcp.com/blog/connect-multiple-ai-models",
+        "https://vercel.com/docs/agent-resources/vercel-mcp",
+        "https://vercel.com/changelog/mcp-server-support-on-vercel",
+        "https://github.com/Quegenx/vercel-mcp-server"
+      ],
+      "reason": "Vercel provides an official MCP integration supported directly on vercel.com.",
+      "timestamp": "2026-09-18T23:07:37.104Z"
+    },
+    {
+      "id": 63,
+      "app": "Netlify",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/netlify/netlify-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.netlify.com/press/netlify-launches-official-mcp-server-setting-the-standard-for-agent-native-development",
+        "https://github.com/netlify/netlify-mcp",
+        "https://www.netlify.com/knowledge-base/how-to-build-and-deploy-an-mcp-server-on-netlify",
+        "https://developers.netlify.com/guides/write-mcps-on-netlify",
+        "https://docs.netlify.com/build/build-with-ai/agent-setup-guides/agent-setup-overview",
+        "https://www.netlify.com/blog/netlify-mcp-server-ai-agents-deploy-your-code",
+        "https://composio.dev/toolkits/netlify_mcp"
+      ],
+      "reason": "Netlify offers an official MCP server hosted under their official GitHub organization.",
+      "timestamp": "2026-09-18T23:07:37.104Z"
+    },
+    {
+      "id": 64,
+      "app": "Cloudflare",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/cloudflare/mcp",
+        "https://github.com/cloudflare/mcp-server-cloudflare",
+        "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare",
+        "https://explainx.ai/mcp-servers/cloudflare-documentation",
+        "https://blog.cloudflare.com/remote-model-context-protocol-servers-mcp",
+        "https://fast.io/resources/deploy-mcp-server-cloudflare-workers",
+        "https://mcpservers.org/servers/cloudflare/mcp-server-cloudflare"
+      ],
+      "reason": "Cloudflare provides an official MCP server hosted in their official Cloudflare GitHub organization.",
+      "timestamp": "2026-09-18T23:07:37.105Z"
+    },
+    {
+      "id": 65,
+      "app": "Supabase",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://supabase.com/features/mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/alexander-zuev/supabase-mcp-server",
+        "https://supabase.com/features/mcp-server",
+        "https://www.builder.io/blog/supabase-mcp",
+        "https://mcpservers.org/servers/supabase-mcp-server",
+        "https://enterprisedna.co/directories/mcp/mcp-supabase",
+        "https://www.mintmcp.com/blog/connect-supabase-with-mcp",
+        "https://supabase.com/blog/mcp-server"
+      ],
+      "reason": "Supabase offers an official MCP server feature documented on their domain.",
+      "timestamp": "2026-09-18T23:07:37.105Z"
+    },
+    {
+      "id": 66,
+      "app": "Neo4j",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/neo4j-contrib/mcp-neo4j",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp",
+        "https://neo4j.com/labs/genai-ecosystem/agent-platforms",
+        "https://github.com/neo4j-contrib/mcp-neo4j",
+        "https://github.com/neo4j-contrib/mcp-neo4j/blob/main/servers/mcp-neo4j-cypher/README.md",
+        "https://medium.com/neo4j/implementing-neo4j-graphrag-retrievers-as-mcp-server-77162e1d2b40",
+        "https://pypi.org/project/mcp-neo4j-data-modeling",
+        "https://mcpservers.org/servers/cxt9/neo4j-mcp"
+      ],
+      "reason": "Neo4j officially supports MCP via their contributor organization github repository.",
+      "timestamp": "2026-09-18T23:07:37.106Z"
+    },
+    {
+      "id": 67,
+      "app": "Snowflake",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.snowflake.com/en/developer-guide/native-apps/agents-mcp-servers",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://docs.snowflake.com/en/release-notes/2026/other/2026-08-07-native-apps-agents-mcp-ga",
+        "https://medium.com/towards-data-engineering/building-a-production-grade-snowflake-ai-agent-using-mcp-server-with-cortex-ai-d5253ee1305d",
+        "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+        "https://docs.snowflake.com/en/developer-guide/native-apps/agents-mcp-servers",
+        "https://docs.snowflake.com/en/release-notes/2025/other/2025-10-02-mcp-server",
+        "https://www.dreamfactory.com/hub/set-up-mcp-server-for-snowflake",
+        "https://www.snowflake.com/en/blog/managed-mcp-servers-secure-data-agents"
+      ],
+      "reason": "Snowflake provides native MCP server support documented on their official developer portal.",
+      "timestamp": "2026-09-18T23:07:37.106Z"
+    },
+    {
+      "id": 68,
+      "app": "MongoDB Atlas",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/mongodb-developer/mcp-mongodb-atlas",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.mongodb.com/products/updates/now-ga-mongodb-atlas-managed-mcp-server",
+        "https://www.mongodb.com/docs/mcp-server/overview",
+        "https://www.mongodb.com/company/blog/product-release-announcements/mongodb-for-agentic-era-built-for-developers-ai-agents",
+        "https://github.com/mongodb-developer/mcp-mongodb-atlas",
+        "https://cursor.com/marketplace/mcp/mongodb-atlas",
+        "https://www.facebook.com/MongoDB/posts/mongodb-atlas-managed-mcp-server-is-now-available-as-a-plugin-on-major-ai-market/1621014700068535",
+        "https://www.infoworld.com/article/4210798/mongodb-unveils-mongodb-atlas-managed-mcp-server.html"
+      ],
+      "reason": "MongoDB provides a managed MCP server via their official developer organization.",
+      "timestamp": "2026-09-18T23:07:37.107Z"
+    },
+    {
+      "id": 69,
+      "app": "Datadog",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.datadoghq.com/mcp_server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/azure-native-isv",
+        "https://docs.datadoghq.com/mcp_server",
+        "https://www.channelinsider.com/ai/datadog-mcp-server-observability",
+        "https://www.truefoundry.com/blog/datadog-mcp-server",
+        "https://finance.yahoo.com/news/datadog-launches-mcp-server-ai-130000906.html",
+        "https://ca.finance.yahoo.com/news/datadog-launches-mcp-server-ai-130000906.html",
+        "https://www.stocktitan.net/news/DDOG/datadog-launches-mcp-server-to-provide-ai-agents-with-secure-real-cy89xwmx6vyr.html"
+      ],
+      "reason": "Datadog provides an official MCP server detailed in their official documentation.",
+      "timestamp": "2026-09-18T23:07:37.107Z"
+    },
+    {
+      "id": 70,
+      "app": "Sentry",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/getsentry/sentry-mcp-stdio",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://blog.sentry.io/yes-sentry-has-an-mcp-server-and-its-pretty-good",
+        "https://github.com/getsentry/sentry-mcp-stdio",
+        "https://docs.aigateway.cequence.ai/docs/remote-mcp-servers/sentry",
+        "https://mcpservers.org/servers/getsentry/sentry-mcp-ts",
+        "https://www.town.com/integrations/sentry",
+        "https://www.mintmcp.com/blog/connect-sentry-to-mcp",
+        "https://news.ycombinator.com/item?id=46862288"
+      ],
+      "reason": "Sentry maintains an official MCP server repository under their getsentry organization.",
+      "timestamp": "2026-09-18T23:07:37.108Z"
+    },
+    {
+      "id": 71,
+      "app": "Notion",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://www.notion.com/help/mcp-connections-for-custom-agents",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.stackone.com/blog/notion-mcp-deep-dive",
+        "https://www.truefoundry.com/blog/notion-mcp-server",
+        "https://www.scalekit.com/blog/notion-mcp-vs-api",
+        "https://mcpservers.org/servers/ContexaAI/Notion-MCP-Server-SSE",
+        "https://mcp.so/servers/notion-mcp-server-itsiiromiuy",
+        "https://www.notion.com/help/guides/connect-custom-agents-to-mcp-integrations",
+        "https://www.notion.com/help/mcp-connections-for-custom-agents"
+      ],
+      "reason": "Notion supplies native guidance and MCP server tools on their official help domain.",
+      "timestamp": "2026-09-18T23:07:37.108Z"
+    },
+    {
+      "id": 72,
+      "app": "Airtable",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://support.airtable.com/articles/9897799762-using-the-airtable-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpmarket.com/server/airtable-9",
+        "https://support.airtable.com/articles/9897799762-using-the-airtable-mcp-server",
+        "https://airtable-mcp.business-automated.com",
+        "https://www.truefoundry.com/pt/blog/airtable-mcp-server",
+        "https://www.airtable.com/articles/mcp-server-interfaces-automations",
+        "https://cursor.com/marketplace/mcp/airtable",
+        "https://www.augmentcode.com/mcp/airtable-mcp-server"
+      ],
+      "reason": "Airtable provides an official support page and integration for their MCP server.",
+      "timestamp": "2026-09-18T23:07:37.108Z"
+    },
+    {
+      "id": 73,
+      "app": "Linear",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://linear.app/docs/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://medium.com/@marc.bara.iniesta/10-mcp-and-native-connections-every-knowledge-worker-should-try-7c62e25028ef",
+        "https://linear.app/docs/mcp",
+        "https://www.mintmcp.com/blog/mcp-gateways-linear-integration",
+        "https://www.strac.io/blog/linear-mcp-server",
+        "https://mcpservers.org/servers/tacticlaunch/mcp-linear",
+        "https://github.com/jerhadf/linear-mcp-server",
+        "https://www.builder.io/blog/linear-mcp-server"
+      ],
+      "reason": "Linear hosts official documentation for connecting via MCP on their main domain.",
+      "timestamp": "2026-09-18T23:07:37.108Z"
+    },
+    {
+      "id": 74,
+      "app": "Jira",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/atlassian/atlassian-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://titanapps.io/blog/jira-mcp-server",
+        "https://mcpservers.org/servers/guanghuang/jira-mcp",
+        "https://www.workato.com/the-connector/jira-mcp",
+        "https://testomat.io/blog/building-jira-mcp-server-integration-with-test-management",
+        "https://www.mindstudio.ai/blog/atlassian-mcp-server-ga-claude-reads-writes-jira-confluence-compass-oauth",
+        "https://github.com/atlassian/atlassian-mcp-server",
+        "https://lobehub.com/mcp/amruthabesto28-jira-mcp"
+      ],
+      "reason": "Atlassian provides an official MCP server hosted on their corporate GitHub organization.",
+      "timestamp": "2026-09-18T23:07:37.108Z"
+    },
+    {
+      "id": 75,
+      "app": "Asana",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers.asana.com/docs/mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://developers.asana.com/docs/mcp-server",
+        "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "https://www.gumloop.com/mcp/asana",
+        "https://www.mintmcp.com/blog/connect-asana-to-mcp",
+        "https://github.com/roychri/mcp-server-asana",
+        "https://developers.asana.com/docs/mcp-clients",
+        "https://truto.one/blog/connect-asana-to-claude-manage-team-collaboration-track-goals"
+      ],
+      "reason": "Asana offers official documentation and guides for their MCP server implementation.",
+      "timestamp": "2026-09-18T23:07:37.109Z"
+    },
+    {
+      "id": 76,
+      "app": "Monday.com",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.monday.com/api-reference/docs/monday-mcp-security-overview",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://developer.monday.com/api-reference/docs/monday-mcp-security-overview",
+        "https://till-freitag.com/en/blog/monday-mcp-tools-and-integrations-en",
+        "https://support.monday.com/hc/en-us/articles/32364501317906-monday-MCP-available-tools",
+        "https://n8n.io/workflows/5120-mondaycom-tool-mcp-server-all-18-operations",
+        "https://mcpservers.org/servers/sakce/mcp-server-monday",
+        "https://developer.monday.com/api-reference/docs/build-on-monday-with-ai",
+        "https://support.monday.com/hc/en-us/articles/28515034903314-Get-started-with-monday-MCP"
+      ],
+      "reason": "Monday.com provides official developer documentation and security guides for their MCP server.",
+      "timestamp": "2026-09-18T23:07:37.109Z"
+    },
+    {
+      "id": 77,
+      "app": "ClickUp",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://clickup.com/blog/mcp-tools",
+        "https://www.lightningventures.com.au/mcp/claude/clickup",
+        "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+        "https://github.com/DiversioTeam/clickup-mcp",
+        "https://help.clickup.com/hc/en-us/articles/33335772678423-What-is-ClickUp-MCP",
+        "https://mcpservers.org/servers/github-com-taazkareem-clickup-mcp-server",
+        "https://www.scalekit.com/blog/clickup-mcp-vs-api"
+      ],
+      "reason": "ClickUp provides official documentation and guides for connecting AI assistants via their MCP server.",
+      "timestamp": "2026-09-18T23:07:37.109Z"
+    },
+    {
+      "id": 78,
+      "app": "Coda",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://usecoda.dev/docs/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.gosearch.ai/blog/coda-mcp-server-gosearch",
+        "https://github.com/orellazri/coda-mcp",
+        "https://mcpservers.org/servers/orellazri/coda-mcp",
+        "https://mcp.so/servers/codamcpserver",
+        "https://usecoda.dev/docs/mcp",
+        "https://github.com/TJC-LP/coda-mcp-server",
+        "https://help.coda.io/hc/en-us/articles/44722661982989-Connect-to-the-Coda-MCP"
+      ],
+      "reason": "Coda hosts official documentation for connecting to their native MCP server.",
+      "timestamp": "2026-09-18T23:07:37.109Z"
+    },
+    {
+      "id": 79,
+      "app": "Smartsheet",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server",
+        "https://github.com/terilios/smartsheet-server",
+        "https://www.gosearch.ai/blog/smartsheet-mcp-server-gosearch",
+        "https://www.smartsheet.com/content-center/news/smartsheet-mcp-server-achieves-exceptional-customer-adoption-first-week-4000",
+        "https://finance.yahoo.com/sectors/technology/articles/smartsheet-mcp-server-achieves-exceptional-130000914.html",
+        "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools",
+        "https://community.smartsheet.com/en/discussion/145882/connect-any-mcp-compliant-ai-tool-to-your-smartsheet-data-with-the-new-mcp-server"
+      ],
+      "reason": "Smartsheet provides an official MCP server integration supported on their developer portal.",
+      "timestamp": "2026-09-18T23:07:37.109Z"
+    },
+    {
+      "id": 82,
+      "app": "Plaid",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://plaid.com/docs/resources/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://apigene.ai/mcp/official/plaid",
+        "https://plaid.com/blog/plaid-mcp-ai-assistant-claude",
+        "https://plaid.com/docs/resources/mcp",
+        "https://glama.ai/mcp/servers/t-rhex/plaid-mcp",
+        "https://lobehub.com/mcp/arjabbar-plaidmcp",
+        "https://plaid.com/blog/openai-plaid-mcp",
+        "https://finance.yahoo.com/news/karmacheck-launches-mcp-server-background-150000317.html"
+      ],
+      "reason": "Official documentation and blog posts confirm native MCP support directly on Plaid's domain.",
+      "timestamp": "2026-09-18T23:07:47.951Z"
+    },
+    {
+      "id": 83,
+      "app": "Binance",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/TermiX-official/binance-mcp",
+        "https://mcpservers.org/servers/TermiX-official/binance-mcp",
+        "https://lobehub.com/mcp/your-repo-binance-mcp-server",
+        "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+        "https://langdb.ai/app/mcp-servers/binance-mcp-server-8f9fb33e-4a1e-4a5c-87c1-9d0f97eaa45e",
+        "https://glama.ai/mcp/servers/UpperMoon0/Binance-MCP",
+        "https://mcpmarket.com/server/binance-8"
+      ],
+      "reason": "Official developer docs confirm a native agent-native MCP server hosted by Binance.",
+      "timestamp": "2026-09-18T23:07:47.952Z"
+    },
+    {
+      "id": 85,
+      "app": "iPayX",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/Ipayx-stellar/mcp-fx-audit",
+        "https://glama.ai/mcp/connectors/io.github.Ipayx-stellar/fx-audit",
+        "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+        "https://glama.ai/mcp/servers?query=namespace%3Aio.github.Ipayx-stellar",
+        "https://glama.ai/mcp/servers/iPAYX-Technologies/mcp-fx-audit",
+        "https://claudemarketplaces.com/mcp/io.github.ipayx-stellar/fx-audit",
+        "https://www.pulsemcp.com/servers/ipayx-stellar-fx-audit"
+      ],
+      "reason": "Found community/third-party repositories and integrations for iPayX FX audit MCP.",
+      "timestamp": "2026-09-18T23:07:47.952Z"
+    },
+    {
+      "id": 87,
+      "app": "Xero",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/xeroapi/xero-mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/xeroapi/xero-mcp-server",
+        "https://www.usecarly.com/blog/xero-mcp",
+        "https://explainx.ai/mcp-servers/xero",
+        "https://mcpservers.org/servers/john-zhang-dev/xero-mcp",
+        "https://www.agentx.so/mcp/xero",
+        "https://www.explainx.ai/mcp-servers/xero-accounting",
+        "https://improvado.io/mcp/xero"
+      ],
+      "reason": "Official Xero developer organization hosts the official Xero MCP server.",
+      "timestamp": "2026-09-18T23:07:47.953Z"
+    },
+    {
+      "id": 88,
+      "app": "Brex",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developer.brex.com/docs/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpmux.com/servers/dennisonbertram.brex-mcp-npx",
+        "https://mcp.so/servers/mcp-brex-server",
+        "https://www.usecarly.com/blog/brex-mcp",
+        "https://github.com/crazyrabbitLTC/mcp-brex-server",
+        "https://developer.brex.com/docs/mcp",
+        "https://lobehub.com/ar/mcp/dennisonbertram-brex-mcp-server",
+        "https://www.brex.com/support/using-brex-in-ai-apps"
+      ],
+      "reason": "Official Brex developer documentation provides direct integration support for MCP.",
+      "timestamp": "2026-09-18T23:07:47.953Z"
+    },
+    {
+      "id": 89,
+      "app": "Ramp",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://github.com/ramp-public/ramp_mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcpmarket.com/es/server/ramp-3",
+        "https://truto.one/blog/connect-ramp-to-chatgpt-manage-spend-cards-and-accounting-sync",
+        "https://glama.ai/mcp/connectors/com.ramp.ramp-mcp-remote/ramp",
+        "https://github.com/ramp-public/ramp_mcp",
+        "https://builders.ramp.com/post/ramp-mcp",
+        "https://composio.dev/toolkits/ramp/framework/claude-code",
+        "https://www.mintmcp.com/docs/ramp-mcp-setup"
+      ],
+      "reason": "Official Ramp public repository and builder posts confirm native support.",
+      "timestamp": "2026-09-18T23:07:47.953Z"
+    },
+    {
+      "id": 90,
+      "app": "PitchBook",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://pitchbook.com/media/press-releases/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://top-mcps.com/mcp/pitchbook",
+        "https://mcpservers.org/remote-mcp-servers/pitchbook",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://pitchbook.com/media/press-releases/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence",
+        "https://mcp-proxy-external.pitchbook.com",
+        "https://www.tooljunction.io/mcp/pitchbook",
+        "https://agentman.ai/agentskills/connections/mcp-server/pitchbook"
+      ],
+      "reason": "PitchBook press releases confirm official essential MCP integration.",
+      "timestamp": "2026-09-18T23:07:47.954Z"
+    },
+    {
+      "id": 91,
+      "app": "NotebookLM",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/PleasePrompto/notebooklm-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://generativeai.pub/notebooklm-as-an-mcp-server-the-missing-layer-between-your-team-and-your-ai-workflow-4ffa7fe99a4b",
+        "https://www.xda-developers.com/notebooklm-connects-to-claude-through-mcp",
+        "https://github.com/google/mcp/issues/19",
+        "https://agentnativedev.medium.com/automate-google-notebooklm-from-your-ai-agent-with-notebooklm-mcp-3c513a37396a",
+        "https://github.com/PleasePrompto/notebooklm-mcp",
+        "https://www.npmjs.com/package/@m4ykeldev/notebooklm-mcp",
+        "https://explainx.ai/mcp-servers/notebooklm"
+      ],
+      "reason": "Only community or third-party wrappers/packages exist for NotebookLM MCP integration.",
+      "timestamp": "2026-09-18T23:07:47.954Z"
+    },
+    {
+      "id": 92,
+      "app": "Otter AI",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.spinach.ai/blog/spinach-vs-otter-integrations-comparison",
+        "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+        "https://github.com/bcharleson/otter-cli",
+        "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+        "https://zapier.com/mcp/otterai",
+        "https://glama.ai/mcp/servers/ChocoTonic/otterai-mcp",
+        "https://lobehub.com/mcp/yourusername-otter-mcp-server"
+      ],
+      "reason": "Official Otter AI support pages host documentation for the Otter MCP Server.",
+      "timestamp": "2026-09-18T23:07:47.955Z"
+    },
+    {
+      "id": 94,
+      "app": "Consensus",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://lobehub.com/mcp/consensus-nlp-consensus-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://lobehub.com/mcp/consensus-nlp-consensus-mcp",
+        "https://support.goconsensus.com/mcp-server-security-information",
+        "https://composio.dev/toolkits/consensus",
+        "https://www.stocktitan.net/news/FDS/fact-set-meets-demand-for-ai-ready-data-first-to-announce-mcp-sans-cg0hxqvudtyk.html",
+        "https://www.youtube.com/watch?v=0nRUTlAI8rE",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html",
+        "https://github.com/BeehiveInnovations/pal-mcp-server/blob/main/docs/tools/consensus.md"
+      ],
+      "reason": "Found third-party integrations and toolkits for Consensus MCP.",
+      "timestamp": "2026-09-18T23:07:47.955Z"
+    },
+    {
+      "id": 95,
+      "app": "Reducto",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://docs.reducto.ai/mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://github.com/reductoai/mcp-server-reducto",
+        "https://docs.reducto.ai/mcp-server",
+        "https://www.gumloop.com/mcp/reducto",
+        "https://reducto.ai/about",
+        "https://reducto.ai/careers/fc364c32-445c-4746-9ac4-a8e1a187f299",
+        "https://reducto.ai/compare/reducto-vs-llamaparse",
+        "https://finance.yahoo.com/sectors/technology/articles/swoogo-launches-native-mcp-server-140000817.html"
+      ],
+      "reason": "Official Reducto documentation hosts the official MCP server.",
+      "timestamp": "2026-09-18T23:07:47.956Z"
+    },
+    {
+      "id": 97,
+      "app": "higgsfield",
+      "original_mcp_status": "No MCP / Custom Wrapper Needed",
+      "verified_mcp_status": "Third-Party MCP",
+      "mcp_server_url": "https://github.com/jfikrat/higgsfield-mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://explainx.ai/mcp-servers/higgsfield-mcp",
+        "https://github.com/jfikrat/higgsfield-mcp",
+        "https://glama.ai/mcp/servers/keerthanar24/MCP_Blotato_higgsfield",
+        "https://glama.ai/mcp/servers/jfikrat/higgsfield-mcp",
+        "https://www.closingmorecases.com/higgsfield-mcp-setup-guide",
+        "https://www.explainx.ai/mcp-servers/higgsfield-mcp",
+        "https://www.remoteopenclaw.com/mcp/geopopos/geo_higgsfield_ai_mcp"
+      ],
+      "reason": "Only community and third-party repositories exist for Higgsfield MCP.",
+      "timestamp": "2026-09-18T23:07:47.956Z"
+    },
+    {
+      "id": 98,
+      "app": "Mermaid CLI",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://mermaid.ai/docs/ai/mcp-server",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://mcp.so/servers/mermaid-mcp-server-longjianjiang",
+        "https://mermaid.ai/docs/ai/mcp-server",
+        "https://mcpservers.org/servers/hustcc/mcp-mermaid",
+        "https://lobehub.com/nl/mcp/aviciot-mcp_mermaid",
+        "https://explainx.ai/mcp-servers/mermaid",
+        "https://mcpservers.org/servers/peng-shawn/mermaid-mcp-server",
+        "https://mcpnest.io/servers/mermaid-cli-server"
+      ],
+      "reason": "Official AI docs hosted by Mermaid provide the official MCP server implementation.",
+      "timestamp": "2026-09-18T23:07:47.956Z"
+    },
+    {
+      "id": 100,
+      "app": "Grain",
+      "original_mcp_status": "Third-Party MCP",
+      "verified_mcp_status": "Native MCP Available",
+      "mcp_server_url": "https://developers.grain.com/mcp",
+      "human_verification": "check mcp server url",
+      "search_evidence": [
+        "https://www.youtube.com/watch?v=xwwxeR2WAtA",
+        "https://developers.grain.com/mcp",
+        "https://mcpnest.io/servers/grain-mcp-server",
+        "https://docs.glean.com/administration/platform/mcp/about",
+        "https://lobehub.com/mcp/patrickkabwe-rn-mcp",
+        "https://zapier.com/mcp/grain",
+        "https://github.com/streamnative/streamnative-mcp-server"
+      ],
+      "reason": "Official Grain developers site hosts official MCP documentation.",
+      "timestamp": "2026-09-18T23:07:47.956Z"
+    }
+  ]
+}

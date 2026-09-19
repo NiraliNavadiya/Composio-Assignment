@@ -1,61 +1,54 @@
-// import * as fs from "fs";
-import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import * as path from "path";
 import * as fs from "fs";
+import { GoogleGenerativeAI, SchemaType } from "@google/generative-ai";
 
 dotenv.config({ path: path.resolve(__dirname, "..", ".env") });
 
-const apiKey = process.env.GEMINI_API_KEY;
-console.log(" ----- apiKey ------", apiKey);
-if (!apiKey) {
-  console.error(
-    " Error: Set GEMINI_API_KEY environment variable before running.",
-  );
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+const TAVILY_API_KEY = process.env.TAVILY_API_KEY;
+
+if (!GEMINI_API_KEY) {
+  console.error("❌ Error: Set GEMINI_API_KEY or GOOGLE_API_KEY in .env");
   process.exit(1);
 }
 
-const ai = new GoogleGenAI({ apiKey });
-const TAVILY_API_KEY = process.env.TAVILY_API_KEY;
-console.log(" -- TAVILY_API_KEY -- ", TAVILY_API_KEY);
+const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-type McpStatus =
-  | "Native MCP Available"
-  | "Composio/Third-Party MCP"
-  | "No MCP / Custom Wrapper Needed";
+type McpStatus = "Native MCP Available" | "Third-Party MCP" | "No MCP ";
 
 interface DatasetItem {
   id: number | string;
+  human_verification: string | undefined;
   app: string;
+  url: string;
   mcp_status: McpStatus | string;
+  search_evidence?: string[];
+  mcp_server_url: string | undefined;
   [key: string]: any;
 }
 
 interface AuditMismatch {
   id: number | string;
+  human_verification: string | undefined;
   app: string;
   original_mcp_status: string;
   verified_mcp_status: McpStatus;
-  urls_checked: string[];
+  search_evidence: string[] | undefined;
+  mcp_server_url: string | undefined;
   reason: string;
   timestamp: string;
 }
 
-const inputFilePath = path.join(__dirname, "..", "data", "research copy.json");
-if (!fs.existsSync(inputFilePath)) {
-  console.error(`❌ Input file not found: ${inputFilePath}`);
-  process.exit(1);
-}
-
+const inputFilePath = path.join(__dirname, "..", "data", "research.json");
 const rawDataset: DatasetItem[] = JSON.parse(
   fs.readFileSync(inputFilePath, "utf-8"),
 );
 
-// Helper: Get TOP 5 URLs ONLY from Tavily
+// 1. Fetch web search snippets AND URLs from Tavily
 async function getTop5UrlsFromTavily(appName: string): Promise<string[]> {
   const appSlug = appName.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const query = `"${appName}"'s official ("Model Context Protocol" OR MCP server) `;
-  console.log(" -- query ", query);
+  const query = `${appName} Native MCP server`;
   try {
     const res = await fetch("https://api.tavily.com/search", {
       method: "POST",
@@ -64,96 +57,118 @@ async function getTop5UrlsFromTavily(appName: string): Promise<string[]> {
         api_key: TAVILY_API_KEY,
         query: query,
         search_depth: "advanced",
-        max_results: 5,
+        max_results: 7,
       }),
     });
 
     const data = await res.json();
-    console.log(" -- data ", data);
+    const result = (data.results || []).map((r: any) => r.url).filter(Boolean);
 
-    // Slice top 5 URLs ONLY, discard snippets/contents/titles
-    return (data.results || []).map((r: any) => r.url).slice(0, 5);
+    return result;
   } catch (err) {
     console.error(`⚠️ Tavily error for ${appName}:`, err);
     return [];
   }
 }
 
-// Process 20 apps at once inside a single Gemini prompt
-async function verifyBatchOf20(batch: DatasetItem[]) {
-  console.log(`\n==================================================`);
-  console.log(`🚀 Gathering Tavily URLs for Batch of ${batch.length} apps...`);
-  console.log(`==================================================`);
+// 2. Query Gemini model using structured JSON Schema output
+async function getGeminiResponse(prompt: string, retries = 3): Promise<string> {
+  try {
+    const model = genAI.getGenerativeModel({
+      model: "gemini-3.5-flash-lite",
+      generationConfig: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: SchemaType.OBJECT,
+          properties: {
+            results: {
+              type: SchemaType.ARRAY,
+              items: {
+                type: SchemaType.OBJECT,
+                properties: {
+                  id: { type: SchemaType.STRING },
+                  app: { type: SchemaType.STRING },
+                  verified_status: {
+                    type: SchemaType.STRING,
+                    format: "enum",
+                    enum: [
+                      "Native MCP Available",
+                      "Third-Party MCP",
+                      "No MCP / Custom Wrapper Needed",
+                    ],
+                  },
+                  mcp_server_url: { type: SchemaType.STRING },
+                  reason: { type: SchemaType.STRING },
+                },
+                required: ["id", "app", "verified_status", "reason"],
+              },
+            },
+          },
+          required: ["results"],
+        },
+      },
+    });
 
-  // Step 1: Run Tavily in parallel for all 20 apps
-  const tavilyMap: { [app: string]: string[] } = {};
+    const result = await model.generateContent(prompt);
+    return result.response.text();
+  } catch (error: any) {
+    if (retries > 0) {
+      await new Promise((r) => setTimeout(r, 3000));
+      return getGeminiResponse(prompt, retries - 1);
+    }
+    console.error("⚠️ Gemini API Error:", error);
+    return "";
+  }
+}
+
+// 3. Process batch without sending mcp_status (removes bias & injects input data)
+async function verifyBatch(batch: DatasetItem[]) {
   await Promise.all(
     batch.map(async (item) => {
-      const urls = await getTop5UrlsFromTavily(item.app);
-
-      console.log(" \n\n\n--- urls --- ", urls);
-
-      tavilyMap[item.app] = urls;
-      console.log(`📡 [${item.app}] extracted ${urls.length} URLs`);
+      item.search_evidence = await getTop5UrlsFromTavily(item.app);
     }),
   );
 
-  // Step 2: Build batch payload containing ONLY app names and their top 5 URLs
+  // ✅ FIXED
   const batchInputPayload = batch.map((item) => ({
-    id: item.id,
+    id: String(item.id),
     app: item.app,
-    current_status: item.mcp_status,
-    top_5_urls: tavilyMap[item.app] || [],
+    url: item.url || "",
+    search_evidence: item.search_evidence || [],
   }));
 
+  console.log(" ==== batchInputPayload === ", batchInputPayload);
   const prompt = `
-    You are an integration auditor verifying software metadata for a batch of 20 applications.
+  You are an objective integration auditor. Your job is to verify whether an application supports Model Context Protocol (MCP).
 
-    INPUT DATA (Apps & Top 5 Discovered Documentation URLs):
-    ${JSON.stringify(batchInputPayload, null, 2)}
+  INPUT DATA (Contains target apps and their official website URLs):
+  ${JSON.stringify(batchInputPayload, null, 2)}
 
-    TASK:
-    Analyze each app's provided URLs (and perform a live search if URLs are empty) to verify if it supports an official Native MCP server.
+  CLASSIFICATION RULES FOR "mcp_status":
+  1. "Native MCP Available":
+       - An MCP server is considered official/native ONLY IF the search evidence contains an MCP server link hosted directly on the app's official domain or official vendor GitHub organization.
+       - Set "mcp_server_url" to that official URL.
 
-    CATEGORIZATION RULES:
-    1. "Native MCP Available": Official vendor docs or official GitHub repos confirm a first-party native MCP server.
-    2. "Composio/Third-Party MCP": Server is available ONLY via third-party wrappers (Composio, Pipedream, Glama, Obot).
-    3. "No MCP / Custom Wrapper Needed": No MCP server exists.
+    2. "Third-Party MCP":
+       - An MCP server exists, BUT the URL points to a personal/community GitHub user account or third-party aggregators/directories (e.g., Composio, Glama, Obot, PulseMCP, MCPLists, Smithery, Smithery.ai).
+       - Set "mcp_server_url" to that third-party repository or listing URL.
 
-    OUTPUT REQUIREMENT:
-    Return strictly a JSON array of objects for all items in the batch:
-    [
-      {
-        "id": 1,
-        "app": "AppName",
-        "verified_status": "Native MCP Available" | "Composio/Third-Party MCP" | "No MCP / Custom Wrapper Needed",
-        "reason": "1-sentence explanation"
-      }
-    ]
+    3. "No MCP / Custom Wrapper Needed":
+       - No MCP server implementation is found.
+       - Set "mcp_server_url" to an empty string ("").
+
+  Provide your audit decisions for each item following the schema.
   `;
 
-  console.log(`🤖 Sending Batch of ${batch.length} apps to Gemini...`);
-
-  const geminiResponse = await ai.models.generateContent({
-    model: "gemini-3.5-flash",
-    contents: prompt,
-    config: {
-      tools: [{ googleSearch: {} }],
-    },
-  });
-
-  const responseText = geminiResponse.text || "";
-  const cleanText = responseText.replace(/```json|```/g, "").trim();
-
+  const rawResponse = await getGeminiResponse(prompt);
   try {
-    return JSON.parse(cleanText);
+    const parsed = JSON.parse(rawResponse);
+    return parsed.results || [];
   } catch (err) {
-    console.error("❌ Batch JSON parse error from Gemini output:", err);
     return [];
   }
 }
 
-// Chunk helper function
 function chunkArray<T>(array: T[], size: number): T[][] {
   const chunks: T[][] = [];
   for (let i = 0; i < array.length; i += size) {
@@ -162,207 +177,93 @@ function chunkArray<T>(array: T[], size: number): T[][] {
   return chunks;
 }
 
-// Execution Loop
-// async function runFullAudit() {
-//   const verifiedDataset: DatasetItem[] = [];
-//   const falseDataList: AuditMismatch[] = [];
-
-//   // Filter items: skip already native items to save credits & time
-//   const itemsToVerify = rawDataset.filter((item) => {
-//     const status = String(item.mcp_status).trim();
-//     return status !== "Native MCP Available";
-//   });
-
-//   const alreadyNativeItems = rawDataset.filter((item) => {
-//     const status = String(item.mcp_status).trim();
-//     return status === "Native MCP Available";
-//   });
-
-//   console.log(`\n==================================================`);
-//   console.log(`📊 Total Items in Input File: ${rawDataset.length}`);
-//   console.log(
-//     `⏩ Skipping ${alreadyNativeItems.length} items ("Native MCP Available")`,
-//   );
-//   console.log(`🔍 Auditing ${itemsToVerify.length} non-native items`);
-//   console.log(`==================================================\n`);
-
-//   // Split entire dataset into chunks of 20 apps
-//   const batches = chunkArray(itemsToVerify, 20);
-
-//   for (let i = 0; i < batches.length; i++) {
-//     const currentBatch = batches[i];
-//     console.log(
-//       `\n📦 Processing Chunk ${i + 1}/${batches.length} (${currentBatch.length} apps)`,
-//     );
-
-//     const batchResults = await verifyBatchOf20(currentBatch);
-
-//     // Reconcile Gemini batch evaluations against initial dataset
-//     for (const item of currentBatch) {
-//       const match = batchResults.find(
-//         (r: any) => String(r.id) === String(item.id) || r.app === item.app,
-//       );
-//       const verifiedStatus: McpStatus = match
-//         ? match.verified_status
-//         : (item.mcp_status as McpStatus);
-//       const reason: string = match ? match.reason : "Batch evaluation fallback";
-
-//       const currentStatusStr = String(item.mcp_status).trim();
-//       const verifiedStatusStr = String(verifiedStatus).trim();
-
-//       if (currentStatusStr !== verifiedStatusStr) {
-//         console.log(
-//           `🚨 Error Caught on [${item.app}]: "${currentStatusStr}" -> "${verifiedStatusStr}"`,
-//         );
-
-//         falseDataList.push({
-//           id: item.id,
-//           app: item.app,
-//           original_mcp_status: currentStatusStr,
-//           verified_mcp_status: verifiedStatus,
-//           urls_checked: item.top_5_urls || [],
-//           reason: reason,
-//           timestamp: new Date().toISOString(),
-//         });
-
-//         item.mcp_status = verifiedStatus;
-//       } else {
-//         console.log(`✅ [${item.app}] verified: "${verifiedStatusStr}"`);
-//       }
-
-//       verifiedDataset.push(item);
-//     }
-//   }
-
-//   // Save outputs
-//   const outputDir = path.join(__dirname, "..", "data");
-//   fs.writeFileSync(
-//     path.join(outputDir, "dataset_verified.json"),
-//     JSON.stringify(verifiedDataset, null, 2),
-//   );
-//   fs.writeFileSync(
-//     path.join(outputDir, "dataset_audit_log.json"),
-//     JSON.stringify(
-//       {
-//         total_checked: rawDataset.length,
-//         false_count: falseDataList.length,
-//         mismatches: falseDataList,
-//       },
-//       null,
-//       2,
-//     ),
-//   );
-
-//   console.log(`\n==================================================`);
-//   console.log(
-//     `🎉 Batch Audit Complete! Corrected ${falseDataList.length} total entries.`,
-//   );
-//   console.log(`==================================================`);
-// }
-
+// 4. Main Execution Loop
 async function runFullAudit() {
   const verifiedDataset: DatasetItem[] = [];
   const falseDataList: AuditMismatch[] = [];
 
-  // Skip items that are already marked as Native MCP Available
-  const itemsToVerify = rawDataset.filter((item) => {
-    const status = String(item.mcp_status).trim();
-    return status !== "Native MCP Available";
-  });
-
-  // Keep already-native items so they can be added back to the final dataset
-  const alreadyNativeItems = rawDataset.filter((item) => {
-    const status = String(item.mcp_status).trim();
-    return status === "Native MCP Available";
-  });
-
-  console.log(`\n==================================================`);
-  console.log(`📊 Total Items in Input File: ${rawDataset.length}`);
-  console.log(
-    `⏩ Skipping ${alreadyNativeItems.length} items ("Native MCP Available")`,
+  const alreadyNativeItems = rawDataset.filter(
+    (item) => String(item.mcp_status).trim() === "Official MCP Available",
   );
-  console.log(`🔍 Auditing ${itemsToVerify.length} non-native items`);
-  console.log(`==================================================\n`);
 
-  // Only create batches from items that need verification
-  const batches = chunkArray(itemsToVerify, 20);
+  console.log(`📊 Total Items: ${rawDataset.length}`);
+  console.log(`⏩ Skipping ${alreadyNativeItems.length} Official MCP items`);
+  console.log(`🔍 Auditing ${rawDataset.length} Non-Official items`);
+
+  const batches = chunkArray(rawDataset, 20);
 
   for (let i = 0; i < batches.length; i++) {
+    console.log(`⏳ Processing Batch ${i + 1} of ${batches.length}...`);
     const currentBatch = batches[i];
-
-    console.log(
-      `\n📦 Processing Chunk ${i + 1}/${batches.length} (${currentBatch.length} apps)`,
-    );
-
-    const batchResults = await verifyBatchOf20(currentBatch);
+    const batchResults = await verifyBatch(currentBatch);
 
     for (const item of currentBatch) {
-      const match = Array.isArray(batchResults)
-        ? batchResults.find(
-            (r: any) => String(r.id) === String(item.id) || r.app === item.app,
-          )
-        : undefined;
+      const match = batchResults.find(
+        (r: any) => String(r.id) === String(item.id) || r.app === item.app,
+      );
 
       const verifiedStatus: McpStatus = match
         ? match.verified_status
         : (item.mcp_status as McpStatus);
 
-      const reason: string = match ? match.reason : "Batch evaluation fallback";
-
+      // 👇 CHANGE 4: Capture extracted URL and assign it
+      const verifiedMcpUrl = match
+        ? match.mcp_server_url
+        : item.mcp_server_url || "";
+      const reason = match ? match.reason : "Fallback to original";
+      const searchEvidence = match ? match.search_evidence : [];
       const currentStatusStr = String(item.mcp_status).trim();
       const verifiedStatusStr = String(verifiedStatus).trim();
 
+      const humanCheckValue = "check mcp server url";
+
+      // 👇 CHANGE 4: Update item properties (Add mcp_server_url, remove search_evidence)
+      item.mcp_server_url = verifiedMcpUrl;
+      // delete item.search_evidence;
+
       if (currentStatusStr !== verifiedStatusStr) {
         console.log(
-          `🚨 Mismatch Found [${item.app}]: "${currentStatusStr}" -> "${verifiedStatusStr}"`,
+          `🚨 Mismatch [${item.app}]: "${currentStatusStr}" -> "${verifiedStatusStr}"`,
         );
-
         falseDataList.push({
           id: item.id,
           app: item.app,
           original_mcp_status: currentStatusStr,
           verified_mcp_status: verifiedStatus,
-          urls_checked: item.top_5_urls || [],
+          mcp_server_url: verifiedMcpUrl, // 👈 Added to audit log too
+          human_verification: humanCheckValue,
+          search_evidence: item.search_evidence,
           reason: reason,
           timestamp: new Date().toISOString(),
         });
 
         item.mcp_status = verifiedStatus;
-      } else {
-        console.log(
-          `✅ [${item.app}] verified unchanged: "${verifiedStatusStr}"`,
-        );
+        item.human_verification = humanCheckValue;
       }
 
       verifiedDataset.push(item);
     }
-
-    // Pause between batches
-    if (i < batches.length - 1) {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-    }
   }
 
-  // Add skipped Native MCP items back
   const finalDataset = [...verifiedDataset, ...alreadyNativeItems];
-
   const outputDir = path.join(__dirname, "..", "data");
 
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
-  }
+  // 👇 Strip search_evidence from every item specifically for the final verified dataset file
+  const cleanedFinalDataset = finalDataset.map((item) => {
+    const copy = { ...item };
+    delete copy.search_evidence;
+    return copy;
+  });
 
   fs.writeFileSync(
     path.join(outputDir, "dataset_verified.json"),
-    JSON.stringify(finalDataset, null, 2),
+    JSON.stringify(cleanedFinalDataset, null, 2), // 👈 Using cleanedFinalDataset here
   );
-
   fs.writeFileSync(
     path.join(outputDir, "dataset_audit_log.json"),
     JSON.stringify(
       {
-        total_items: rawDataset.length,
-        total_checked: itemsToVerify.length,
+        total_checked: rawDataset.length,
         skipped_already_native: alreadyNativeItems.length,
         false_count: falseDataList.length,
         mismatches: falseDataList,
@@ -372,13 +273,7 @@ async function runFullAudit() {
     ),
   );
 
-  console.log(`\n==================================================`);
-  console.log(
-    `🎉 Batch Audit Complete! Updated ${falseDataList.length} entry mismatches.`,
-  );
-  console.log(`⏩ Skipped ${alreadyNativeItems.length} already-native items.`);
-  console.log(`🔍 Verified ${itemsToVerify.length} non-native items.`);
-  console.log(`==================================================`);
+  console.log(`🎉 Complete! Corrected ${falseDataList.length} mismatches.`);
 }
 
 runFullAudit();

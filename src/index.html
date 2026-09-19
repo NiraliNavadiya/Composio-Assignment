@@ -3,2169 +3,781 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            Composio AI Product Ops Intern Assignment — 100 App Research &
-            Pattern Analysis
-        </title>
+        <title>MCP Integration Audit Dashboard</title>
         <style>
-            :root {
-                --bg-main: #0f172a;
-                --bg-card: #1e293b;
-                --bg-hover: #334155;
-                --border-color: #334155;
-                --text-main: #f8fafc;
-                --text-muted: #94a3b8;
-                --accent-primary: #6366f1;
-                --accent-hover: #4f46e5;
-                --success: #10b981;
-                --warning: #f59e0b;
-                --danger: #ef4444;
-                --font:
-                    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            }
-
             * {
                 box-sizing: border-box;
-                margin: 0;
-                padding: 0;
             }
+
+            :root {
+                --bg: #d6e1ea;
+                --surface: #ffffff;
+                --ink: #10141f;
+                --ink-soft: #3d4457;
+                --ink-faint: #7b8296;
+                --line: #e2e5ee;
+                --line-soft: #edeff5;
+                --accent: #3757e8;
+                --accent-soft: #eef1fd;
+                --green: #0f9d63;
+                --green-soft: #e7fbf1;
+                --amber: #c67c05;
+                --amber-soft: #fef3e0;
+                --violet: #7c4fe0;
+                --violet-soft: #f3eefd;
+                --pink: #d1418f;
+                --pink-soft: #fdeef6;
+                --radius: 16px;
+            }
+
             body {
-                background-color: var(--bg-main);
-                color: var(--text-main);
-                font-family: var(--font);
-                line-height: 1.5;
-                padding: 2rem;
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    sans-serif;
+                background: var(--bg);
+                color: var(--ink);
+                margin: 0;
+                padding: 64px 24px;
+                line-height: 1.6;
+                font-size: 15px;
+                -webkit-font-smoothing: antialiased;
             }
 
             .container {
-                max-width: 1400px;
+                max-width: 1140px;
                 margin: 0 auto;
             }
+
+            /* ---------- Header ---------- */
             header {
-                border-bottom: 1px solid var(--border-color);
-                padding-bottom: 1.5rem;
-                margin-bottom: 2rem;
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end;
+                align-items: center;
                 flex-wrap: wrap;
-                gap: 1rem;
+                gap: 20px;
+                margin-bottom: 40px;
             }
-            h1 {
-                font-size: 1.875rem;
+
+            .eyebrow {
+                font-size: 12px;
                 font-weight: 700;
-                color: #fff;
+                letter-spacing: 0.09em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin: 0 0 10px 0;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: 800;
                 letter-spacing: -0.025em;
-            }
-            .subtitle {
-                color: var(--text-muted);
-                font-size: 0.95rem;
-                margin-top: 0.25rem;
+                margin: 0 0 8px 0;
+                color: var(--ink);
             }
 
-            .badge-bar {
-                display: flex;
-                gap: 0.75rem;
-                flex-wrap: wrap;
+            .lede {
+                color: var(--ink-soft);
+                font-size: 15px;
+                margin: 0;
+                max-width: 520px;
             }
-            .badge {
-                background: var(--bg-card);
-                border: 1px solid var(--border-color);
-                color: var(--text-main);
-                padding: 0.4rem 0.8rem;
-                border-radius: 9999px;
-                font-size: 0.8rem;
-                font-weight: 600;
-                display: flex;
+
+            .github-btn {
+                display: inline-flex;
                 align-items: center;
-                gap: 0.4rem;
-            }
-            .badge-success {
-                border-color: var(--success);
-                color: #34d399;
-            }
-
-            /* Layout Grid */
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(12, 1fr);
-                gap: 1.5rem;
-                margin-bottom: 2.5rem;
-            }
-            .col-12 {
-                grid-column: span 12;
-            }
-            .col-8 {
-                grid-column: span 8;
-            }
-            .col-6 {
-                grid-column: span 6;
-            }
-            .col-4 {
-                grid-column: span 4;
-            }
-
-            @media (max-width: 1024px) {
-                .col-8,
-                .col-6,
-                .col-4 {
-                    grid-column: span 12;
-                }
-            }
-
-            .card {
-                background: var(--bg-card);
-                border: 1px solid var(--border-color);
-                border-radius: 0.75rem;
-                padding: 1.5rem;
-            }
-            .card-title {
-                font-size: 1.1rem;
-                font-weight: 600;
-                margin-bottom: 1rem;
+                gap: 9px;
+                background: var(--ink);
                 color: #fff;
+                padding: 12px 20px;
+                border-radius: 10px;
+                font-size: 13.5px;
+                font-weight: 600;
+                text-decoration: none;
+                transition:
+                    transform 0.15s ease,
+                    background 0.15s ease;
+                white-space: nowrap;
+            }
+            .github-btn:hover {
+                background: #262c3d;
+                transform: translateY(-1px);
+            }
+            .github-btn svg {
+                width: 16px;
+                height: 16px;
+                fill: currentColor;
+            }
+
+            /* ---------- Stat cards ---------- */
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+
+            .stat-card {
+                position: relative;
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: var(--radius);
+                padding: 26px 28px;
+                overflow: hidden;
+            }
+
+            .stat-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: var(--accent);
+            }
+            .stat-card.green::before {
+                background: var(--green);
+            }
+
+            .stat-card .top-row {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-bottom: 14px;
             }
 
-            /* Headline Cards */
-            .stat-box {
-                display: flex;
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-            .stat-val {
-                font-size: 2rem;
-                font-weight: 800;
-                color: var(--accent-primary);
-            }
-            .stat-label {
-                font-size: 0.85rem;
-                color: var(--text-muted);
+            .stat-card .label {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
                 text-transform: uppercase;
-                letter-spacing: 0.05em;
+                color: var(--ink-faint);
             }
 
-            /* Pattern Lists */
-            ul.pattern-list {
-                list-style: none;
+            .stat-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--accent-soft);
+                flex-shrink: 0;
+            }
+            .stat-card.green .stat-icon {
+                background: var(--green-soft);
+            }
+            .stat-icon svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            .stat-card .value {
+                font-size: 40px;
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                line-height: 1;
+                color: var(--accent);
+            }
+
+            .stat-card.green .value {
+                color: var(--green);
+            }
+
+            .stat-card .caption {
+                font-size: 14.5px;
+                color: var(--ink-soft);
+                margin-top: 12px;
+                font-weight: 500;
+            }
+
+            /* ---------- Insight strip ---------- */
+            .insights {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                gap: 14px;
+                margin: 32px 0 48px 0;
+            }
+
+            .insight {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                padding: 22px 22px 24px 22px;
+                transition:
+                    transform 0.15s ease,
+                    box-shadow 0.15s ease;
+            }
+
+            .insight:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 24px rgba(16, 20, 31, 0.06);
+            }
+
+            .insight .icon-badge {
+                width: 32px;
+                height: 32px;
+                border-radius: 9px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 14px;
+            }
+            .insight .icon-badge svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .insight.c-blue .icon-badge {
+                background: var(--accent-soft);
+            }
+            .insight.c-blue .icon-badge svg {
+                stroke: var(--accent);
+            }
+            .insight.c-green .icon-badge {
+                background: var(--green-soft);
+            }
+            .insight.c-green .icon-badge svg {
+                stroke: var(--green);
+            }
+            .insight.c-amber .icon-badge {
+                background: var(--amber-soft);
+            }
+            .insight.c-amber .icon-badge svg {
+                stroke: var(--amber);
+            }
+            .insight.c-violet .icon-badge {
+                background: var(--violet-soft);
+            }
+            .insight.c-violet .icon-badge svg {
+                stroke: var(--violet);
+            }
+            .insight.c-pink .icon-badge {
+                background: var(--pink-soft);
+            }
+            .insight.c-pink .icon-badge svg {
+                stroke: var(--pink);
+            }
+
+            .insight .label {
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--ink-faint);
+                margin-bottom: 10px;
+            }
+
+            .insight .headline {
+                font-size: 15.5px;
+                font-weight: 700;
+                color: var(--ink);
+                line-height: 1.4;
+                margin-bottom: 9px;
+            }
+
+            .insight .detail {
+                font-size: 13.5px;
+                color: var(--ink-soft);
+                line-height: 1.6;
+            }
+
+            /* ---------- Section shell ---------- */
+            section {
+                background: var(--surface);
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                padding: 40px 44px 44px 44px;
+            }
+
+            .section-head {
+                margin-bottom: 32px;
+            }
+
+            .section-head h2 {
+                font-size: 20px;
+                font-weight: 800;
+                letter-spacing: -0.015em;
+                margin: 0 0 8px 0;
+            }
+
+            .section-head p {
+                font-size: 14.5px;
+                color: var(--ink-soft);
+                margin: 0;
+                max-width: 620px;
+            }
+
+            /* ---------- Workflow timeline ---------- */
+            .workflow {
                 display: flex;
                 flex-direction: column;
-                gap: 0.85rem;
-            }
-            ul.pattern-list li {
-                background: rgba(255, 255, 255, 0.02);
-                border-left: 3px solid var(--accent-primary);
-                padding: 0.75rem 1rem;
-                border-radius: 0 0.5rem 0.5rem 0;
-                font-size: 0.925rem;
-            }
-            ul.pattern-list strong {
-                color: #fff;
             }
 
-            /* Architecture / Workflow */
-            .pipeline-step {
-                display: flex;
-                gap: 1rem;
-                margin-bottom: 1rem;
-                align-items: flex-start;
+            .flow-step {
+                display: grid;
+                grid-template-columns: 44px 1fr;
+                gap: 20px;
             }
-            .step-num {
-                background: var(--accent-primary);
-                color: #fff;
-                width: 28px;
-                height: 28px;
+
+            .flow-rail {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flow-dot {
+                width: 32px;
+                height: 32px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-weight: bold;
-                font-size: 0.85rem;
+                font-size: 13px;
+                font-weight: 800;
                 flex-shrink: 0;
-            }
-            .step-content {
-                font-size: 0.9rem;
-            }
-            .step-title {
-                font-weight: 600;
                 color: #fff;
             }
 
-            /* Code Snippet */
-            pre {
-                background: #090d16;
-                padding: 1rem;
-                border-radius: 0.5rem;
-                overflow-x: auto;
-                font-family: monospace;
-                font-size: 0.825rem;
-                color: #a5b4fc;
-                border: 1px solid var(--border-color);
+            .flow-line {
+                width: 2px;
+                flex: 1;
+                background: var(--line);
+                margin: 6px 0;
+                min-height: 30px;
             }
 
-            /* Table Styles */
-            .controls {
-                display: flex;
-                gap: 1rem;
-                margin-bottom: 1rem;
-                flex-wrap: wrap;
-            }
-            input[type="text"],
-            select {
-                background: var(--bg-card);
-                border: 1px solid var(--border-color);
-                color: var(--text-main);
-                padding: 0.6rem 1rem;
-                border-radius: 0.5rem;
-                font-size: 0.9rem;
-                outline: none;
-            }
-            input[type="text"]:focus,
-            select:focus {
-                border-color: var(--accent-primary);
-            }
-            input[type="text"] {
-                flex-grow: 1;
+            .flow-body {
+                padding-bottom: 32px;
             }
 
-            .table-wrapper {
-                overflow-x: auto;
-                border: 1px solid var(--border-color);
-                border-radius: 0.75rem;
-                background: var(--bg-card);
-                max-height: 650px;
-                overflow-y: auto;
+            .flow-body h4 {
+                font-size: 15.5px;
+                font-weight: 700;
+                margin: 3px 0 8px 0;
+                color: var(--ink);
             }
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                text-align: left;
-                font-size: 0.875rem;
+
+            .flow-body p {
+                font-size: 14px;
+                color: var(--ink-soft);
+                line-height: 1.65;
+                margin: 0 0 4px 0;
             }
-            th {
-                background: #111827;
-                position: sticky;
-                top: 0;
-                z-index: 10;
-                padding: 0.85rem 1rem;
-                border-bottom: 1px solid var(--border-color);
-                font-weight: 600;
-                color: var(--text-muted);
+
+            .flow-body ul {
+                margin: 12px 0 0 0;
+                padding-left: 0;
+                list-style: none;
             }
-            td {
-                padding: 0.85rem 1rem;
-                border-bottom: 1px solid var(--border-color);
-                vertical-align: top;
+
+            .flow-body li {
+                font-size: 13.5px;
+                color: var(--ink-soft);
+                line-height: 1.6;
+                margin-bottom: 7px;
+                padding-left: 20px;
+                position: relative;
             }
-            tr:hover {
-                background: var(--bg-hover);
+            .flow-body li::before {
+                content: "→";
+                position: absolute;
+                left: 0;
+                color: var(--amber);
+                font-weight: 700;
             }
 
             .tag {
-                display: inline-block;
-                padding: 0.2rem 0.5rem;
-                border-radius: 0.25rem;
-                font-size: 0.75rem;
+                display: inline-flex;
+                align-items: center;
+                font-size: 11.5px;
+                font-weight: 700;
+                padding: 3px 10px;
+                border-radius: 20px;
+                background: var(--amber-soft);
+                color: var(--amber);
+                margin-left: 8px;
+                vertical-align: middle;
+            }
+
+            .kbd {
+                background: #f1f2f6;
+                padding: 2px 7px;
+                border-radius: 5px;
+                font-size: 12.5px;
+                font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+                color: var(--ink);
                 font-weight: 600;
+            }
+
+            /* ---------- Schema block ---------- */
+            .schema-wrapper {
+                margin-top: 12px;
+                background: linear-gradient(135deg, #f8f9fc 0%, #f2f4fa 100%);
+                border: 1px solid var(--line-soft);
+                border-radius: 14px;
+                padding: 26px 28px;
+            }
+
+            .schema-wrapper .label {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.06em;
                 text-transform: uppercase;
-            }
-            .tag-oauth {
-                background: rgba(99, 102, 241, 0.2);
-                color: #818cf8;
-                border: 1px solid #6366f1;
-            }
-            .tag-key {
-                background: rgba(16, 185, 129, 0.2);
-                color: #34d399;
-                border: 1px solid #10b981;
-            }
-            .tag-self {
-                background: rgba(16, 185, 129, 0.15);
-                color: #6ee7b7;
-            }
-            .tag-gated {
-                background: rgba(239, 68, 68, 0.15);
-                color: #fca5a5;
-            }
-            .tag-ready {
-                background: rgba(16, 185, 129, 0.2);
-                color: #34d399;
-            }
-            .tag-blocked {
-                background: rgba(239, 68, 68, 0.2);
-                color: #f87171;
+                color: var(--ink-faint);
+                margin-bottom: 14px;
             }
 
-            a.doc-link {
-                color: var(--accent-primary);
-                text-decoration: none;
-                word-break: break-all;
-            }
-            a.doc-link:hover {
-                text-decoration: underline;
-            }
-
-            .tab-container {
+            .schema-list {
                 display: flex;
-                gap: 0.5rem;
-                margin-bottom: 1rem;
-                border-bottom: 1px solid var(--border-color);
-                padding-bottom: 0.5rem;
+                flex-wrap: wrap;
+                gap: 9px;
             }
-            .tab-btn {
-                background: none;
-                border: none;
-                color: var(--text-muted);
-                padding: 0.5rem 1rem;
-                cursor: pointer;
+
+            .schema-badge {
+                background: #fff;
+                border: 1px solid var(--line);
+                color: var(--ink);
+                padding: 7px 12px;
+                border-radius: 7px;
+                font-size: 12.5px;
                 font-weight: 600;
-                font-size: 0.9rem;
-                border-radius: 0.375rem;
+                font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
             }
-            .tab-btn.active {
-                background: var(--accent-primary);
-                color: #fff;
+
+            .footnote {
+                font-size: 13.5px;
+                color: var(--ink-soft);
+                margin-top: 20px;
+                line-height: 1.7;
+            }
+
+            .footnote .kbd {
+                background: #fff;
+                border: 1px solid var(--line);
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <!-- Header Section -->
             <header>
                 <div>
-                    <h1>
-                        Composio Integration Audit — 100 App Toolkit Analysis
-                    </h1>
-                    <p class="subtitle">
-                        AI Product Ops Assignment | Autonomous Agent Research
-                        Pipeline & Key Pattern Insights
+                    <p class="eyebrow">Composio Assignment</p>
+                    <h1>MCP Server URL Verification Dashboard</h1>
+                    <p class="lede">
+                        Audit execution and data correction flow for MCP server
+                        records across the target app list.
                     </p>
                 </div>
-                <div class="badge-bar">
-                    <span class="badge badge-success"
-                        >✓ 100/100 Apps Audited</span
-                    >
-                    <span class="badge">Accuracy: 96% (Verified)</span>
-                    <span class="badge"
-                        >Pipeline: Composio SDK + Browser-Use</span
-                    >
-                </div>
+                <a
+                    href="https://github.com/NiraliNavadiya/Composio-Assignment"
+                    target="_blank"
+                    class="github-btn"
+                >
+                    <svg viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                        />
+                    </svg>
+                    View Repository
+                </a>
             </header>
 
-            <!-- Key Metrics Row -->
-            <div class="grid">
-                <div class="card col-3">
-                    <div class="stat-box">
-                        <span class="stat-val">74%</span>
-                        <span class="stat-label">OAuth2 Dominance</span>
+            <div class="stats-grid">
+                <div class="stat-card green">
+                    <div class="top-row">
+                        <div class="label">
+                            Verified &amp; Corrected (False → True)
+                        </div>
+                        <div class="stat-icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="var(--green)"
+                                stroke-width="2.4"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="value">84</div>
+                    <div class="caption">
+                        MCP server URL records updated to the correct state
                     </div>
                 </div>
-                <div class="card col-3">
-                    <div class="stat-box">
-                        <span class="stat-val">68%</span>
-                        <span class="stat-label">Self-Serve Built</span>
+                <div class="stat-card">
+                    <div class="top-row">
+                        <div class="label">Unchanged / Native Matches</div>
+                        <div class="stat-icon">
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="var(--accent)"
+                                stroke-width="2.4"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 8v4l3 2" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <div class="card col-3">
-                    <div class="stat-box">
-                        <span class="stat-val">22%</span>
-                        <span class="stat-label">Sales/Partner Gated</span>
-                    </div>
-                </div>
-                <div class="card col-3">
-                    <div class="stat-box">
-                        <span class="stat-val">34%</span>
-                        <span class="stat-label">Pre-Built MCP Available</span>
+                    <div class="value">16</div>
+                    <div class="caption">
+                        Records already correct against the native baseline
                     </div>
                 </div>
             </div>
 
-            <!-- Headline & Patterns Cluster Section -->
-            <div class="grid">
-                <div class="card col-8">
-                    <div class="card-title">
-                        <span>Strategic Pattern Clusters & Findings</span>
-                        <span
-                            style="font-size: 0.8rem; color: var(--text-muted)"
-                            >Executive Summary</span
+            <div class="insights">
+                <div class="insight c-blue">
+                    <div class="icon-badge">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                         >
+                            <path d="M4 6h16M4 12h16M4 18h10" />
+                        </svg>
                     </div>
-                    <ul class="pattern-list">
-                        <li>
-                            <strong
-                                >Access Gating is the Ultimate
-                                Bottleneck:</strong
-                            >
-                            API surface size and documentation quality do not
-                            guarantee integration speed. Partner approvals,
-                            enterprise sales walls, and strict app reviews
-                            completely block instant agent buildability despite
-                            having modern APIs. <br /><em>Example:</em>
-                            <strong>DealCloud</strong> requires enterprise sales
-                            clearance, and <strong>Amazon SP-API</strong> or
-                            <strong>LinkedIn Ads</strong> require multi-stage
-                            developer vetting and IAM/LWA authorization.
-                        </li>
-                        <li>
-                            <strong
-                                >Developer Tools & Messaging Lead
-                                Availability:</strong
-                            >
-                            Support, helpdesk, and team messaging platforms
-                            dominate self-serve access, enabling ready-made
-                            MCP/Composio wrapper coverage out of the box.
-                            <br /><em>Example:</em> <strong>Slack</strong> and
-                            <strong>Zendesk</strong> provide instant OAuth/API
-                            token setup, allowing developers to connect AI
-                            agents via pre-built MCP servers in minutes.
-                        </li>
-                        <li>
-                            <strong
-                                >SEO & Scraping Tools are Prime Custom
-                                Targets:</strong
-                            >
-                            Data, SEO, and web scraping utilities offer simple
-                            API Key authentication with low friction, but
-                            completely lack pre-built MCP servers, making them
-                            ideal candidates for custom wrapper development.
-                            <br /><em>Example:</em>
-                            <strong>DataForSEO</strong> and
-                            <strong>MrScraper</strong> use straightforward Basic
-                            Auth or HTTP Bearer Tokens, enabling developers to
-                            easily build lightweight, custom OpenAPI or MCP
-                            wrappers.
-                        </li>
-                        <li>
-                            <strong>OAuth2 is the Enterprise Standard:</strong>
-                            OAuth2 accounts for over 75% of integration
-                            authentication methods across CRM, E-commerce, and
-                            Ad networks, whereas simpler Bearer Tokens and API
-                            Keys dominate developer-first and utility APIs.
-                            <br /><em>Example:</em>
-                            <strong>Salesforce</strong> and
-                            <strong>HubSpot</strong> use complex OAuth2 consent
-                            flows for user-level access, whereas
-                            <strong>Attio</strong> or
-                            <strong>Twenty</strong> offer instant tenant-level
-                            API Keys.
-                        </li>
-                        <li>
-                            <strong
-                                >Ad Platforms Require Compliance
-                                Vetting:</strong
-                            >
-                            Major marketing and ad networks are restricted by
-                            mandatory app review processes, developer token
-                            applications, and account verification checks before
-                            production access is granted. <br /><em
-                                >Example:</em
-                            >
-                            <strong>Meta Ads</strong> and
-                            <strong>WhatsApp Business</strong> require Meta
-                            Business Verification, strict App Review
-                            permissions, and System User Token provisioning to
-                            move beyond local sandboxes.
-                        </li>
-                    </ul>
+                    <div class="label">Protocol Distribution</div>
+                    <div class="headline">
+                        89% REST · 9% Hybrid · 2% GraphQL
+                    </div>
+                    <div class="detail">
+                        REST remains the baseline architecture; only a small
+                        fraction relies purely on GraphQL.
+                    </div>
                 </div>
-
-                <!-- Agent Workflow & proof -->
-                <div class="card col-4">
-                    <div class="card-title">Agent Workflow & Human-in-Loop</div>
-
-                    <div class="pipeline-step">
-                        <div class="step-num">1</div>
-                        <div class="step-content">
-                            <div class="step-title">
-                                Autonomous Search & Fetch
-                            </div>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.8rem;
-                                "
-                            >
-                                Composio Tavily/Web tool searches official API
-                                docs, dev portals, and OpenAPI specs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pipeline-step">
-                        <div class="step-num">2</div>
-                        <div class="step-content">
-                            <div class="step-title">LLM Schema Extraction</div>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.8rem;
-                                "
-                            >
-                                Structured JSON parser extracts Auth methods,
-                                Gating status, and MCP status against standard
-                                taxonomy.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pipeline-step">
-                        <div class="step-num">3</div>
-                        <div class="step-content">
-                            <div class="step-title">
-                                Browser Validation Loop
-                            </div>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.8rem;
-                                "
-                            >
-                                Playwright browser agent visits signup pages to
-                                check if developer credentials are self-serve or
-                                gated behind sales.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="pipeline-step">
-                        <div class="step-num">4</div>
-                        <div class="step-content">
-                            <div class="step-title" style="color: #f59e0b">
-                                Human Intervention (4/100 Apps)
-                            </div>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.8rem;
-                                "
-                            >
-                                Needed human checks for ambiguous enterprise
-                                portals (e.g. Paygent, Fanbasis) where dev docs
-                                were unindexed or paywalled.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 1rem">
-                        <div
-                            class="card-title"
-                            style="font-size: 0.9rem; margin-bottom: 0.5rem"
+                <div class="insight c-green">
+                    <div class="icon-badge">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                         >
-                            Runnable Agent Proof
-                        </div>
-                        <pre><code># Run autonomous research agent
-git clone https://github.com/composio-research/100-app-agent
-cd 100-app-agent
-python research_pipeline.py --input apps.json --verify</code></pre>
+                            <rect x="4" y="9" width="16" height="11" rx="2" />
+                            <path d="M8 9V6a4 4 0 018 0v3" />
+                        </svg>
+                    </div>
+                    <div class="label">Authentication Standard</div>
+                    <div class="headline">86% support OAuth2</div>
+                    <div class="detail">
+                        OAuth2 is the dominant standard for secure,
+                        user-delegated access across the ecosystem.
+                    </div>
+                </div>
+                <div class="insight c-amber">
+                    <div class="icon-badge">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M12 9v4m0 4h.01M10.3 3.9L2.6 18a2 2 0 001.7 3h15.4a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="label">Ads &amp; Social Media Friction</div>
+                    <div class="headline">High compliance walls</div>
+                    <div class="detail">
+                        Marketing tools like Google and Meta Ads require strict
+                        app reviews and rate limits.
+                    </div>
+                </div>
+                <div class="insight c-violet">
+                    <div class="icon-badge">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+                        </svg>
+                    </div>
+                    <div class="label">Developer Onboarding</div>
+                    <div class="headline">63% instant wins</div>
+                    <div class="detail">
+                        Most applications let developers start building
+                        immediately with zero blockers.
+                    </div>
+                </div>
+                <div class="insight c-pink">
+                    <div class="icon-badge">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke-width="2.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="label">Enterprise Security</div>
+                    <div class="headline">Rigid permission hierarchies</div>
+                    <div class="detail">
+                        Platforms like Salesforce and DealCloud require
+                        Connected Apps to protect corporate assets.
                     </div>
                 </div>
             </div>
 
-            <!-- Accuracy & Verification Audit -->
-            <div class="grid">
-                <div class="card col-12">
-                    <div class="card-title">
-                        <span
-                            >Verification Audit & Accuracy Improvement
-                            Loop</span
-                        >
-                        <span style="font-size: 0.8rem; color: var(--success)"
-                            >Sample Verified: 20/100 Apps Cross-Checked by
-                            Hand</span
-                        >
-                    </div>
-                    <div style="display: flex; gap: 2rem; flex-wrap: wrap">
-                        <div style="flex: 1; min-width: 300px">
-                            <p
-                                style="
-                                    font-size: 0.9rem;
-                                    color: var(--text-muted);
-                                    margin-bottom: 0.75rem;
-                                "
+            <section>
+                <div class="section-head">
+                    <h2>Project Workflow &amp; Methodology</h2>
+                    <p>
+                        How the app dataset was researched, audited, and
+                        corrected — including how conflicting MCP server records
+                        were flagged for human review.
+                    </p>
+                </div>
+
+                <div class="workflow">
+                    <div class="flow-step">
+                        <div class="flow-rail">
+                            <div
+                                class="flow-dot"
+                                style="background: var(--accent)"
                             >
-                                Accuracy evolved from
-                                <strong>78% (First Pass)</strong> to
-                                <strong>96% (Final Pass)</strong> by
-                                implementing deterministic rule assertions and a
-                                secondary headless browser agent.
+                                1
+                            </div>
+                            <div class="flow-line"></div>
+                        </div>
+                        <div class="flow-body">
+                            <h4>Initial Research with Gemini</h4>
+                            <p>
+                                Used Gemini to research the given list of apps
+                                and build baseline profiles — description,
+                                access model, and API surface — for each one.
                             </p>
-                            <ul
-                                style="
-                                    font-size: 0.85rem;
-                                    color: var(--text-muted);
-                                    padding-left: 1.2rem;
-                                    display: flex;
-                                    flex-direction: column;
-                                    gap: 0.4rem;
-                                "
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-rail">
+                            <div class="flow-dot" style="background: #6b7280">
+                                2
+                            </div>
+                            <div class="flow-line"></div>
+                        </div>
+                        <div class="flow-body">
+                            <h4>Manual Spot-Check</h4>
+                            <p>
+                                Manually checked 25–30 apps by hand. Every field
+                                was accurate <strong>except one</strong> — the
+                                MCP server URL was frequently wrong or missing,
+                                so verification was scoped specifically to that
+                                field.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-rail">
+                            <div
+                                class="flow-dot"
+                                style="background: var(--amber)"
                             >
+                                3
+                            </div>
+                            <div class="flow-line"></div>
+                        </div>
+                        <div class="flow-body">
+                            <h4>
+                                Automated Verification Loop
+                                <span class="tag">Tavily</span>
+                            </h4>
+                            <p>
+                                Built a verification loop to fetch the correct
+                                MCP server URL for every app. Tavily was used
+                                for the web search step, since Gemini's native
+                                web search isn't free.
+                            </p>
+                            <ul>
                                 <li>
-                                    <strong style="color: #fff"
-                                        >Pass 1 (Raw LLM Web Fetch):</strong
-                                    >
-                                    Misclassified apps as "Self-Serve" when they
-                                    offered free trials but locked API keys
-                                    behind paid tiers (e.g., Close, Copper).
+                                    Fetch MCP server details via Tavily and
+                                    check the app's official domain first
                                 </li>
                                 <li>
-                                    <strong style="color: #fff"
-                                        >Pass 2 (Browser-Use
-                                        Verification):</strong
-                                    >
-                                    Verified actual account onboarding paths to
-                                    check whether API keys are generated
-                                    self-serve or gated.
+                                    If an official/native MCP server URL exists
+                                    on that domain, use it
                                 </li>
                                 <li>
-                                    <strong style="color: #fff"
-                                        >Pass 3 (Human Cross-Check
-                                        Audit):</strong
-                                    >
-                                    Manually audited 20 randomly sampled apps.
-                                    Found 1 minor hallucination on Otter.ai MCP
-                                    status and corrected it.
+                                    If not, fall back to the best available
+                                    third-party MCP server URL
                                 </li>
                             </ul>
                         </div>
-                        <div
-                            style="
-                                width: 280px;
-                                background: #090d16;
-                                padding: 1rem;
-                                border-radius: 0.5rem;
-                                border: 1px solid var(--border-color);
-                            "
-                        >
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-rail">
                             <div
-                                style="
-                                    font-size: 0.8rem;
-                                    font-weight: bold;
-                                    color: #fff;
-                                    margin-bottom: 0.5rem;
-                                "
+                                class="flow-dot"
+                                style="background: var(--green)"
                             >
-                                Sample Accuracy Hits & Misses
+                                4
                             </div>
-                            <div
-                                style="
-                                    font-size: 0.775rem;
-                                    display: flex;
-                                    flex-direction: column;
-                                    gap: 0.35rem;
-                                "
-                            >
-                                <div>
-                                    <span style="color: var(--success)"
-                                        >✓ Salesforce:</span
-                                    >
-                                    Correctly flagged OAuth2 + Free Dev Org.
-                                </div>
-                                <div>
-                                    <span style="color: var(--success)"
-                                        >✓ Amazon SP-API:</span
-                                    >
-                                    Correctly identified IAM/LWA gating.
-                                </div>
-                                <div>
-                                    <span style="color: var(--danger)"
-                                        >✗ Otter AI (Pass 1):</span
-                                    >
-                                    Agent hallucinated official MCP; fixed in
-                                    Pass 2 to community status.
-                                </div>
-                                <div>
-                                    <span style="color: var(--danger)"
-                                        >✗ DealCloud (Pass 1):</span
-                                    >
-                                    Missed enterprise sales gate; caught by
-                                    verification loop.
-                                </div>
-                            </div>
+                        </div>
+                        <div class="flow-body">
+                            <h4>Human-in-the-Loop for Conflicts</h4>
+                            <p>
+                                For records where the automated result was
+                                ambiguous or conflicting, added a
+                                <span class="kbd">human_verification</span>
+                                column noting exactly what to check, alongside
+                                the candidate
+                                <span class="kbd">mcp_server_url</span> — so a
+                                reviewer can verify the record quickly without
+                                redoing the research.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 100 App Interactive Matrix -->
-            <div class="card col-12">
-                <div class="card-title">
-                    <span>Complete 100-App Research Matrix</span>
-                    <span style="font-size: 0.8rem; color: var(--text-muted)"
-                        >Filterable & Searchable Output</span
-                    >
+                <div class="schema-wrapper">
+                    <div class="label">
+                        Final Verified Data Schema Attributes
+                    </div>
+                    <div class="schema-list">
+                        <span class="schema-badge">app_name</span>
+                        <span class="schema-badge">category</span>
+                        <span class="schema-badge">one_line_description</span>
+                        <span class="schema-badge">access_model</span>
+                        <span class="schema-badge">api_surface</span>
+                        <span class="schema-badge">mcp_status</span>
+                        <span class="schema-badge">buildability_verdict</span>
+                        <span class="schema-badge">primary_blocker</span>
+                        <span class="schema-badge">docs_url</span>
+                        <span class="schema-badge">url</span>
+                        <span class="schema-badge">mcp_server_url</span>
+                        <span class="schema-badge">human_verification</span>
+                    </div>
+                    <div class="footnote">
+                        Falsy states were purged using automated filters. See
+                        <span class="kbd">dataset_audit_log.json</span> for
+                        audit adjustments and
+                        <span class="kbd">dataset_verified.json</span> for the
+                        final production output.
+                    </div>
                 </div>
-
-                <!-- Controls -->
-                <div class="controls">
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search app name, category, or auth type..."
-                        onkeyup="filterTable()"
-                    />
-                    <select id="categoryFilter" onchange="filterTable()">
-                        <option value="">All Categories (10)</option>
-                        <option value="CRM and Sales">1. CRM and Sales</option>
-                        <option value="Support and Helpdesk">
-                            2. Support and Helpdesk
-                        </option>
-                        <option value="Communications and Messaging">
-                            3. Communications and Messaging
-                        </option>
-                        <option value="Marketing, Ads, Email and Social">
-                            4. Marketing, Ads & Social
-                        </option>
-                        <option value="Ecommerce">5. Ecommerce</option>
-                        <option value="Data, SEO and Scraping">
-                            6. Data, SEO & Scraping
-                        </option>
-                        <option value="Developer, Infra and Data platforms">
-                            7. Developer & Infra
-                        </option>
-                        <option value="Productivity and Project Management">
-                            8. Productivity & PM
-                        </option>
-                        <option value="Finance and Fintech">
-                            9. Finance and Fintech
-                        </option>
-                        <option value="AI, Research and Media-native">
-                            10. AI & Media-native
-                        </option>
-                    </select>
-                    <select id="verdictFilter" onchange="filterTable()">
-                        <option value="">All Verdicts</option>
-                        <option value="High (Ready)">High (Ready)</option>
-                        <option value="Moderate">Moderate</option>
-                        <option value="Gated / Blocked">Gated / Blocked</option>
-                    </select>
-                </div>
-
-                <!-- Table -->
-                <div class="table-wrapper">
-                    <table id="appTable">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>App & Category</th>
-                                <th>One-Line Summary</th>
-                                <th>Auth Method</th>
-                                <th>Access Model</th>
-                                <th>API Surface & MCP</th>
-                                <th>Buildability Verdict</th>
-                                <th>Docs Link</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                            <!-- Rows dynamically injected or rendered -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            </section>
         </div>
-
-        <script>
-            // Complete 100 Apps Dataset
-            const appsData = [
-                // 1. CRM & Sales
-                {
-                    id: 1,
-                    name: "Salesforce",
-                    cat: "CRM and Sales",
-                    desc: "Enterprise customer relationship management platform.",
-                    auth: "OAuth2",
-                    access: "Gated (Dev Org Free)",
-                    surface: "REST, GraphQL, SOAP (Massive >500 ops)",
-                    mcp: "Composio Native / Ready",
-                    verdict: "High (Ready)",
-                    blocker: "Needs Dev Sandbox for testing",
-                    url: "https://developer.salesforce.com",
-                },
-                {
-                    id: 2,
-                    name: "HubSpot",
-                    cat: "CRM and Sales",
-                    desc: "Inbound marketing, sales, and service CRM suite.",
-                    auth: "OAuth2, Private App Token",
-                    access: "Self-Serve Free",
-                    surface: "REST (Broad >200 ops)",
-                    mcp: "Composio Native / Ready",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.hubspot.com",
-                },
-                {
-                    id: 3,
-                    name: "Pipedrive",
-                    cat: "CRM and Sales",
-                    desc: "Pipeline-focused sales CRM for small teams.",
-                    auth: "OAuth2, API Key",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Broad >100 ops)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.pipedrive.com",
-                },
-                {
-                    id: 4,
-                    name: "Attio",
-                    cat: "CRM and Sales",
-                    desc: "Data-driven, customizable modern CRM.",
-                    auth: "API Key, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST, GraphQL (Moderate)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://attio.com/docs",
-                },
-                {
-                    id: 5,
-                    name: "Twenty",
-                    cat: "CRM and Sales",
-                    desc: "Open-source extensible CRM platform.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve (Open Source)",
-                    surface: "REST, GraphQL (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://twenty.com/docs",
-                },
-                {
-                    id: 6,
-                    name: "Podio",
-                    cat: "CRM and Sales",
-                    desc: "Customizable work management and CRM tool.",
-                    auth: "OAuth2, Basic Auth",
-                    access: "Self-Serve Free",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Legacy OAuth flow structure",
-                    url: "https://developers.podio.com",
-                },
-                {
-                    id: 7,
-                    name: "Zoho CRM",
-                    cat: "CRM and Sales",
-                    desc: "Omnichannel enterprise sales CRM.",
-                    auth: "OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad >150 ops)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Multi-datacenter domain complexities",
-                    url: "https://zoho.com/crm/developer",
-                },
-                {
-                    id: 8,
-                    name: "Close",
-                    cat: "CRM and Sales",
-                    desc: "Sales engagement and calling CRM for inside sales.",
-                    auth: "API Key, Basic Auth",
-                    access: "Paid Plan (14d Trial)",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "API key requires paid account tier",
-                    url: "https://developer.close.com",
-                },
-                {
-                    id: 9,
-                    name: "Copper",
-                    cat: "CRM and Sales",
-                    desc: "Google Workspace-native CRM.",
-                    auth: "API Key, Header Auth",
-                    access: "Paid Plan Trial",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Requires Google Workspace admin binding",
-                    url: "https://developer.copper.com",
-                },
-                {
-                    id: 10,
-                    name: "DealCloud",
-                    cat: "CRM and Sales",
-                    desc: "Financial services and private equity CRM.",
-                    auth: "OAuth2",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Enterprise Partner Gate required",
-                    url: "https://api.docs.dealcloud.com",
-                },
-
-                // 2. Support & Helpdesk
-                {
-                    id: 11,
-                    name: "Zendesk",
-                    cat: "Support and Helpdesk",
-                    desc: "Enterprise customer service and ticketing software.",
-                    auth: "OAuth2, API Key, Basic",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Massive >300 ops)",
-                    mcp: "Composio Native / MCP Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.zendesk.com",
-                },
-                {
-                    id: 12,
-                    name: "Intercom",
-                    cat: "Support and Helpdesk",
-                    desc: "Customer messaging and AI agent support platform.",
-                    auth: "OAuth2, Access Token",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Broad >150 ops)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.intercom.com",
-                },
-                {
-                    id: 13,
-                    name: "Freshdesk",
-                    cat: "Support and Helpdesk",
-                    desc: "Cloud-based customer helpdesk and ticketing.",
-                    auth: "API Key, Basic Auth",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.freshdesk.com",
-                },
-                {
-                    id: 14,
-                    name: "Front",
-                    cat: "Support and Helpdesk",
-                    desc: "Customer communication hub for shared inboxes.",
-                    auth: "OAuth2, API Key",
-                    access: "Paid Plan Trial",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "Requires team workspace admin tier",
-                    url: "https://dev.frontapp.com",
-                },
-                {
-                    id: 15,
-                    name: "Pylon",
-                    cat: "Support and Helpdesk",
-                    desc: "B2B support platform for Slack and Teams.",
-                    auth: "API Key",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Closed early-access partner program",
-                    url: "https://usepylon.com",
-                },
-                {
-                    id: 16,
-                    name: "LiveAgent",
-                    cat: "Support and Helpdesk",
-                    desc: "Helpdesk and live chat software.",
-                    auth: "API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://apidocs.liveagent.com",
-                },
-                {
-                    id: 17,
-                    name: "Plain",
-                    cat: "Support and Helpdesk",
-                    desc: "Developer-first customer support platform.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve Free",
-                    surface: "GraphQL (Modern, Full)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://plain.com/docs",
-                },
-                {
-                    id: 18,
-                    name: "Help Scout",
-                    cat: "Support and Helpdesk",
-                    desc: "Customer support platform and knowledge base.",
-                    auth: "OAuth2",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.helpscout.com",
-                },
-                {
-                    id: 19,
-                    name: "Gorgias",
-                    cat: "Support and Helpdesk",
-                    desc: "E-commerce customer service and helpdesk tool.",
-                    auth: "Basic Auth, OAuth2",
-                    access: "Paid Plan Trial",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "E-commerce store integration required",
-                    url: "https://developers.gorgias.com",
-                },
-                {
-                    id: 20,
-                    name: "Gladly",
-                    cat: "Support and Helpdesk",
-                    desc: "Human-centered customer service platform.",
-                    auth: "API Token, Basic",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Enterprise sales onboarding gate",
-                    url: "https://developer.gladly.com",
-                },
-
-                // 3. Communications & Messaging
-                {
-                    id: 21,
-                    name: "Slack",
-                    cat: "Communications and Messaging",
-                    desc: "Team collaboration and instant messaging platform.",
-                    auth: "OAuth2, Bot Token",
-                    access: "Self-Serve Free",
-                    surface: "Web API, Socket Mode (Massive)",
-                    mcp: "MCP / Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://api.slack.com",
-                },
-                {
-                    id: 22,
-                    name: "Twilio",
-                    cat: "Communications and Messaging",
-                    desc: "Programmable SMS, Voice, and Video APIs.",
-                    auth: "Basic Auth (SID + Token)",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Massive)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "A2P 10DLC phone registration for SMS",
-                    url: "https://twilio.com/docs",
-                },
-                {
-                    id: 23,
-                    name: "Zoho Cliq",
-                    cat: "Communications and Messaging",
-                    desc: "Enterprise chat and team messaging suite.",
-                    auth: "OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://zoho.com/cliq/help/restapi",
-                },
-                {
-                    id: 24,
-                    name: "Lark (Larksuite)",
-                    cat: "Communications and Messaging",
-                    desc: "All-in-one workplace collaboration workspace.",
-                    auth: "Tenant Access Token, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST (Massive)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "Complex multi-region tenant token refresh",
-                    url: "https://open.larksuite.com",
-                },
-                {
-                    id: 25,
-                    name: "Pumble",
-                    cat: "Communications and Messaging",
-                    desc: "Free team chat and business messenger.",
-                    auth: "API Key",
-                    access: "Self-Serve Free",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Limited API endpoints available",
-                    url: "https://pumble.com",
-                },
-                {
-                    id: 26,
-                    name: "Discord",
-                    cat: "Communications and Messaging",
-                    desc: "Community messaging and voice platform.",
-                    auth: "Bot Token, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST, Gateway WebSockets (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "Privileged gateway intents verification",
-                    url: "https://discord.com/developers/docs",
-                },
-                {
-                    id: 27,
-                    name: "Telegram",
-                    cat: "Communications and Messaging",
-                    desc: "Cloud-based mobile and desktop messaging app.",
-                    auth: "Bot Token",
-                    access: "Self-Serve Free",
-                    surface: "HTTP Bot API (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://core.telegram.org/bots/api",
-                },
-                {
-                    id: 28,
-                    name: "WhatsApp Business",
-                    cat: "Communications and Messaging",
-                    desc: "Enterprise WhatsApp messaging platform.",
-                    auth: "OAuth2, System User Token",
-                    access: "Admin Approval (Meta)",
-                    surface: "REST Graph API (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "Gated / Blocked",
-                    blocker: "Meta Business Verification & Phone Review",
-                    url: "https://developers.facebook.com/docs/whatsapp",
-                },
-                {
-                    id: 29,
-                    name: "Aircall",
-                    cat: "Communications and Messaging",
-                    desc: "Cloud call center and phone system.",
-                    auth: "OAuth2, API Key",
-                    access: "Paid Plan Trial",
-                    surface: "REST (Moderate)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Requires active VoIP subscription",
-                    url: "https://developer.aircall.io",
-                },
-                {
-                    id: 30,
-                    name: "Vonage",
-                    cat: "Communications and Messaging",
-                    desc: "Communications API for SMS, Voice, and Video.",
-                    auth: "OAuth2, JWT, API Key",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.vonage.com",
-                },
-
-                // 4. Marketing, Ads & Social
-                {
-                    id: 31,
-                    name: "Google Ads",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Online advertising platform by Google.",
-                    auth: "OAuth2 + Dev Token",
-                    access: "Self-Serve (Token Approval)",
-                    surface: "gRPC, REST (Massive)",
-                    mcp: "Composio Native",
-                    verdict: "Gated / Blocked",
-                    blocker: "Basic Access Developer Token approval required",
-                    url: "https://developers.google.com/google-ads",
-                },
-                {
-                    id: 32,
-                    name: "Meta Ads",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Advertising platform for Facebook & Instagram.",
-                    auth: "OAuth2, Long-lived Token",
-                    access: "Self-Serve (App Review)",
-                    surface: "Graph API (Massive)",
-                    mcp: "Composio Native",
-                    verdict: "Gated / Blocked",
-                    blocker: "App Review & Meta Business Verification",
-                    url: "https://developers.facebook.com/docs/marketing-apis",
-                },
-                {
-                    id: 33,
-                    name: "LinkedIn Ads",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "B2B social advertising network.",
-                    auth: "OAuth2",
-                    access: "Admin Approval Gate",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Marketing Developer Platform application gate",
-                    url: "https://learn.microsoft.com/linkedin/marketing",
-                },
-                {
-                    id: 34,
-                    name: "GoHighLevel",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "All-in-one white-label marketing platform.",
-                    auth: "OAuth2, Private Key",
-                    access: "Paid Plan Account",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "Agency level subscription required",
-                    url: "https://highlevel.stoplight.io",
-                },
-                {
-                    id: 35,
-                    name: "Mailchimp",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Email marketing and automation platform.",
-                    auth: "OAuth2, API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://mailchimp.com/developer",
-                },
-                {
-                    id: 36,
-                    name: "Klaviyo",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "E-commerce automated email & SMS platform.",
-                    auth: "API Key, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.klaviyo.com",
-                },
-                {
-                    id: 37,
-                    name: "systeme.io",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "All-in-one sales funnel and course builder.",
-                    auth: "API Key",
-                    access: "Self-Serve Free",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Limited endpoint scope for deep automation",
-                    url: "https://systeme.io",
-                },
-                {
-                    id: 38,
-                    name: "Pinterest",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Visual discovery and advertising network.",
-                    auth: "OAuth2",
-                    access: "Self-Serve (App Approval)",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "App Review needed for production rate limits",
-                    url: "https://developers.pinterest.com",
-                },
-                {
-                    id: 39,
-                    name: "Threads (Meta)",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Text-based social conversation platform.",
-                    auth: "OAuth2",
-                    access: "Self-Serve (App Review)",
-                    surface: "REST API (Narrow)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "App Review required for publishing capabilities",
-                    url: "https://developers.facebook.com/docs/threads",
-                },
-                {
-                    id: 40,
-                    name: "SendGrid",
-                    cat: "Marketing, Ads, Email and Social",
-                    desc: "Cloud transactional email delivery service.",
-                    auth: "API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Domain authentication for email sending",
-                    url: "https://sendgrid.com/docs/api-reference",
-                },
-
-                // 5. Ecommerce
-                {
-                    id: 41,
-                    name: "Shopify",
-                    cat: "Ecommerce",
-                    desc: "E-commerce platform for online stores and POS.",
-                    auth: "OAuth2, Admin Token",
-                    access: "Self-Serve Partner Free",
-                    surface: "REST, GraphQL (Massive)",
-                    mcp: "Composio Native / MCP Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://shopify.dev",
-                },
-                {
-                    id: 42,
-                    name: "WooCommerce",
-                    cat: "Ecommerce",
-                    desc: "Open-source WordPress e-commerce plugin.",
-                    auth: "Basic Auth (Key + Secret)",
-                    access: "Self-Serve (Open Source)",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Requires hosted WordPress installation",
-                    url: "https://woocommerce.com/document/woocommerce-rest-api",
-                },
-                {
-                    id: 43,
-                    name: "BigCommerce",
-                    cat: "Ecommerce",
-                    desc: "SaaS e-commerce platform for growing brands.",
-                    auth: "OAuth2, Access Token",
-                    access: "Self-Serve Trial",
-                    surface: "REST, GraphQL (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.bigcommerce.com",
-                },
-                {
-                    id: 44,
-                    name: "Salesforce Commerce Cloud",
-                    cat: "Ecommerce",
-                    desc: "Enterprise cloud e-commerce solution.",
-                    auth: "OAuth2, JWT",
-                    access: "Contact Sales Gate",
-                    surface: "REST OCAPI / SLAS (Massive)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Requires enterprise sandbox provisioning",
-                    url: "https://developer.salesforce.com/docs/commerce",
-                },
-                {
-                    id: 45,
-                    name: "Magento (Adobe Commerce)",
-                    cat: "Ecommerce",
-                    desc: "Extensible open-source enterprise e-commerce platform.",
-                    auth: "Bearer Token, OAuth1.0a",
-                    access: "Self-Serve (Open Source)",
-                    surface: "REST, GraphQL (Massive)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.adobe.com/commerce",
-                },
-                {
-                    id: 46,
-                    name: "Squarespace",
-                    cat: "Ecommerce",
-                    desc: "Website builder and e-commerce platform.",
-                    auth: "API Key, OAuth2",
-                    access: "Paid Plan Account",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Requires website plan tier",
-                    url: "https://developers.squarespace.com",
-                },
-                {
-                    id: 47,
-                    name: "Ecwid",
-                    cat: "Ecommerce",
-                    desc: "Embeddable shopping cart software.",
-                    auth: "OAuth2, Secret Key",
-                    access: "Self-Serve Free",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://api-docs.ecwid.com",
-                },
-                {
-                    id: 48,
-                    name: "Gumroad",
-                    cat: "Ecommerce",
-                    desc: "Digital product sales platform for creators.",
-                    auth: "OAuth2, Access Token",
-                    access: "Self-Serve Free",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://gumroad.com/api",
-                },
-                {
-                    id: 49,
-                    name: "Amazon Selling Partner",
-                    cat: "Ecommerce",
-                    desc: "Amazon merchant & marketplace API.",
-                    auth: "OAuth2 (LWA + AWS IAM)",
-                    access: "Partner Vetting Gate",
-                    surface: "REST (Massive)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "AWS IAM role setup & SP-API Developer vetting",
-                    url: "https://developer-docs.amazon.com/sp-api",
-                },
-                {
-                    id: 50,
-                    name: "Fanbasis",
-                    cat: "Ecommerce",
-                    desc: "Creator monetization and custom digital experiences.",
-                    auth: "API Key",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Undocumented public API; contact gate",
-                    url: "https://fanbasis.com",
-                },
-
-                // 6. Data, SEO & Scraping
-                {
-                    id: 51,
-                    name: "DataForSEO",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Comprehensive SEO, SERP, and web data APIs.",
-                    auth: "Basic Auth (Login + Pass)",
-                    access: "Self-Serve Free Trial",
-                    surface: "REST (Massive)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "No pre-built MCP server exists",
-                    url: "https://docs.dataforseo.com",
-                },
-                {
-                    id: 52,
-                    name: "SE Ranking",
-                    cat: "Data, SEO and Scraping",
-                    desc: "All-in-one SEO and keyword analysis platform.",
-                    auth: "API Key",
-                    access: "Paid Plan Account",
-                    surface: "REST (Broad)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "Moderate",
-                    blocker: "Requires paid subscription",
-                    url: "https://seranking.com/api",
-                },
-                {
-                    id: 53,
-                    name: "Ahrefs",
-                    cat: "Data, SEO and Scraping",
-                    desc: "SEO tools & backlink index database.",
-                    auth: "OAuth2, API Key",
-                    access: "Paid Enterprise Plan",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Requires top-tier Enterprise plan",
-                    url: "https://ahrefs.com/api",
-                },
-                {
-                    id: 54,
-                    name: "MrScraper",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Visual web scraping and extraction tool.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Moderate)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.mrscraper.com",
-                },
-                {
-                    id: 55,
-                    name: "Apify",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Cloud platform for web scraping and data extraction.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Massive)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.apify.com",
-                },
-                {
-                    id: 56,
-                    name: "Firecrawl",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Web scraper converting websites to LLM-ready markdown.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve Free Credits",
-                    surface: "REST (Specialized)",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://firecrawl.dev",
-                },
-                {
-                    id: 57,
-                    name: "Bright Data",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Web data collection and proxy service infrastructure.",
-                    auth: "API Key, Bearer Token",
-                    access: "Self-Serve Free Trial",
-                    surface: "REST (Broad)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://brightdata.com",
-                },
-                {
-                    id: 58,
-                    name: "Sherlock",
-                    cat: "Data, SEO and Scraping",
-                    desc: "OSINT username hunting tool across social sites.",
-                    auth: "None (CLI/Python)",
-                    access: "Self-Serve (Open Source)",
-                    surface: "Local CLI Tool",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "Moderate",
-                    blocker: "No hosted REST API; needs wrapper script",
-                    url: "https://github.com/sherlock-project/sherlock",
-                },
-                {
-                    id: 59,
-                    name: "Waterfall.io",
-                    cat: "Data, SEO and Scraping",
-                    desc: "B2B contact and company intelligence pipeline.",
-                    auth: "API Key",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Moderate)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Sales onboarding wall",
-                    url: "https://waterfall.io",
-                },
-                {
-                    id: 60,
-                    name: "Clay",
-                    cat: "Data, SEO and Scraping",
-                    desc: "Data enrichment and automated outreach platform.",
-                    auth: "API Key, Webhook",
-                    access: "Paid Plan Account",
-                    surface: "REST (Moderate)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://clay.com",
-                },
-
-                // 7. Developer, Infra & Data platforms
-                {
-                    id: 61,
-                    name: "GitHub",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Software development and version control platform.",
-                    auth: "OAuth2, Personal Access Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST, GraphQL (Massive)",
-                    mcp: "MCP Native / Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.github.com/rest",
-                },
-                {
-                    id: 62,
-                    name: "Vercel",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Frontend cloud deployment platform.",
-                    auth: "Bearer Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://vercel.com/docs/rest-api",
-                },
-                {
-                    id: 63,
-                    name: "Netlify",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Web developer platform for hosting modern web apps.",
-                    auth: "Personal Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.netlify.com/api",
-                },
-                {
-                    id: 64,
-                    name: "Cloudflare",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Global CDN, DNS, and security infrastructure.",
-                    auth: "Bearer Token, API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Massive)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.cloudflare.com/api",
-                },
-                {
-                    id: 65,
-                    name: "Supabase",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Open-source Firebase alternative.",
-                    auth: "Bearer Token, API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (PostgREST), GraphQL",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://supabase.com/docs",
-                },
-                {
-                    id: 66,
-                    name: "Neo4j",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Graph database engine and Aura cloud service.",
-                    auth: "Basic Auth, Bearer Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "Bolt Protocol, REST",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://neo4j.com/docs/api",
-                },
-                {
-                    id: 67,
-                    name: "Snowflake",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Cloud data warehouse and analytical engine.",
-                    auth: "OAuth2, Key-Pair Auth",
-                    access: "Self-Serve 30d Trial",
-                    surface: "SQL REST API (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.snowflake.com",
-                },
-                {
-                    id: 68,
-                    name: "MongoDB Atlas",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Fully managed cloud NoSQL database platform.",
-                    auth: "Digest Auth, API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST API (Broad)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://mongodb.com/docs/atlas/api",
-                },
-                {
-                    id: 69,
-                    name: "Datadog",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Monitoring and security platform for cloud apps.",
-                    auth: "API Key + Application Key",
-                    access: "Self-Serve Free Trial",
-                    surface: "REST (Massive)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Dual key configuration requirement",
-                    url: "https://docs.datadoghq.com/api",
-                },
-                {
-                    id: 70,
-                    name: "Sentry",
-                    cat: "Developer, Infra and Data platforms",
-                    desc: "Application performance monitoring & error tracking.",
-                    auth: "Auth Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.sentry.io/api",
-                },
-
-                // 8. Productivity & PM
-                {
-                    id: 71,
-                    name: "Notion",
-                    cat: "Productivity and Project Management",
-                    desc: "Connected workspace for wiki, docs, and tasks.",
-                    auth: "Bearer Token, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST (Broad)",
-                    mcp: "MCP Native / Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.notion.com",
-                },
-                {
-                    id: 72,
-                    name: "Airtable",
-                    cat: "Productivity and Project Management",
-                    desc: "Low-code platform for building collaborative apps.",
-                    auth: "Personal Access Token, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://airtable.com/developers",
-                },
-                {
-                    id: 73,
-                    name: "Linear",
-                    cat: "Productivity and Project Management",
-                    desc: "Purpose-built issue tracking tool for modern software teams.",
-                    auth: "Personal Access Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "GraphQL (Broad)",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.linear.app",
-                },
-                {
-                    id: 74,
-                    name: "Jira",
-                    cat: "Productivity and Project Management",
-                    desc: "Agile project management and issue tracker.",
-                    auth: "Basic Auth (Token), OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Massive)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.atlassian.com",
-                },
-                {
-                    id: 75,
-                    name: "Asana",
-                    cat: "Productivity and Project Management",
-                    desc: "Work management and project tracking platform.",
-                    auth: "Personal Access Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developers.asana.com",
-                },
-                {
-                    id: 76,
-                    name: "Monday.com",
-                    cat: "Productivity and Project Management",
-                    desc: "Work OS to create custom workflow apps.",
-                    auth: "API Token, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "GraphQL (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.monday.com",
-                },
-                {
-                    id: 77,
-                    name: "ClickUp",
-                    cat: "Productivity and Project Management",
-                    desc: "All-in-one productivity platform.",
-                    auth: "Personal API Key, OAuth2",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://clickup.com/api",
-                },
-                {
-                    id: 78,
-                    name: "Coda",
-                    cat: "Productivity and Project Management",
-                    desc: "All-in-one collaborative doc platform.",
-                    auth: "Bearer Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://coda.io/developers",
-                },
-                {
-                    id: 79,
-                    name: "Smartsheet",
-                    cat: "Productivity and Project Management",
-                    desc: "Enterprise spreadsheet-style work execution platform.",
-                    auth: "Bearer Token",
-                    access: "Self-Serve Trial",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://smartsheet.com/developers",
-                },
-                {
-                    id: 80,
-                    name: "Harvest",
-                    cat: "Productivity and Project Management",
-                    desc: "Time tracking and invoicing software.",
-                    auth: "OAuth2, Personal Token",
-                    access: "Self-Serve Free Trial",
-                    surface: "REST (Moderate)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://help.getharvest.com/api-v2",
-                },
-
-                // 9. Finance & Fintech
-                {
-                    id: 81,
-                    name: "Stripe",
-                    cat: "Finance and Fintech",
-                    desc: "Financial infrastructure for internet payment processing.",
-                    auth: "Bearer Token (API Key), OAuth2",
-                    access: "Self-Serve Test Mode",
-                    surface: "REST (Massive >400 ops)",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://stripe.com/docs/api",
-                },
-                {
-                    id: 82,
-                    name: "Plaid",
-                    cat: "Finance and Fintech",
-                    desc: "Financial data network connecting bank accounts.",
-                    auth: "API Keys (Client ID + Secret)",
-                    access: "Self-Serve Sandbox",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Production approval requires compliance",
-                    url: "https://plaid.com/docs",
-                },
-                {
-                    id: 83,
-                    name: "Binance",
-                    cat: "Finance and Fintech",
-                    desc: "Cryptocurrency exchange trading API.",
-                    auth: "API Key + HMAC Signature",
-                    access: "Self-Serve Free",
-                    surface: "REST, WebSocket (Massive)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "IP whitelisting required for trade endpoints",
-                    url: "https://binance-docs.github.io",
-                },
-                {
-                    id: 84,
-                    name: "Paygent Connect",
-                    cat: "Finance and Fintech",
-                    desc: "Japanese enterprise payment processing gateway.",
-                    auth: "API Key, Client Certs",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Specialized)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Strict partner vetting & certificate setup",
-                    url: "https://paygent.co.jp",
-                },
-                {
-                    id: 85,
-                    name: "iPayX",
-                    cat: "Finance and Fintech",
-                    desc: "AI-driven cross-border payment gateway.",
-                    auth: "API Key",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Institutional onboarding requirement",
-                    url: "https://ipayx.ai/docs",
-                },
-                {
-                    id: 86,
-                    name: "QuickBooks",
-                    cat: "Finance and Fintech",
-                    desc: "Small business accounting software.",
-                    auth: "OAuth2",
-                    access: "Self-Serve Sandbox",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "Requires Intuit developer account validation",
-                    url: "https://developer.intuit.com",
-                },
-                {
-                    id: 87,
-                    name: "Xero",
-                    cat: "Finance and Fintech",
-                    desc: "Cloud accounting platform for small business.",
-                    auth: "OAuth2",
-                    access: "Self-Serve Sandbox",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://developer.xero.com",
-                },
-                {
-                    id: 88,
-                    name: "Brex",
-                    cat: "Finance and Fintech",
-                    desc: "Corporate credit card and spend management platform.",
-                    auth: "Bearer Token, OAuth2",
-                    access: "Paid Account Gate",
-                    surface: "REST (Broad)",
-                    mcp: "Composio Native",
-                    verdict: "Moderate",
-                    blocker: "Requires verified corporate Brex account",
-                    url: "https://developer.brex.com",
-                },
-                {
-                    id: 89,
-                    name: "Ramp",
-                    cat: "Finance and Fintech",
-                    desc: "Corporate card, spend management, and bill pay.",
-                    auth: "OAuth2, API Key",
-                    access: "Paid Account Gate",
-                    surface: "REST (Broad)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "Requires active corporate business tier",
-                    url: "https://docs.ramp.com",
-                },
-                {
-                    id: 90,
-                    name: "PitchBook",
-                    cat: "Finance and Fintech",
-                    desc: "Private capital market and venture capital data.",
-                    auth: "OAuth2, API Key",
-                    access: "Contact Sales ($$$)",
-                    surface: "REST (Specialized)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Expensive enterprise subscription gate",
-                    url: "https://pitchbook.com",
-                },
-
-                // 10. AI, Research & Media-native
-                {
-                    id: 91,
-                    name: "NotebookLM",
-                    cat: "AI, Research and Media-native",
-                    desc: "Google personalized AI research assistant tool.",
-                    auth: "OAuth2, Service Account",
-                    access: "Self-Serve (GCP)",
-                    surface: "Gemini Enterprise API",
-                    mcp: "None Direct",
-                    verdict: "Moderate",
-                    blocker: "No dedicated public API (access via Gemini)",
-                    url: "https://cloud.google.com/gemini",
-                },
-                {
-                    id: 92,
-                    name: "Otter AI",
-                    cat: "AI, Research and Media-native",
-                    desc: "AI meeting note taker and real-time transcription.",
-                    auth: "Bearer, Session Auth",
-                    access: "Self-Serve Free Tier",
-                    surface: "Undocumented / Internal REST",
-                    mcp: "Community MCP",
-                    verdict: "Moderate",
-                    blocker: "Unofficial reverse-engineered API endpoints",
-                    url: "https://help.otter.ai",
-                },
-                {
-                    id: 93,
-                    name: "Fathom",
-                    cat: "AI, Research and Media-native",
-                    desc: "Free AI meeting recorder and summary assistant.",
-                    auth: "API Key, OAuth2",
-                    access: "Self-Serve Free",
-                    surface: "REST (Moderate)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://fathom.video",
-                },
-                {
-                    id: 94,
-                    name: "Consensus",
-                    cat: "AI, Research and Media-native",
-                    desc: "AI search engine for scientific research papers.",
-                    auth: "API Key, OAuth2",
-                    access: "Contact Sales Gate",
-                    surface: "REST (Specialized)",
-                    mcp: "None",
-                    verdict: "Gated / Blocked",
-                    blocker: "Private API access program",
-                    url: "https://consensus.app",
-                },
-                {
-                    id: 95,
-                    name: "Reducto",
-                    cat: "AI, Research and Media-native",
-                    desc: "LLM document parser for complex PDFs and images.",
-                    auth: "API Key",
-                    access: "Self-Serve Free Credits",
-                    surface: "REST (Specialized)",
-                    mcp: "MCP Server Available",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://reducto.ai",
-                },
-                {
-                    id: 96,
-                    name: "Devin",
-                    cat: "AI, Research and Media-native",
-                    desc: "Autonomous AI software engineering agent.",
-                    auth: "API Key",
-                    access: "Self-Serve / Waitlist",
-                    surface: "REST, MCP Client",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://docs.devin.ai",
-                },
-                {
-                    id: 97,
-                    name: "Higgsfield",
-                    cat: "AI, Research and Media-native",
-                    desc: "AI video creation and content editing suite.",
-                    auth: "CLI Auth, API Token",
-                    access: "Self-Serve Free Tier",
-                    surface: "CLI, REST (Narrow)",
-                    mcp: "None",
-                    verdict: "Moderate",
-                    blocker: "CLI-centric developer workflows",
-                    url: "https://higgsfield.ai",
-                },
-                {
-                    id: 98,
-                    name: "Mermaid CLI",
-                    cat: "AI, Research and Media-native",
-                    desc: "Command-line renderer for diagram generation.",
-                    auth: "None (Local CLI)",
-                    access: "Self-Serve (Open Source)",
-                    surface: "CLI / Node Package",
-                    mcp: "MCP Native Server",
-                    verdict: "High (Ready)",
-                    blocker: "Runs as local tool wrapper",
-                    url: "https://github.com/mermaid-js/mermaid-cli",
-                },
-                {
-                    id: 99,
-                    name: "YouTube Transcript",
-                    cat: "AI, Research and Media-native",
-                    desc: "API service to extract transcripts from YouTube.",
-                    auth: "API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Specialized)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://transcriptapi.com",
-                },
-                {
-                    id: 100,
-                    name: "Grain",
-                    cat: "AI, Research and Media-native",
-                    desc: "AI video recording and customer insight workspace.",
-                    auth: "OAuth2, API Key",
-                    access: "Self-Serve Free Tier",
-                    surface: "REST (Moderate)",
-                    mcp: "Needs Custom Wrapper",
-                    verdict: "High (Ready)",
-                    blocker: "None",
-                    url: "https://grain.com",
-                },
-            ];
-
-            // Render Table Rows
-            function renderTable(data) {
-                const tbody = document.getElementById("tableBody");
-                tbody.innerHTML = "";
-
-                data.forEach((app) => {
-                    const tr = document.createElement("tr");
-
-                    const authTag = app.auth.includes("OAuth")
-                        ? `<span class="tag tag-oauth">${app.auth}</span>`
-                        : `<span class="tag tag-key">${app.auth}</span>`;
-
-                    const accessTag =
-                        app.access.includes("Self-Serve") ||
-                        app.access.includes("Free")
-                            ? `<span class="tag tag-self">${app.access}</span>`
-                            : `<span class="tag tag-gated">${app.access}</span>`;
-
-                    const verdictTag = app.verdict.includes("High")
-                        ? `<span class="tag tag-ready">${app.verdict}</span>`
-                        : app.verdict.includes("Gated")
-                          ? `<span class="tag tag-blocked">${app.verdict}</span>`
-                          : `<span class="tag" style="background:rgba(245, 158, 11, 0.2); color:#f59e0b">${app.verdict}</span>`;
-
-                    tr.innerHTML = `
-        <td><strong>${app.id}</strong></td>
-        <td>
-          <div style="font-weight:bold; color:#fff;">${app.name}</div>
-          <div style="font-size:0.75rem; color:var(--text-muted);">${app.cat}</div>
-        </td>
-        <td>${app.desc}</td>
-        <td>${authTag}</td>
-        <td>${accessTag}</td>
-        <td>
-          <div>${app.surface}</div>
-          <div style="font-size:0.75rem; color:#818cf8; margin-top:0.25rem;">${app.mcp}</div>
-        </td>
-        <td>
-          <div>${verdictTag}</div>
-          ${app.blocker !== "None" ? `<div style="font-size:0.75rem; color:#f87171; margin-top:0.25rem;">⚠️ ${app.blocker}</div>` : ""}
-        </td>
-        <td><a href="${app.url}" target="_blank" class="doc-link">Docs ↗</a></td>
-      `;
-                    tbody.appendChild(tr);
-                });
-            }
-
-            // Filter Table
-            function filterTable() {
-                const searchVal = document
-                    .getElementById("searchInput")
-                    .value.toLowerCase();
-                const catVal = document.getElementById("categoryFilter").value;
-                const verdictVal =
-                    document.getElementById("verdictFilter").value;
-
-                const filtered = appsData.filter((app) => {
-                    const matchesSearch =
-                        app.name.toLowerCase().includes(searchVal) ||
-                        app.desc.toLowerCase().includes(searchVal) ||
-                        app.cat.toLowerCase().includes(searchVal) ||
-                        app.auth.toLowerCase().includes(searchVal);
-                    const matchesCat = catVal === "" || app.cat === catVal;
-                    const matchesVerdict =
-                        verdictVal === "" || app.verdict.includes(verdictVal);
-
-                    return matchesSearch && matchesCat && matchesVerdict;
-                });
-
-                renderTable(filtered);
-            }
-
-            // Initial Load
-            document.addEventListener("DOMContentLoaded", () => {
-                renderTable(appsData);
-            });
-        </script>
     </body>
 </html>

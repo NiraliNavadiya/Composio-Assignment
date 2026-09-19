@@ -13,11 +13,13 @@
       "type": "Hybrid",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Complex permission sets and Connected App approval requirements",
     "docs_url": "https://developer.salesforce.com/docs/",
-    "url": "salesforce.com"
+    "url": "salesforce.com",
+    "mcp_server_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 2,
@@ -37,7 +39,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.hubspot.com/docs/api/overview",
-    "url": "hubspot.com"
+    "url": "hubspot.com",
+    "mcp_server_url": "https://mcp.so/server/hubspot-mcp-summary/KaranThink41"
   },
   {
     "id": 3,
@@ -53,11 +56,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://pipedrive.readme.io/docs/getting-started",
-    "url": "pipedrive.com"
+    "url": "pipedrive.com",
+    "mcp_server_url": "https://support.pipedrive.com/en/article/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 4,
@@ -73,11 +78,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://attio.com/docs",
-    "url": "attio.com"
+    "url": "attio.com",
+    "mcp_server_url": "https://docs.attio.com/mcp/overview",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 5,
@@ -94,11 +101,13 @@
       "type": "GraphQL",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://twenty.com/developers",
-    "url": "twenty.com"
+    "url": "twenty.com",
+    "mcp_server_url": "https://github.com/jezweb/twenty-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 6,
@@ -114,11 +123,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.podio.com/",
-    "url": "podio.com"
+    "url": "podio.com",
+    "mcp_server_url": "https://viasocket.com/mcp/podio",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 7,
@@ -133,11 +144,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://www.zoho.com/crm/developer/docs/api/v2/",
-    "url": "zoho.com/crm"
+    "url": "zoho.com/crm",
+    "mcp_server_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 8,
@@ -153,11 +166,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.close.com/",
-    "url": "close.com"
+    "url": "close.com",
+    "mcp_server_url": "https://close.com/integrations/close-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 9,
@@ -172,11 +187,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.copper.com/",
-    "url": "copper.com"
+    "url": "copper.com",
+    "mcp_server_url": "https://glama.ai/mcp/servers/hasankhadra/copper-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 10,
@@ -192,11 +209,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires enterprise or partner-gated API credentials to access documentation and endpoints.",
     "docs_url": "https://api.docs.dealcloud.com/",
-    "url": "api.docs.dealcloud.com"
+    "url": "api.docs.dealcloud.com",
+    "mcp_server_url": "https://api.docs.dealcloud.com/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 11,
@@ -213,11 +232,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.zendesk.com/api-reference/",
-    "url": "zendesk.com"
+    "url": "zendesk.com",
+    "mcp_server_url": "https://support.zendesk.com/hc/en-us/articles/10497779528730-Connecting-to-MCP-servers-and-using-MCP-tools-in-action-flows",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 12,
@@ -233,11 +254,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.intercom.com/docs/references/rest-api/",
-    "url": "intercom.com"
+    "url": "intercom.com",
+    "mcp_server_url": "https://github.com/intercom/intercom-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 13,
@@ -253,11 +276,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.freshdesk.com/api/",
-    "url": "freshdesk.com"
+    "url": "freshdesk.com",
+    "mcp_server_url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 14,
@@ -273,11 +298,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://dev.frontapp.com/",
-    "url": "front.com"
+    "url": "front.com",
+    "mcp_server_url": "https://dev.frontapp.com/docs/mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 15,
@@ -293,11 +320,13 @@
       "type": "REST",
       "breadth": "Narrow (<10)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Limited public API documentation requiring direct contact for access",
     "docs_url": "https://docs.usepylon.com/",
-    "url": "usepylon.com"
+    "url": "usepylon.com",
+    "mcp_server_url": "https://www.usepylon.com/integrations/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 16,
@@ -313,11 +342,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://www.liveagent.com/api/",
-    "url": "liveagent.com"
+    "url": "liveagent.com",
+    "mcp_server_url": "https://github.com/QualityUnit/liveagent-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 17,
@@ -333,11 +364,13 @@
       "type": "GraphQL",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.plain.com/",
-    "url": "plain.com"
+    "url": "plain.com",
+    "mcp_server_url": "https://www.plain.com/blog/mcp-customer-support-2026",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 18,
@@ -353,11 +386,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.helpscout.com/",
-    "url": "helpscout.com"
+    "url": "helpscout.com",
+    "mcp_server_url": "https://articles.helpscout.com/blog/introducing-help-scout-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 19,
@@ -373,11 +408,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.gorgias.com/",
-    "url": "gorgias.com"
+    "url": "gorgias.com",
+    "mcp_server_url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 20,
@@ -393,11 +430,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Requires partner-gated credentials and enterprise access to test APIs.",
     "docs_url": "https://developer.gladly.com/",
-    "url": "gladly.com"
+    "url": "gladly.com",
+    "mcp_server_url": "https://truto.one/blog/connect-gladly-to-chatgpt-manage-customers-tasks-and-support-data",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 21,
@@ -413,11 +452,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://api.slack.com/",
-    "url": "slack.com"
+    "url": "slack.com",
+    "mcp_server_url": "https://docs.slack.dev/ai/slack-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 22,
@@ -433,11 +474,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://www.twilio.com/docs/api",
-    "url": "twilio.com"
+    "url": "twilio.com",
+    "mcp_server_url": "https://www.twilio.com/docs/ai/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 23,
@@ -452,11 +495,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Restricted token scopes and region-specific API domains",
     "docs_url": "https://www.zoho.com/cliq/help/developerportal/",
-    "url": "zoho.com/cliq"
+    "url": "zoho.com/cliq",
+    "mcp_server_url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 24,
@@ -472,11 +517,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://open.larksuite.com/document/home/index",
-    "url": "open.larksuite.com"
+    "url": "open.larksuite.com",
+    "mcp_server_url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/advanced-configuration",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 25,
@@ -492,11 +539,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Limited public webhook and API documentation compared to major competitors",
     "docs_url": "https://pumble.com/help/integrations-and-api/",
-    "url": "pumble.com"
+    "url": "pumble.com",
+    "mcp_server_url": "https://pumble.com/learn/pumble/connecting-pumble-with-ai-agents-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 26,
@@ -516,7 +565,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://discord.com/developers/docs",
-    "url": "discord.com"
+    "url": "discord.com",
+    "mcp_server_url": "https://github.com/SaseQ/discord-mcp"
   },
   {
     "id": 27,
@@ -536,7 +586,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://core.telegram.org/bots/api",
-    "url": "core.telegram.org"
+    "url": "core.telegram.org",
+    "mcp_server_url": "https://mcp.so/servers/telegram-mcp-server-bmwdroch"
   },
   {
     "id": 28,
@@ -552,11 +603,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Meta business verification and template message approvals required.",
     "docs_url": "https://developers.facebook.com/docs/whatsapp",
-    "url": "developers.facebook.com/docs/whatsapp"
+    "url": "developers.facebook.com/docs/whatsapp",
+    "mcp_server_url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 29,
@@ -572,11 +625,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.aircall.io/",
-    "url": "aircall.io"
+    "url": "aircall.io",
+    "mcp_server_url": "https://github.com/themobilefirstco/aircall-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 30,
@@ -592,11 +647,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.vonage.com/",
-    "url": "developer.vonage.com"
+    "url": "developer.vonage.com",
+    "mcp_server_url": "https://developer.vonage.com/en/mcp-server/overview",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 31,
@@ -611,11 +668,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires Google Cloud project, developer token approval process, and OAuth setup.",
     "docs_url": "https://developers.google.com/google-ads/api/docs/start",
-    "url": "developers.google.com/google-ads"
+    "url": "developers.google.com/google-ads",
+    "mcp_server_url": "https://www.marktechpost.com/2025/10/10/google-open-sources-an-mcp-server-for-the-google-ads-api-bringing-llm-native-access-to-ads-data",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 32,
@@ -635,7 +694,8 @@
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires Meta App review, specific permissions, and system user token generation.",
     "docs_url": "https://developers.facebook.com/docs/marketing-apis",
-    "url": "developers.facebook.com/docs/marketing-apis"
+    "url": "developers.facebook.com/docs/marketing-apis",
+    "mcp_server_url": "https://github.com/gomarble-ai/facebook-ads-mcp-server"
   },
   {
     "id": 33,
@@ -650,11 +710,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires LinkedIn Developer Portal application and specific product approvals (Marketing Developer Platform).",
     "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing/",
-    "url": "learn.microsoft.com/linkedin/marketing"
+    "url": "learn.microsoft.com/linkedin/marketing",
+    "mcp_server_url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 34,
@@ -670,11 +732,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://highlevel.stoplight.io/",
-    "url": "highlevel.stoplight.io"
+    "url": "highlevel.stoplight.io",
+    "mcp_server_url": "https://glama.ai/mcp/servers/alibhatti59/gohighlevel-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 35,
@@ -695,7 +759,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://mailchimp.com/developer/",
-    "url": "mailchimp.com/developer"
+    "url": "mailchimp.com/developer",
+    "mcp_server_url": "https://github.com/AgentX-ai/mailchimp-mcp"
   },
   {
     "id": 36,
@@ -711,11 +776,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.klaviyo.com/",
-    "url": "developers.klaviyo.com"
+    "url": "developers.klaviyo.com",
+    "mcp_server_url": "https://www.klaviyo.com/blog/introducing-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 37,
@@ -730,11 +797,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Limited public documentation for API endpoints requires custom API reverse-engineering or restricted partner access.",
     "docs_url": "https://systeme.io/",
-    "url": "systeme.io (funnel builder)"
+    "url": "systeme.io (funnel builder)",
+    "mcp_server_url": "https://help.systeme.io/article/11331-how-to-manage-your-contacts-with-the-systeme-io-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 38,
@@ -749,11 +818,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.pinterest.com/",
-    "url": "developers.pinterest.com"
+    "url": "developers.pinterest.com",
+    "mcp_server_url": "https://medium.com/pinterest-engineering/building-an-mcp-ecosystem-at-pinterest-d881eb4c16f1",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 39,
@@ -768,11 +839,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Meta app review and strict rate limits for posting and reading content.",
     "docs_url": "https://developers.facebook.com/docs/threads",
-    "url": "developers.facebook.com/docs/threads"
+    "url": "developers.facebook.com/docs/threads",
+    "mcp_server_url": "https://www.threads.com/@mattnavarra/post/DaQIWUEiiYk/meta-launches-an-mcp-server-to-help-developers-debug-their-apps-developer-tools",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 40,
@@ -792,7 +865,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.sendgrid.com/",
-    "url": "sendgrid.com"
+    "url": "sendgrid.com",
+    "mcp_server_url": "https://github.com/deyikong/sendgrid-mcp"
   },
   {
     "id": 41,
@@ -812,7 +886,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://shopify.dev/docs/api",
-    "url": "shopify.dev"
+    "url": "shopify.dev",
+    "mcp_server_url": "https://github.com/geli2001/shopify-mcp"
   },
   {
     "id": 42,
@@ -828,11 +903,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://woocommerce.com/document/woocommerce-rest-api/",
-    "url": "woocommerce.com/document/woocommerce-rest-api"
+    "url": "woocommerce.com/document/woocommerce-rest-api",
+    "mcp_server_url": "https://developer.woocommerce.com/docs/features/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 43,
@@ -848,11 +925,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.bigcommerce.com/docs/rest",
-    "url": "developer.bigcommerce.com"
+    "url": "developer.bigcommerce.com",
+    "mcp_server_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 44,
@@ -868,11 +947,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Complex enterprise permissioning and restricted developer sandbox access.",
     "docs_url": "https://developer.salesforce.com/docs/commerce",
-    "url": "developer.salesforce.com/docs/commerce"
+    "url": "developer.salesforce.com/docs/commerce",
+    "mcp_server_url": "https://github.com/taurgis/sfcc-dev-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 45,
@@ -888,11 +969,13 @@
       "type": "Hybrid",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.adobe.com/commerce/webservices/rest/introduction/",
-    "url": "developer.adobe.com/commerce"
+    "url": "developer.adobe.com/commerce",
+    "mcp_server_url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 46,
@@ -908,11 +991,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires a Squarespace Developer Platform or Commerce API plan.",
     "docs_url": "https://developers.squarespace.com/",
-    "url": "developers.squarespace.com"
+    "url": "developers.squarespace.com",
+    "mcp_server_url": "https://developers-preview.squarespace.com/mcp/overview",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 47,
@@ -928,11 +1013,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://api-docs.ecwid.com/",
-    "url": "api-docs.ecwid.com"
+    "url": "api-docs.ecwid.com",
+    "mcp_server_url": "https://github.com/m190/usefulapi-mcp/blob/main/servers/ecwid/README.md",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 48,
@@ -948,11 +1035,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://app.gumroad.com/api",
-    "url": "gumroad.com/api"
+    "url": "gumroad.com/api",
+    "mcp_server_url": "https://github.com/rmarescu/gumroad-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 49,
@@ -968,11 +1057,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Strict AWS IAM, LWA (Login with Amazon), and lengthy approval process required.",
     "docs_url": "https://developer-docs.amazon.com/sp-api",
-    "url": "developer-docs.amazon.com/sp-api"
+    "url": "developer-docs.amazon.com/sp-api",
+    "mcp_server_url": "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/amazon-selling-partner-mcp-server.md",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 50,
@@ -991,7 +1082,8 @@
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Public developer documentation and open public APIs are not readily available.",
     "docs_url": "https://fanbasis.com",
-    "url": "fanbasis.com"
+    "url": "fanbasis.com",
+    "mcp_server_url": ""
   },
   {
     "id": 51,
@@ -1007,11 +1099,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.dataforseo.com/",
-    "url": "docs.dataforseo.com"
+    "url": "docs.dataforseo.com",
+    "mcp_server_url": "https://dataforseo.com/model-context-protocol",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 52,
@@ -1026,11 +1120,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://seranking.com/api.html",
-    "url": "seranking.com/api"
+    "url": "seranking.com/api",
+    "mcp_server_url": "https://seranking.com/api/integrations/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 53,
@@ -1046,11 +1142,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Strict access requirements and enterprise-only availability",
     "docs_url": "https://ahrefs.com/api",
-    "url": "ahrefs.com/api"
+    "url": "ahrefs.com/api",
+    "mcp_server_url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 54,
@@ -1066,11 +1164,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.mrscraper.com/",
-    "url": "docs.mrscraper.com"
+    "url": "docs.mrscraper.com",
+    "mcp_server_url": "https://docs.mrscraper.com",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 55,
@@ -1086,11 +1186,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.apify.com/api/v2",
-    "url": "docs.apify.com"
+    "url": "docs.apify.com",
+    "mcp_server_url": "https://docs.apify.com/integrations/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 56,
@@ -1105,11 +1207,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.firecrawl.dev/",
-    "url": "https://firecrawl.dev"
+    "url": "https://firecrawl.dev",
+    "mcp_server_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 57,
@@ -1125,11 +1229,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Complex multi-step scraping dataset collection asynchronous workflow",
     "docs_url": "https://docs.brightdata.com/",
-    "url": "https://brightdata.com"
+    "url": "https://brightdata.com",
+    "mcp_server_url": "https://docs.brightdata.com/products/mcp-server/remote/quickstart",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 58,
@@ -1144,11 +1250,13 @@
       "type": "None/Scrape-Only",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Command-line tool primarily with no official hosted public REST API",
     "docs_url": "https://github.com/sherlock-project/sherlock",
-    "url": "https://github.com/sherlock-project/sherlock"
+    "url": "https://github.com/sherlock-project/sherlock",
+    "mcp_server_url": "https://github.com/H4RR1SON/sherlock-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 59,
@@ -1167,7 +1275,8 @@
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Limited public API documentation requiring enterprise onboarding",
     "docs_url": "https://waterfall.io/",
-    "url": "https://waterfall.io"
+    "url": "https://waterfall.io",
+    "mcp_server_url": ""
   },
   {
     "id": 60,
@@ -1183,11 +1292,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://clay.com/docs",
-    "url": "https://clay.com"
+    "url": "https://clay.com",
+    "mcp_server_url": "https://www.clay.com/guides/clay-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 61,
@@ -1203,11 +1314,13 @@
       "type": "Hybrid",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.github.com/rest",
-    "url": "docs.github.com/rest"
+    "url": "docs.github.com/rest",
+    "mcp_server_url": "https://github.com/mcp/github/github-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 62,
@@ -1223,11 +1336,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://vercel.com/docs/rest-api",
-    "url": "vercel.com/docs/rest-api"
+    "url": "vercel.com/docs/rest-api",
+    "mcp_server_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 63,
@@ -1243,11 +1358,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.netlify.com/api",
-    "url": "docs.netlify.com/api"
+    "url": "docs.netlify.com/api",
+    "mcp_server_url": "https://github.com/netlify/netlify-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 64,
@@ -1263,11 +1380,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.cloudflare.com/api",
-    "url": "developers.cloudflare.com/api"
+    "url": "developers.cloudflare.com/api",
+    "mcp_server_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 65,
@@ -1283,11 +1402,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://supabase.com/docs",
-    "url": "supabase.com/docs"
+    "url": "supabase.com/docs",
+    "mcp_server_url": "https://supabase.com/features/mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 66,
@@ -1303,11 +1424,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://neo4j.com/docs/api/",
-    "url": "neo4j.com/docs/api"
+    "url": "neo4j.com/docs/api",
+    "mcp_server_url": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 67,
@@ -1324,11 +1447,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.snowflake.com",
-    "url": "docs.snowflake.com"
+    "url": "docs.snowflake.com",
+    "mcp_server_url": "https://docs.snowflake.com/en/developer-guide/native-apps/agents-mcp-servers",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 68,
@@ -1344,11 +1469,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://www.mongodb.com/docs/atlas/api/",
-    "url": "mongodb.com/docs/atlas/api"
+    "url": "mongodb.com/docs/atlas/api",
+    "mcp_server_url": "https://github.com/mongodb-developer/mcp-mongodb-atlas",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 69,
@@ -1364,11 +1491,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.datadoghq.com/api/",
-    "url": "docs.datadoghq.com/api"
+    "url": "docs.datadoghq.com/api",
+    "mcp_server_url": "https://docs.datadoghq.com/mcp_server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 70,
@@ -1384,11 +1513,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.sentry.io/api/",
-    "url": "docs.sentry.io/api"
+    "url": "docs.sentry.io/api",
+    "mcp_server_url": "https://github.com/getsentry/sentry-mcp-stdio",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 71,
@@ -1404,11 +1535,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.notion.com",
-    "url": "developers.notion.com"
+    "url": "developers.notion.com",
+    "mcp_server_url": "https://www.notion.com/help/mcp-connections-for-custom-agents",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 72,
@@ -1424,11 +1557,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://airtable.com/developers",
-    "url": "airtable.com/developers"
+    "url": "airtable.com/developers",
+    "mcp_server_url": "https://support.airtable.com/articles/9897799762-using-the-airtable-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 73,
@@ -1444,11 +1579,13 @@
       "type": "GraphQL",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.linear.app",
-    "url": "developers.linear.app"
+    "url": "developers.linear.app",
+    "mcp_server_url": "https://linear.app/docs/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 74,
@@ -1465,11 +1602,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/",
-    "url": "developer.atlassian.com"
+    "url": "developer.atlassian.com",
+    "mcp_server_url": "https://github.com/atlassian/atlassian-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 75,
@@ -1485,11 +1624,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.asana.com",
-    "url": "developers.asana.com"
+    "url": "developers.asana.com",
+    "mcp_server_url": "https://developers.asana.com/docs/mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 76,
@@ -1505,11 +1646,13 @@
       "type": "GraphQL",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.monday.com/api-reference/docs",
-    "url": "developer.monday.com"
+    "url": "developer.monday.com",
+    "mcp_server_url": "https://developer.monday.com/api-reference/docs/monday-mcp-security-overview",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 77,
@@ -1525,11 +1668,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://clickup.com/api",
-    "url": "clickup.com/api"
+    "url": "clickup.com/api",
+    "mcp_server_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 78,
@@ -1545,11 +1690,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://coda.io/developers",
-    "url": "coda.io/developers"
+    "url": "coda.io/developers",
+    "mcp_server_url": "https://usecoda.dev/docs/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 79,
@@ -1565,11 +1712,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://smartsheet.com/developers",
-    "url": "smartsheet.com/developers"
+    "url": "smartsheet.com/developers",
+    "mcp_server_url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 80,
@@ -1589,7 +1738,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://help.getharvest.com/api-v2",
-    "url": "help.getharvest.com/api-v2"
+    "url": "help.getharvest.com/api-v2",
+    "mcp_server_url": "https://mcpservers.org/servers/taiste/harvest-mcp-server"
   },
   {
     "id": 81,
@@ -1609,7 +1759,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://stripe.com/docs/api",
-    "url": "stripe.com"
+    "url": "stripe.com",
+    "mcp_server_url": "https://mcpmarket.com/server/stripe-server"
   },
   {
     "id": 82,
@@ -1624,11 +1775,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://plaid.com/docs/",
-    "url": "plaid.com"
+    "url": "plaid.com",
+    "mcp_server_url": "https://plaid.com/docs/resources/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 83,
@@ -1643,11 +1796,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://binance-docs.github.io/apidocs/",
-    "url": "binance.com"
+    "url": "binance.com",
+    "mcp_server_url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 84,
@@ -1667,7 +1822,8 @@
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires merchant account approval and restricted sandbox access",
     "docs_url": "https://www.paygent.co.jp/",
-    "url": "paygent.co.jp"
+    "url": "paygent.co.jp",
+    "mcp_server_url": ""
   },
   {
     "id": 85,
@@ -1683,11 +1839,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Gated enterprise documentation and lack of public developer portal",
     "docs_url": "https://ipayx.ai/",
-    "url": "ipayx.ai"
+    "url": "ipayx.ai",
+    "mcp_server_url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 86,
@@ -1706,7 +1864,8 @@
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Strict app review and production approval process by Intuit",
     "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account",
-    "url": "https://developer.intuit.com"
+    "url": "https://developer.intuit.com",
+    "mcp_server_url": "https://github.com/intuit/quickbooks-online-mcp-server"
   },
   {
     "id": 87,
@@ -1721,11 +1880,13 @@
       "type": "REST",
       "breadth": "Extensive (>50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developer.xero.com/documentation/api/accounting/overview/",
-    "url": "https://developer.xero.com"
+    "url": "https://developer.xero.com",
+    "mcp_server_url": "https://github.com/xeroapi/xero-mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 88,
@@ -1741,11 +1902,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "API access requires enterprise account standing or partnership approval",
     "docs_url": "https://developer.brex.com/docs/introduction/",
-    "url": "https://developer.brex.com"
+    "url": "https://developer.brex.com",
+    "mcp_server_url": "https://developer.brex.com/docs/mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 89,
@@ -1761,11 +1924,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires Ramp administrator privileges and organization API enable steps",
     "docs_url": "https://docs.ramp.com/developers",
-    "url": "https://docs.ramp.com"
+    "url": "https://docs.ramp.com",
+    "mcp_server_url": "https://github.com/ramp-public/ramp_mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 90,
@@ -1781,11 +1946,13 @@
       "type": "REST",
       "breadth": "Narrow (<10)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "Enterprise-only data subscription required with heavily gated institutional API access",
     "docs_url": "https://pitchbook.com",
-    "url": "https://pitchbook.com"
+    "url": "https://pitchbook.com",
+    "mcp_server_url": "https://pitchbook.com/media/press-releases/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 91,
@@ -1800,11 +1967,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Blocked / High Friction",
     "primary_blocker": "No public user-facing API for NotebookLM; tightly bound to Google internal infrastructure or enterprise Gemini APIs.",
     "docs_url": "https://cloud.google.com/gemini",
-    "url": "cloud.google.com/gemini (Enterprise API)"
+    "url": "cloud.google.com/gemini (Enterprise API)",
+    "mcp_server_url": "https://github.com/PleasePrompto/notebooklm-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 92,
@@ -1820,11 +1989,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Official developer APIs require business tier subscriptions and enterprise approval/partnerships.",
     "docs_url": "https://help.otter.ai/",
-    "url": "help.otter.ai (MCP server)"
+    "url": "help.otter.ai (MCP server)",
+    "mcp_server_url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 93,
@@ -1844,7 +2015,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://fathom.video/developers",
-    "url": "fathom.video"
+    "url": "fathom.video",
+    "mcp_server_url": "https://github.com/agencyenterprise/fathom-mcp-server"
   },
   {
     "id": 94,
@@ -1860,11 +2032,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "API access is restricted and requires direct developer partnership or contact with sales.",
     "docs_url": "https://consensus.app/",
-    "url": "consensus.app (OAuth requested)"
+    "url": "consensus.app (OAuth requested)",
+    "mcp_server_url": "https://lobehub.com/mcp/consensus-nlp-consensus-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 95,
@@ -1880,11 +2054,13 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://docs.reducto.ai/",
-    "url": "reducto.ai (document parsing)"
+    "url": "reducto.ai (document parsing)",
+    "mcp_server_url": "https://docs.reducto.ai/mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 96,
@@ -1904,7 +2080,8 @@
     "buildability_verdict": "Possible with Workaround",
     "primary_blocker": "Requires enterprise access or invite for API/MCP utilization.",
     "docs_url": "https://docs.devin.ai",
-    "url": "https://docs.devin.ai"
+    "url": "https://docs.devin.ai",
+    "mcp_server_url": "https://docs.devin.ai/work-with-devin/mcp"
   },
   {
     "id": 97,
@@ -1919,11 +2096,13 @@
       "type": "REST",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "No MCP / Custom Wrapper Needed",
+    "mcp_status": "Third-Party MCP",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://higgsfield.ai",
-    "url": "https://higgsfield.ai"
+    "url": "https://higgsfield.ai",
+    "mcp_server_url": "https://github.com/jfikrat/higgsfield-mcp",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 98,
@@ -1938,11 +2117,13 @@
       "type": "None/Scrape-Only",
       "breadth": "Narrow (<10 endpoints)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://github.com/mermaid-js/mermaid-cli",
-    "url": "https://github.com/mermaid-js/mermaid-cli"
+    "url": "https://github.com/mermaid-js/mermaid-cli",
+    "mcp_server_url": "https://mermaid.ai/docs/ai/mcp-server",
+    "human_verification": "check mcp server url"
   },
   {
     "id": 99,
@@ -1961,7 +2142,8 @@
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://transcriptapi.com",
-    "url": "https://transcriptapi.com"
+    "url": "https://transcriptapi.com",
+    "mcp_server_url": "https://github.com/hancengiz/youtube-transcript-mcp"
   },
   {
     "id": 100,
@@ -1977,10 +2159,12 @@
       "type": "REST",
       "breadth": "Moderate (10-50)"
     },
-    "mcp_status": "Third-Party MCP",
+    "mcp_status": "Native MCP Available",
     "buildability_verdict": "Instant Win (Ready)",
     "primary_blocker": "None",
     "docs_url": "https://developers.grain.com",
-    "url": "https://grain.com"
+    "url": "https://grain.com",
+    "mcp_server_url": "https://developers.grain.com/mcp",
+    "human_verification": "check mcp server url"
   }
 ]

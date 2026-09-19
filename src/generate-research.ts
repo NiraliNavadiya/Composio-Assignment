@@ -17,15 +17,18 @@ if (!apiKey) {
   process.exit(1);
 }
 
-console.log(" -- apiKey -- ", apiKey);
-
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const appsPath = path.join(__dirname, "../data/apps.json");
 const researchPath = path.join(__dirname, "../data/research.json");
 
-const allApps = JSON.parse(fs.readFileSync(appsPath, "utf-8"));
-
+const rawApps = JSON.parse(fs.readFileSync(appsPath, "utf-8"));
+const allApps = rawApps.map((a: any) => ({
+  id: a.app_id ?? a.id,
+  app: a.app_name ?? a.app,
+  category: a.category,
+  hint: a.hint,
+}));
 // Enforce structured output schema for each app item
 const appSchema = {
   type: SchemaType.OBJECT,
@@ -38,6 +41,10 @@ const appSchema = {
     category: {
       type: SchemaType.STRING,
       description: "Assigned category from apps.json",
+    },
+    url: {
+      type: SchemaType.STRING,
+      description: "Given app's official URL or domain (from hint)",
     },
     one_liner: {
       type: SchemaType.STRING,
@@ -71,8 +78,13 @@ const appSchema = {
     },
     mcp_status: {
       type: SchemaType.STRING,
+      enum: [
+        "Native MCP Available",
+        "Third-Party MCP",
+        "No MCP / Custom Wrapper Needed",
+      ],
       description:
-        "Native MCP Available, Third-Party MCP, or No MCP / Custom Wrapper Needed",
+        "Set 'Native MCP Available' if vendor officially provides an MCP server, 'Third-Party MCP' if built by community/GitHub developers or external third parties, or 'No MCP / Custom Wrapper Needed' if none exists.",
     },
     buildability_verdict: {
       type: SchemaType.STRING,
@@ -130,11 +142,6 @@ async function processAllInBatches(batchSize: number) {
   const completedIds = new Set(currentResearch.map((r) => r.id));
   const remainingApps = allApps.filter((a: any) => !completedIds.has(a.id));
 
-  console.log(`\n Total Apps in Input: ${allApps.length}`);
-  console.log(` Already Completed: ${completedIds.size}`);
-  console.log(` Remaining to Process: ${remainingApps.length}`);
-  console.log(` Configured Batch Size: ${batchSize}\n`);
-
   if (remainingApps.length === 0) {
     console.log(
       " All apps have already been researched and saved to data/research.json!",
@@ -151,16 +158,24 @@ async function processAllInBatches(batchSize: number) {
       ` Sending API Request for Batch ${batchRange} (${currentBatch.length} apps)...`,
     );
 
+    // Map current batch to explicitly expose the target URL and domain for the model
+    const batchWithUrls = currentBatch.map((item) => ({
+      id: item.id,
+      app: item.app,
+      category: item.category,
+      app_url: item.hint, // Providing explicit app URL/domain context
+    }));
+
     const prompt = `
-    Conduct an API accessibility audit for Composio AI Tooling on the following ${currentBatch.length} applications.
+    Conduct an API accessibility audit for Composio AI Tooling on the following ${batchWithUrls.length} applications.
 
     Target Applications:
-    ${JSON.stringify(currentBatch, null, 2)}
+    ${JSON.stringify(batchWithUrls, null, 2)}
 
     STRICT AUDIT INSTRUCTIONS:
     1. Perform web search verification on official documentation (docs.*, developer.*, api.*) for each app.
     2. Maintain the exact numeric "id" provided in the input list for each app.
-    3. Return a JSON array containing exactly ${currentBatch.length} research objects following the output schema.
+    3. Return a JSON array containing exactly ${batchWithUrls.length} research objects following the output schema.
     `;
 
     try {
