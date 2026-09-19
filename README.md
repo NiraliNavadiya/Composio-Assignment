@@ -1,7 +1,7 @@
 ```markdown
 
 **Live link**  
-[https://niralinavadiya.github.io/Composio-Assignment/](https://niralinavadiya.github.io/Composio-Assignment/)
+[https://niralinavadiya.github.io/Composio-Assignment/]
 
 # Multi-Pass Dataset Research & Verification Pipeline
 
